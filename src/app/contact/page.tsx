@@ -37,7 +37,7 @@ export default function ContactPage() {
           {/* Copy */}
           <div className="flex flex-1 flex-col gap-10">
             <div className="flex flex-col gap-3.5">
-              <h1 className="text-4xl font-semibold leading-[1.2] text-white md:text-5xl lg:text-6xl lg:leading-[72px]">
+              <h1 className="text-3xl font-semibold text-white md:text-4xl lg:text-5xl">
                 Contact us
               </h1>
               <div className="text-sm leading-6 text-white md:text-base md:leading-7">
