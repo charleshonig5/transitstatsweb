@@ -198,7 +198,7 @@ export default function Home() {
         <h2 id="features-heading" className="sr-only">
           Core Features
         </h2>
-        <div className="container flex flex-col">
+        <div className="container flex flex-col gap-10 md:gap-14">
           {features.map((feature, i) => {
             const isReversed = i % 2 !== 0;
             return (
@@ -209,7 +209,7 @@ export default function Home() {
                 }`}
               >
                 {/* Text */}
-                <div className="w-full flex-1 flex flex-col gap-3.5">
+                <div className="order-1 w-full flex-1 flex flex-col gap-3.5 lg:order-none">
                   <div className="flex items-center gap-5">
                     <span className="text-4xl" role="img" aria-hidden="true">
                       {feature.icon}
@@ -224,13 +224,13 @@ export default function Home() {
                 </div>
 
                 {/* Image */}
-                <div className="w-full flex-1 flex items-center justify-center">
+                <div className="order-2 w-full flex-1 flex items-center justify-center lg:order-none">
                   <Image
                     src={feature.image}
                     alt={feature.alt}
-                    width={476}
-                    height={465}
-                    className="h-auto w-full max-w-[476px]"
+                    width={620}
+                    height={606}
+                    className="h-auto w-full max-w-[620px]"
                   />
                 </div>
               </article>
