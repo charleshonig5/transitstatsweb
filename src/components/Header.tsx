@@ -40,8 +40,9 @@ export default function Header() {
           <Image
             src="/images/logo.svg"
             alt="Transit Stats"
-            width={186}
-            height={29}
+            width={205}
+            height={32}
+            className="h-auto w-[149px] lg:w-[205px]"
             priority
           />
         </Link>

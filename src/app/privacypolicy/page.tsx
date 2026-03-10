@@ -4,12 +4,12 @@ export const metadata: Metadata = {
   title: "Privacy Policy — Transit Stats",
   description:
     "Transit Stats privacy policy — how we collect, use, and protect your data. We don't sell personal information to third parties.",
-  alternates: { canonical: "https://www.transitstats.co/privacy" },
+  alternates: { canonical: "https://www.transitstats.co/privacypolicy" },
   openGraph: {
     title: "Privacy Policy — Transit Stats",
     description:
       "Transit Stats privacy policy — how we collect, use, and protect your data. We don't sell personal information to third parties.",
-    url: "https://www.transitstats.co/privacy",
+    url: "https://www.transitstats.co/privacypolicy",
   },
 };
 

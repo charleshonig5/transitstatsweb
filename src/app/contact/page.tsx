@@ -39,7 +39,6 @@ export default function ContactPage() {
                   <li>- Found a bug</li>
                   <li>- Want to share your transit achievements</li>
                   <li>- Have ideas for new features</li>
-                  <li>- Just want to say hi</li>
                 </ul>
               </div>
             </div>
@@ -109,11 +108,11 @@ export default function ContactPage() {
           {/* Illustration */}
           <div className="hidden flex-1 items-center justify-center lg:flex">
             <Image
-              src="/images/about-contact-illustration.svg"
+              src="/images/about-contact-illustration.png"
               alt="Illustration of a person at a desk working on Transit Stats"
-              width={392}
-              height={392}
-              className="h-auto w-full max-w-[392px]"
+              width={480}
+              height={480}
+              className="h-auto w-full max-w-[480px]"
             />
           </div>
         </div>

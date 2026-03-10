@@ -100,7 +100,6 @@ export default function AboutPage() {
                   <li>- Found a bug</li>
                   <li>- Want to share your transit achievements</li>
                   <li>- Have ideas for new features</li>
-                  <li>- Just want to say hi</li>
                 </ul>
               </div>
             </div>
@@ -194,8 +193,11 @@ export default function AboutPage() {
             >
               <div className="flex flex-col gap-6">
                 {/* Quote mark */}
-                <div
-                  className="h-6 w-8 rounded-sm bg-brand"
+                <Image
+                  src="/images/quote.svg"
+                  alt=""
+                  width={32}
+                  height={24}
                   aria-hidden="true"
                 />
                 <p className="text-sm leading-6 text-dark md:text-base md:leading-7">

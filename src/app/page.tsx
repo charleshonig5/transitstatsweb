@@ -253,9 +253,9 @@ export default function Home() {
               Beyond the data
             </h2>
 
-            <div className="flex w-full flex-col gap-10">
+            <div className="flex w-full flex-col gap-10 md:gap-14">
               {/* Climate change */}
-              <article className="flex w-full flex-col gap-10 lg:flex-row lg:items-center lg:gap-20">
+              <article className="flex w-full flex-col gap-10 lg:flex-row lg:items-center lg:gap-14">
                 <div className="flex flex-1 flex-col gap-3.5">
                   <h3 className="text-2xl font-semibold leading-tight text-brand md:text-3xl lg:text-4xl">
                     Every transit ride fights climate change
@@ -284,7 +284,7 @@ export default function Home() {
               </article>
 
               {/* Supported cities */}
-              <article className="flex w-full flex-col gap-10 lg:flex-row lg:items-center lg:gap-20">
+              <article className="flex w-full flex-col gap-10 lg:flex-row lg:items-center lg:gap-14">
                 <div className="order-2 lg:order-1 w-full flex-1">
                   <Image
                     src="/images/illustration-cities.png"
@@ -312,7 +312,7 @@ export default function Home() {
               </article>
 
               {/* Data safety */}
-              <article className="flex w-full flex-col gap-10 lg:flex-row lg:items-center lg:gap-20">
+              <article className="flex w-full flex-col gap-10 lg:flex-row lg:items-center lg:gap-14">
                 <div className="flex flex-1 flex-col gap-3.5">
                   <h3 className="text-2xl font-semibold leading-tight text-brand md:text-3xl lg:text-4xl">
                     Data safety and security
