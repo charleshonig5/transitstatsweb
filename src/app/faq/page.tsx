@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "FAQ — Transit Stats",
@@ -15,43 +16,57 @@ export const metadata: Metadata = {
 
 const faqs = [
   {
-    icon: "🚃",
+    icon: "/images/emoji/emoji-train.svg",
+    iconW: 32,
+    iconH: 32,
     question: "How does ride tracking work?",
     answer:
       "You can start tracking a ride with one tap. The app uses GPS and nearby CTA data to automatically detect your line, direction, and stops in real-time. If you forget to track live, you can easily add rides manually later with our smart autofill feature that estimates time and distance using official CTA data.",
   },
   {
-    icon: "🔋",
+    icon: "/images/emoji/emoji-battery.svg",
+    iconW: 21,
+    iconH: 28,
     question: "Will this drain my battery?",
     answer:
       "No — Transit Stats is optimized for minimal battery usage. We use smart GPS polling that adapts to your movement and only tracks location during active rides. Most users see less than 2% additional battery drain per day, even with regular tracking.",
   },
   {
-    icon: "🔒",
+    icon: "/images/emoji/emoji-achievements.svg",
+    iconW: 44,
+    iconH: 44,
     question: "Is my data private?",
     answer:
       "Absolutely. Your location is only stored during active ride tracking and is never shared with third parties. All your personal data stays on your device and in your private account.",
   },
   {
-    icon: "🚌",
+    icon: "/images/emoji/emoji-bus.svg",
+    iconW: 32,
+    iconH: 32,
     question: "Do I need a Ventra account to use this app?",
     answer:
       "No — Transit Stats works independently. You don\u2019t need to connect your Ventra account to use the app.",
   },
   {
-    icon: "💵",
+    icon: "/images/emoji/emoji-free.svg",
+    iconW: 28,
+    iconH: 28,
     question: "Is Transit Stats free?",
     answer:
       "Yes — the entire core app is 100% free to use, including ride tracking, stats, achievements, and leaderboards. Transit Stats Pro ($2.99 one-time purchase) removes ads and supports continued development, but all features remain free forever.",
   },
   {
-    icon: "🏆",
+    icon: "/images/emoji/emoji-leaderboards.svg",
+    iconW: 44,
+    iconH: 44,
     question: "How often do leaderboards update?",
     answer:
       "Personal rankings update in real-time when you complete rides. Citywide leaderboards refresh hourly for all rankings to ensure fair competition.",
   },
   {
-    icon: "🚩",
+    icon: "/images/emoji/emoji-flag.svg",
+    iconW: 32,
+    iconH: 32,
     question: "Do I need to keep location services on?",
     answer:
       "You only need location services enabled if you want to use live tracking or track rides automatically in the background. If you prefer to add rides manually, you can turn off location services and still use all of Transit Stats\u2019 features like achievements, leaderboards, and ride history.",
@@ -61,6 +76,38 @@ const faqs = [
 export default function FAQPage() {
   return (
     <div className="rounded-b-[36px] bg-white">
+      {/* FAQPage structured data for Google rich snippets + AI search */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: faqs.map((faq) => ({
+              "@type": "Question",
+              name: faq.question,
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: faq.answer,
+              },
+            })),
+          }),
+        }}
+      />
+      {/* Breadcrumb structured data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://www.transitstats.co" },
+              { "@type": "ListItem", position: 2, name: "FAQ" },
+            ],
+          }),
+        }}
+      />
       <div className="container flex flex-col gap-16 py-10 md:py-[74px] lg:gap-20">
         {/* Heading */}
         <h1 className="text-3xl font-bold leading-[1.2] text-brand md:text-4xl lg:text-5xl lg:leading-[58px]">
@@ -72,13 +119,7 @@ export default function FAQPage() {
           {faqs.map((faq) => (
             <article key={faq.question} className="flex flex-col gap-3.5">
               <div className="flex items-center gap-5">
-                <span
-                  className="text-3xl"
-                  role="img"
-                  aria-hidden="true"
-                >
-                  {faq.icon}
-                </span>
+                <Image src={faq.icon} alt="" width={faq.iconW} height={faq.iconH} className="h-8 w-auto" aria-hidden="true" />
                 <h2 className="text-xl font-semibold leading-tight text-brand md:text-2xl lg:text-[28px]">
                   {faq.question}
                 </h2>

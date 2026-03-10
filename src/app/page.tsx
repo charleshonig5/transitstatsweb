@@ -14,6 +14,8 @@ export const metadata: Metadata = {
 const features = [
   {
     icon: "/images/emoji/emoji-tracking.svg",
+    iconW: 33,
+    iconH: 44,
     title: "Auto live tracking",
     body: (
       <>
@@ -29,6 +31,8 @@ const features = [
   },
   {
     icon: "/images/emoji/emoji-stats.svg",
+    iconW: 44,
+    iconH: 44,
     title: "In-depth stats",
     body: (
       <>
@@ -44,6 +48,8 @@ const features = [
   },
   {
     icon: "/images/emoji/emoji-leaderboards.svg",
+    iconW: 44,
+    iconH: 44,
     title: "City leaderboards",
     body: (
       <>
@@ -59,6 +65,8 @@ const features = [
   },
   {
     icon: "/images/emoji/emoji-history.svg",
+    iconW: 44,
+    iconH: 44,
     title: "Ride history",
     body: (
       <>
@@ -77,6 +85,8 @@ const features = [
   },
   {
     icon: "/images/emoji/emoji-achievements.svg",
+    iconW: 44,
+    iconH: 44,
     title: "Unlock achievements",
     body: (
       <>
@@ -123,11 +133,11 @@ export default function Home() {
                 {/* Badges */}
                 <div className="flex items-center gap-11">
                   <span className="flex items-center gap-2.5">
-                    <Image src="/images/emoji/emoji-free.svg" alt="" width={28} height={28} aria-hidden="true" />
+                    <Image src="/images/emoji/emoji-free.svg" alt="" width={28} height={28} className="h-7 w-auto" aria-hidden="true" />
                     <span className="text-sm text-dark md:text-base">Available for free</span>
                   </span>
                   <span className="flex items-center gap-2.5">
-                    <Image src="/images/emoji/emoji-battery.svg" alt="" width={28} height={28} aria-hidden="true" />
+                    <Image src="/images/emoji/emoji-battery.svg" alt="" width={21} height={28} className="h-7 w-auto" aria-hidden="true" />
                     <span className="text-sm text-dark md:text-base">Battery efficient</span>
                   </span>
                 </div>
@@ -207,7 +217,7 @@ export default function Home() {
                 {/* Text */}
                 <div className="order-1 w-full flex-1 flex flex-col gap-3.5 lg:order-none">
                   <div className="flex items-center gap-5">
-                    <Image src={feature.icon} alt="" width={36} height={36} aria-hidden="true" />
+                    <Image src={feature.icon} alt="" width={feature.iconW} height={feature.iconH} className="h-9 w-auto" aria-hidden="true" />
                     <h3 className="text-2xl font-semibold leading-tight text-white md:text-3xl lg:text-4xl">
                       {feature.title}
                     </h3>

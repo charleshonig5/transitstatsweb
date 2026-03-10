@@ -72,6 +72,13 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.transitstats.co",
   },
+  other: {
+    "apple-itunes-app": "app-id=6747690858",
+  },
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/images/apple-touch-icon.png",
+  },
 };
 
 export default function RootLayout({
@@ -82,6 +89,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        {/* MobileApplication structured data */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -93,6 +101,11 @@ export default function RootLayout({
               applicationCategory: "TravelApplication",
               description:
                 "Transit Stats turns your CTA rides into meaningful, personal data. Track rides automatically, view in-depth stats, climb city leaderboards, and measure your CO₂ savings.",
+              url: "https://www.transitstats.co",
+              downloadUrl: [
+                "https://apps.apple.com/us/app/transit-stats-cta-analytics/id6747690858",
+                "https://play.google.com/store/apps/details?id=com.mycompany.transitstatsapp",
+              ],
               offers: {
                 "@type": "Offer",
                 price: "0",
@@ -111,6 +124,35 @@ export default function RootLayout({
                 "Achievements system",
                 "CO₂ savings tracking",
               ],
+            }),
+          }}
+        />
+        {/* Organization structured data for AI search + brand knowledge */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "Transit Stats",
+              url: "https://www.transitstats.co",
+              logo: "https://www.transitstats.co/images/og-image.png",
+              description:
+                "Transit Stats turns your CTA rides into meaningful, personal data — showing your real metrics, environmental impact, and transit patterns. Built in Chicago.",
+              sameAs: [
+                "https://www.instagram.com/transitstats/",
+                "https://www.tiktok.com/@transitstats",
+              ],
+              contactPoint: {
+                "@type": "ContactPoint",
+                contactType: "customer support",
+                url: "https://www.transitstats.co/contact",
+              },
+              areaServed: {
+                "@type": "City",
+                name: "Chicago",
+                sameAs: "https://en.wikipedia.org/wiki/Chicago",
+              },
             }),
           }}
         />

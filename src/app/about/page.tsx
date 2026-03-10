@@ -50,6 +50,20 @@ const testimonials = [
 export default function AboutPage() {
   return (
     <div className="rounded-b-[36px] bg-white">
+      {/* Breadcrumb structured data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://www.transitstats.co" },
+              { "@type": "ListItem", position: 2, name: "About" },
+            ],
+          }),
+        }}
+      />
       {/* ── Hero: About heading + intro ── */}
       <section className="container flex flex-col gap-10 py-10 md:py-[74px] lg:flex-row lg:items-start lg:gap-24">
         {/* Heading */}

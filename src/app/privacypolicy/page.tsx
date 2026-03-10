@@ -19,6 +19,20 @@ export default function PrivacyPage() {
 
   return (
     <div className="rounded-b-[36px] bg-white">
+      {/* Breadcrumb structured data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://www.transitstats.co" },
+              { "@type": "ListItem", position: 2, name: "Privacy Policy" },
+            ],
+          }),
+        }}
+      />
       <div className="container flex flex-col gap-14 py-10 md:gap-20 md:py-[74px]">
         {/* Heading */}
         <h1 className="text-3xl font-semibold leading-[1.2] text-brand md:text-4xl lg:text-5xl lg:leading-[58px]">
