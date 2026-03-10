@@ -223,24 +223,14 @@ export default function Home() {
                   </p>
                 </div>
 
-                {/* Image with orange glow */}
-                <div className="relative h-[465px] w-full flex-1 flex items-center justify-center overflow-hidden">
-                  {/* Orange radial glow behind phone */}
-                  <div
-                    className="absolute h-[235px] w-[473px] rounded-[250px]"
-                    style={{
-                      background:
-                        "radial-gradient(ellipse 50% 50% at 50% 50%, #F7752C 0%, #FF5C00 100%)",
-                    }}
-                    aria-hidden="true"
-                  />
-                  {/* Export each feature graphic as a single image from Figma */}
+                {/* Image */}
+                <div className="w-full flex-1 flex items-center justify-center">
                   <Image
                     src={feature.image}
                     alt={feature.alt}
                     width={476}
                     height={465}
-                    className="relative z-10"
+                    className="h-auto w-full max-w-[476px]"
                   />
                 </div>
               </article>
