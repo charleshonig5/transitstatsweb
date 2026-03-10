@@ -121,6 +121,37 @@ export default function AboutPage() {
             {/* Social links */}
             <div className="flex flex-col gap-3.5">
               <a
+                href="mailto:contact@transitstats.co"
+                className="flex items-center gap-3.5 text-sm font-bold text-white transition-all duration-200 hover:translate-x-1 hover:scale-105 md:text-base"
+              >
+                {/* Email icon */}
+                <svg
+                  width="32"
+                  height="32"
+                  viewBox="0 0 32 32"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <rect
+                    x="3"
+                    y="6"
+                    width="26"
+                    height="20"
+                    rx="3"
+                    stroke="white"
+                    strokeWidth="2"
+                  />
+                  <path
+                    d="M3 9l13 9 13-9"
+                    stroke="white"
+                    strokeWidth="2"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+                contact@transitstats.co
+              </a>
+              <a
                 href="https://www.instagram.com/transitstats/"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -181,7 +212,7 @@ export default function AboutPage() {
           </div>
 
           {/* Illustration */}
-          <div className="hidden flex-1 items-center justify-center lg:flex">
+          <div className="flex flex-1 items-center justify-center">
             <Image
               src="/images/about-contact-illustration.png"
               alt="Illustration of a person at a desk working on Transit Stats"
