@@ -2,14 +2,14 @@ import type { Metadata } from "next";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Contact Us — Transit Stats",
+  title: "Contact Us — Transit Stats | Chicago's CTA Tracker App",
   description:
-    "Get in touch with the Transit Stats team. Built by Chicago riders, for Chicago riders. Send us feedback, report bugs, share achievements, or suggest new features.",
+    "Get in touch with the Transit Stats team — the makers of Chicago's favorite CTA tracker. Send us feedback about transit data, report bugs, share achievements, or suggest new features.",
   alternates: { canonical: "https://www.transitstats.co/contact" },
   openGraph: {
-    title: "Contact Us — Transit Stats",
+    title: "Contact Us — Transit Stats | Chicago's CTA Tracker App",
     description:
-      "Get in touch with the Transit Stats team. Built by Chicago riders, for Chicago riders. Send us feedback, report bugs, share achievements, or suggest new features.",
+      "Get in touch with the Transit Stats team — the makers of Chicago's favorite CTA tracker. Send us feedback about transit data, report bugs, share achievements, or suggest new features.",
     url: "https://www.transitstats.co/contact",
   },
 };
@@ -42,8 +42,9 @@ export default function ContactPage() {
               </h1>
               <div className="text-sm leading-6 text-white md:text-base md:leading-7">
                 <p>
-                  Let&rsquo;s chat! Transit Stats is built by Chicago riders,
-                  for Chicago riders. Your feedback shapes every update.
+                  Let&rsquo;s chat! Transit Stats is Chicago&rsquo;s favorite
+                  CTA tracker, built by riders, for riders. Your feedback
+                  shapes every update.
                 </p>
                 <p className="mt-4">
                   <strong>Reach out if you:</strong>

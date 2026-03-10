@@ -4,22 +4,26 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <footer>
-      <div className="container flex items-center justify-between py-[49px]">
-        {/* Left: logo icon + copyright */}
-        <div className="flex items-center justify-between gap-8 sm:gap-16">
-          <Image
-            src="/images/logomark.svg"
-            alt="Transit Stats"
-            width={42}
-            height={42}
-          />
+      <div className="container flex flex-col items-start gap-5 py-10 md:flex-row md:items-center md:justify-between md:py-[49px]">
+        <Image
+          src="/images/logomark.svg"
+          alt="Transit Stats"
+          width={42}
+          height={42}
+        />
 
-          <p className="text-base font-normal text-white">
-            Transit Stats {new Date().getFullYear()}. All rights reserved.
-          </p>
-        </div>
+        <nav className="flex items-center gap-6 text-base font-normal text-white" aria-label="Footer navigation">
+          <Link href="/" className="transition-opacity duration-200 hover:opacity-80">Home</Link>
+          <Link href="/about" className="transition-opacity duration-200 hover:opacity-80">About</Link>
+          <Link href="/faq" className="transition-opacity duration-200 hover:opacity-80">FAQ</Link>
+          <Link href="/contact" className="transition-opacity duration-200 hover:opacity-80">Contact</Link>
+        </nav>
 
-        {/* Right: privacy policy link */}
+        <p className="text-base font-normal text-white">
+          Transit Stats {new Date().getFullYear()}. All rights reserved.
+        </p>
+
+        {/* Privacy policy link */}
         <Link
           href="/privacypolicy"
           className="group flex items-center gap-2.5 text-base font-normal text-white transition-all duration-200 hover:translate-x-1"

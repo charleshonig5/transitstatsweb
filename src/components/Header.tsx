@@ -32,7 +32,7 @@ export default function Header() {
       }`}
     >
       <nav
-        className="container relative flex items-center justify-between py-2 md:py-7"
+        className="container relative flex items-center justify-between py-4 md:py-7"
         aria-label="Main navigation"
       >
         {/* Logo */}

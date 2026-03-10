@@ -2,14 +2,14 @@ import type { Metadata } from "next";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "About Transit Stats — Chicago's Personal CTA Analytics App",
+  title: "About Transit Stats — Chicago Transit Data & CTA Stats App",
   description:
-    "We built the first app that turns your public transit rides into personal analytics — showing your real metrics, environmental impact, and transit patterns. Built by CTA lovers, for CTA lovers.",
+    "Transit Stats is the first app that turns your CTA rides into personal transit data — showing your real CTA statistics, environmental impact, and Chicago transit patterns. Built by CTA riders, for CTA riders.",
   alternates: { canonical: "https://www.transitstats.co/about" },
   openGraph: {
-    title: "About Transit Stats — Chicago's Personal CTA Analytics App",
+    title: "About Transit Stats — Chicago Transit Data & CTA Stats App",
     description:
-      "We built the first app that turns your public transit rides into personal analytics — showing your real metrics, environmental impact, and transit patterns.",
+      "Transit Stats is the first app that turns your CTA rides into personal transit data — showing your real CTA statistics, environmental impact, and Chicago transit patterns.",
     url: "https://www.transitstats.co/about",
   },
 };
@@ -76,17 +76,17 @@ export default function AboutPage() {
         {/* Body copy */}
         <div className="flex-1 text-sm leading-6 text-dark md:text-base md:leading-7">
           <p>
-            We built the first app that turns your public transit rides into
-            personal analytics &ndash; showing your real metrics, environmental
-            impact, and transit patterns. It&rsquo;s like a fitness tracker,
-            but for your public transit usage.
+            We built the first app that turns your Chicago transit rides into
+            personal analytics &ndash; showing your real stats, environmental
+            impact, and CTA data you&rsquo;ve never had access to before.
+            It&rsquo;s like a fitness tracker, but for your transit usage.
           </p>
           <p className="mt-6">
             We started in Chicago because we have one of America&rsquo;s best
             transit systems.{" "}
             <strong>
-              Every train ride and bus trip deserves to be celebrated, tracked,
-              and rewarded.
+              Every CTA train ride and bus trip deserves to be celebrated,
+              tracked, and rewarded.
             </strong>
           </p>
         </div>

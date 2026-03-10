@@ -2,14 +2,14 @@ import type { Metadata } from "next";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "FAQ — Transit Stats",
+  title: "FAQ — Transit Stats | CTA Tracker & Chicago Transit Data Questions",
   description:
-    "Frequently asked questions about Transit Stats — how ride tracking works, battery usage, data privacy, Ventra compatibility, pricing, leaderboards, and location services.",
+    "Frequently asked questions about Transit Stats — Chicago's CTA tracker. Learn how ride tracking works, how we use CTA data, battery usage, data privacy, Ventra compatibility, and more.",
   alternates: { canonical: "https://www.transitstats.co/faq" },
   openGraph: {
-    title: "FAQ — Transit Stats",
+    title: "FAQ — Transit Stats | CTA Tracker & Chicago Transit Data Questions",
     description:
-      "Frequently asked questions about Transit Stats — how ride tracking works, battery usage, data privacy, Ventra compatibility, pricing, leaderboards, and location services.",
+      "Frequently asked questions about Transit Stats — Chicago's CTA tracker. Learn how ride tracking works, how we use CTA data, battery usage, data privacy, Ventra compatibility, and more.",
     url: "https://www.transitstats.co/faq",
   },
 };
@@ -21,7 +21,7 @@ const faqs = [
     iconH: 32,
     question: "How does ride tracking work?",
     answer:
-      "You can start tracking a ride with one tap. The app uses GPS and nearby CTA data to automatically detect your line, direction, and stops in real-time. If you forget to track live, you can easily add rides manually later with our smart autofill feature that estimates time and distance using official CTA data.",
+      "You can start tracking a ride with one tap. Transit Stats acts as your personal CTA tracker, using GPS and real-time CTA data to automatically detect your train line, bus route, direction, and stops as you ride. It works across all CTA L lines (Red, Blue, Brown, Green, Orange, Pink, Purple, and Yellow) and every CTA bus route in Chicago. If you forget to track live, you can easily add rides manually later with our smart autofill feature that estimates time and distance using official Chicago transit data.",
   },
   {
     icon: "/images/emoji/emoji-battery.svg",
@@ -29,7 +29,7 @@ const faqs = [
     iconH: 28,
     question: "Will this drain my battery?",
     answer:
-      "No — Transit Stats is optimized for minimal battery usage. We use smart GPS polling that adapts to your movement and only tracks location during active rides. Most users see less than 2% additional battery drain per day, even with regular tracking.",
+      "Nope. Transit Stats is optimized for minimal battery usage, even during long CTA commutes. We use smart GPS polling that adapts to your movement and only tracks location during active rides. Most users see less than 2% additional battery drain per day, even with regular Chicago transit tracking. The app is designed to run efficiently in the background so you can track every CTA ride without worrying about your phone dying before you reach your stop.",
   },
   {
     icon: "/images/emoji/emoji-achievements.svg",
@@ -37,7 +37,7 @@ const faqs = [
     iconH: 44,
     question: "Is my data private?",
     answer:
-      "Absolutely. Your location is only stored during active ride tracking and is never shared with third parties. All your personal data stays on your device and in your private account.",
+      "Absolutely. Your privacy is a top priority. Transit Stats only stores location data during active ride tracking and never shares your personal information with third parties. Your ride history, stats, and account data are kept private and secure. We don\u2019t sell your data to advertisers or data brokers. Period. You can also delete your account and all associated data at any time from within the app.",
   },
   {
     icon: "/images/emoji/emoji-bus.svg",
@@ -45,7 +45,7 @@ const faqs = [
     iconH: 32,
     question: "Do I need a Ventra account to use this app?",
     answer:
-      "No — Transit Stats works independently. You don\u2019t need to connect your Ventra account to use the app.",
+      "Nope. Transit Stats works completely independently from Ventra. You don\u2019t need to connect or link your Ventra card, Ventra account, or any payment method to use the app. While Ventra handles your CTA fare payments, Transit Stats focuses on something totally different: turning your Chicago transit rides into personal data and statistics. Think of it this way. Ventra gets you on the train. Transit Stats shows you what happens after you tap in, like how far you rode, how much CO\u2082 you saved, where you rank on city leaderboards, and your complete CTA ride history.",
   },
   {
     icon: "/images/emoji/emoji-free.svg",
@@ -53,7 +53,7 @@ const faqs = [
     iconH: 28,
     question: "Is Transit Stats free?",
     answer:
-      "Yes — the entire core app is 100% free to use, including ride tracking, stats, achievements, and leaderboards. Transit Stats Pro ($2.99 one-time purchase) removes ads and supports continued development, but all features remain free forever.",
+      "Yes! The entire core app is 100% free to use, including CTA ride tracking, in-depth stats, achievements, and city leaderboards. You get full access to all your transit data without paying a cent. Transit Stats Pro ($2.99 one-time purchase) removes ads and supports continued development, but every feature stays free forever. We believe every Chicago rider deserves access to their own stats.",
   },
   {
     icon: "/images/emoji/emoji-leaderboards.svg",
@@ -61,7 +61,7 @@ const faqs = [
     iconH: 44,
     question: "How often do leaderboards update?",
     answer:
-      "Personal rankings update in real-time when you complete rides. Citywide leaderboards refresh hourly for all rankings to ensure fair competition.",
+      "Your personal stats and rankings update in real-time the moment you complete a ride. Citywide leaderboards refresh hourly to ensure fair competition across all Chicago riders. You can filter by time period (weekly, monthly, yearly, and all-time) to see where you stack up in categories like most CTA trips, greatest distance, and most CO\u2082 saved.",
   },
   {
     icon: "/images/emoji/emoji-flag.svg",
@@ -69,7 +69,7 @@ const faqs = [
     iconH: 32,
     question: "Do I need to keep location services on?",
     answer:
-      "You only need location services enabled if you want to use live tracking or track rides automatically in the background. If you prefer to add rides manually, you can turn off location services and still use all of Transit Stats\u2019 features like achievements, leaderboards, and ride history.",
+      "Only if you want to use live CTA ride tracking. When location services are on, Transit Stats can automatically detect when you board a CTA train or bus and track your ride in real-time. If you prefer to add rides manually, you can turn off location services and still use all of Transit Stats\u2019 features like achievements, leaderboards, transit stats, and ride history. Either way, your Chicago transit data stays private and location is never tracked when you\u2019re not actively using the app.",
   },
 ];
 
@@ -111,7 +111,7 @@ export default function FAQPage() {
       <div className="container flex flex-col gap-16 py-10 md:py-[74px] lg:gap-20">
         {/* Heading */}
         <h1 className="text-4xl font-bold leading-[1.2] text-brand md:text-5xl lg:text-6xl lg:leading-[72px]">
-          FAQ
+          Transit Stats FAQ
         </h1>
 
         {/* FAQ items */}

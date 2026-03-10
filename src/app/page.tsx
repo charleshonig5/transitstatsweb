@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Transit Stats — CTA Transit Analytics Made Personal",
+  title: "Transit Stats — Chicago Transit Data & CTA Statistics Made Personal",
   description:
-    "Transit Stats turns your CTA rides into meaningful, personal data. Auto-track rides, view stats, climb leaderboards, unlock achievements, and measure your CO₂ savings. Free on iOS and Android.",
+    "Transit Stats is the ultimate CTA tracker — turning your Chicago transit rides into personal data and CTA stats. Auto-track rides, view in-depth transit data, climb leaderboards, and measure your CO₂ savings. Free on iOS and Android.",
   alternates: { canonical: "https://www.transitstats.co" },
 };
 
@@ -19,32 +19,32 @@ const features = [
     title: "Auto live tracking",
     body: (
       <>
-        One tap starts the magic. Transit Stats{" "}
-        <strong>automatically tracks your public transit ride in real-time</strong>,
-        logging distance, time, and route details as you go. Smart GPS detects
-        your line and stops, and we handle everything else with
-        battery-optimized tracking that never gets in your way.
+        One tap starts the magic. Transit Stats is a{" "}
+        <strong>CTA tracker that automatically logs your ride in real-time</strong>,
+        capturing distance, time, and route details as you go. Smart GPS detects
+        your line and stops across Chicago transit, and we handle everything
+        else with battery-optimized tracking that never gets in your way.
       </>
     ),
     image: "/images/feature-tracking.png",
-    alt: "Auto live tracking feature showing real-time ride logging with distance, time, and route details",
+    alt: "CTA tracker feature showing real-time Chicago transit ride logging with distance, time, and route details",
   },
   {
     icon: "/images/emoji/emoji-stats.svg",
     iconW: 44,
     iconH: 44,
-    title: "In-depth stats",
+    title: "In-depth CTA stats",
     body: (
       <>
-        See how your daily commutes add up. Track your{" "}
+        See how your daily commutes add up with detailed CTA statistics. Track your{" "}
         <strong>total distance, ride time, number of trips, CO₂ emissions saved,</strong>{" "}
-        and even your <strong>most used line.</strong> Compare trends over time
-        with weekly, monthly, and yearly views — all personalized to your
-        transit habits.
+        and even your <strong>most used line.</strong> Compare your Chicago transit data
+        over time with weekly, monthly, and yearly views, all personalized to
+        your transit habits.
       </>
     ),
     image: "/images/feature-stats.png",
-    alt: "In-depth stats showing total distance, ride time, trips, CO₂ saved, and most used CTA line",
+    alt: "In-depth CTA statistics dashboard showing transit data including distance, ride time, trips, and CO₂ saved",
   },
   {
     icon: "/images/emoji/emoji-leaderboards.svg",
@@ -61,7 +61,7 @@ const features = [
       </>
     ),
     image: "/images/feature-leaderboards.png",
-    alt: "City leaderboards showing rankings for most trips, greatest distance, and most emissions saved",
+    alt: "Chicago transit leaderboards showing CTA rider rankings for trips, distance, and emissions saved",
   },
   {
     icon: "/images/emoji/emoji-history.svg",
@@ -81,7 +81,7 @@ const features = [
       </>
     ),
     image: "/images/feature-history.png",
-    alt: "Ride history with complete list of past rides, coverage map, and stops visited across Chicago's transit network",
+    alt: "CTA ride history showing past trips, coverage map, and stops visited across Chicago's transit network",
   },
   {
     icon: "/images/emoji/emoji-achievements.svg",
@@ -99,7 +99,7 @@ const features = [
       </>
     ),
     image: "/images/feature-achievements.png",
-    alt: "Achievements system with transit milestones, ride streaks, and CTA line mastery badges",
+    alt: "Transit Stats achievements system with CTA milestones, ride streaks, and Chicago transit line mastery badges",
   },
 ];
 
@@ -115,18 +115,19 @@ export default function Home() {
               <div className="flex flex-col gap-6">
                 <div className="flex flex-col gap-6">
                   <h1 className="text-4xl font-bold leading-[1.2] text-brand md:text-5xl lg:text-6xl lg:leading-[72px]">
-                    CTA transit analytics{" "}
+                    CTA transit data{" "}
                     <span className="font-normal">made personal</span>
                   </h1>
                   <p className="text-sm text-dark md:text-base">
                     <strong>
-                      Transit Stats turns your public transit rides into
-                      meaningful, personal data.{" "}
+                      Transit Stats turns your CTA rides into meaningful,
+                      personal data.{" "}
                     </strong>
-                    Every transit ride saves you money and helps the
+                    Every ride on Chicago transit saves you money and helps the
                     environment, and Transit Stats shows you exactly how much.
-                    Plus, you get city leaderboards, achievements, ride history,
-                    and in-depth insights you&apos;ve never seen before!
+                    Get detailed CTA statistics, city leaderboards, achievements,
+                    ride history, and in-depth transit data you&apos;ve never
+                    seen before!
                   </p>
                 </div>
 
@@ -185,7 +186,7 @@ export default function Home() {
             <div className="w-full lg:flex-1">
               <Image
                 src="/images/hero-phones.png"
-                alt="Transit Stats app screens showing live ride tracking, ride history, coverage map, and CTA service alerts"
+                alt="Transit Stats CTA tracker app showing Chicago transit data, live ride tracking, ride history, and coverage map"
                 width={769}
                 height={683}
                 className="h-auto w-full"
@@ -279,7 +280,7 @@ export default function Home() {
                   {/* Export illustration from Figma as SVG/PNG */}
                   <Image
                     src="/images/illustration-climate.png"
-                    alt="Illustration of data analytics showing CO₂ savings from choosing public transit over driving"
+                    alt="Chicago transit CO₂ savings illustration showing environmental impact of CTA rides versus driving"
                     width={365}
                     height={311}
                     className="h-auto w-full max-w-[420px] mx-auto transition-transform duration-300 hover:scale-105"
@@ -292,7 +293,7 @@ export default function Home() {
                 <div className="order-2 lg:order-1 w-full flex-1">
                   <Image
                     src="/images/illustration-cities.png"
-                    alt="Illustration of a CTA bus and Chicago cityscape representing supported transit systems"
+                    alt="CTA bus and Chicago cityscape illustration representing supported Chicago transit systems"
                     width={329}
                     height={311}
                     className="h-auto w-full max-w-[420px] mx-auto transition-transform duration-300 hover:scale-105"
@@ -303,14 +304,11 @@ export default function Home() {
                     Supported cities
                   </h3>
                   <p className="text-sm text-dark md:text-base">
-                    When you choose the train or bus over driving, you&apos;re
-                    making a difference.{" "}
-                    <strong>
-                      Transit Stats shows you exactly how much CO₂ you save
-                      with every ride
-                    </strong>{" "}
-                    – and how Chicago riders are collectively helping the
-                    planet.
+                    Transit Stats currently supports{" "}
+                    <strong>Chicago transit — including every CTA train line and bus route.</strong>{" "}
+                    We pull real-time CTA data to power ride tracking, stats,
+                    and leaderboards across the entire network. More cities
+                    coming soon.
                   </p>
                 </div>
               </article>

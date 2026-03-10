@@ -13,16 +13,22 @@ const notoSans = Noto_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.transitstats.co"),
   title: {
-    default: "Transit Stats — CTA Transit Analytics Made Personal",
+    default: "Transit Stats — Chicago Transit Data & CTA Statistics Made Personal",
     template: "%s | Transit Stats",
   },
   description:
-    "Transit Stats turns your CTA rides into meaningful, personal data. Track rides, view stats, climb leaderboards, and see your CO₂ savings — all for free.",
+    "Transit Stats is the ultimate CTA tracker — turning your Chicago transit rides into personal CTA data and statistics. Track rides, view in-depth CTA stats, climb leaderboards, and see your CO₂ savings — all for free.",
   keywords: [
-    "CTA",
-    "Chicago transit",
-    "transit tracker",
+    "transit stats",
+    "transit data",
+    "CTA stats",
+    "CTA data",
+    "CTA statistics",
     "CTA tracker",
+    "Chicago transit",
+    "Chicago transit data",
+    "CTA",
+    "transit tracker",
     "public transit analytics",
     "ride history",
     "transit leaderboard",
@@ -39,23 +45,23 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://www.transitstats.co",
     siteName: "Transit Stats",
-    title: "Transit Stats — CTA Transit Analytics Made Personal",
+    title: "Transit Stats — Chicago Transit Data & CTA Statistics Made Personal",
     description:
-      "Track your CTA rides, view in-depth stats, climb city leaderboards, and measure your CO₂ impact. Free for iOS and Android.",
+      "The best CTA tracker app — view Chicago transit data, in-depth CTA stats, city leaderboards, and measure your CO₂ impact. Free for iOS and Android.",
     images: [
       {
         url: "/images/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Transit Stats — CTA Transit Analytics Made Personal",
+        alt: "Transit Stats — Chicago Transit Data & CTA Statistics Made Personal",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Transit Stats — CTA Transit Analytics Made Personal",
+    title: "Transit Stats — Chicago Transit Data & CTA Statistics Made Personal",
     description:
-      "Track your CTA rides, view in-depth stats, climb city leaderboards, and measure your CO₂ impact.",
+      "The best CTA tracker app — view Chicago transit data, in-depth CTA stats, city leaderboards, and measure your CO₂ impact.",
     images: ["/images/og-image.png"],
   },
   robots: {
@@ -100,7 +106,7 @@ export default function RootLayout({
               operatingSystem: "iOS, Android",
               applicationCategory: "TravelApplication",
               description:
-                "Transit Stats turns your CTA rides into meaningful, personal data. Track rides automatically, view in-depth stats, climb city leaderboards, and measure your CO₂ savings.",
+                "Transit Stats is the best CTA tracker app for Chicago transit. View personal CTA stats and transit data, auto-track rides, climb city leaderboards, unlock achievements, and measure your CO₂ savings.",
               url: "https://www.transitstats.co",
               downloadUrl: [
                 "https://apps.apple.com/us/app/transit-stats-cta-analytics/id6747690858",
@@ -127,6 +133,19 @@ export default function RootLayout({
             }),
           }}
         />
+        {/* WebSite structured data for sitelinks searchbox */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              name: "Transit Stats",
+              alternateName: ["CTA Tracker", "Chicago Transit Data"],
+              url: "https://www.transitstats.co",
+            }),
+          }}
+        />
         {/* Organization structured data for AI search + brand knowledge */}
         <script
           type="application/ld+json"
@@ -138,7 +157,7 @@ export default function RootLayout({
               url: "https://www.transitstats.co",
               logo: "https://www.transitstats.co/images/og-image.png",
               description:
-                "Transit Stats turns your CTA rides into meaningful, personal data — showing your real metrics, environmental impact, and transit patterns. Built in Chicago.",
+                "Transit Stats is a Chicago transit data app that turns your CTA rides into personal statistics — showing real CTA stats, environmental impact, and transit patterns. The leading CTA tracker built in Chicago.",
               sameAs: [
                 "https://www.instagram.com/transitstats/",
                 "https://www.tiktok.com/@transitstats",
