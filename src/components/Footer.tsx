@@ -22,7 +22,7 @@ export default function Footer() {
         {/* Right: privacy policy link */}
         <Link
           href="/privacypolicy"
-          className="flex items-center gap-2.5 text-base font-normal text-white transition-colors hover:text-white/80"
+          className="group flex items-center gap-2.5 text-base font-normal text-white transition-all duration-200 hover:translate-x-1"
         >
           Privacy policy
           {/* Arrow icon */}
@@ -33,6 +33,7 @@ export default function Footer() {
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
             aria-hidden="true"
+            className="transition-transform duration-200 group-hover:translate-x-1"
           >
             <path
               d="M4 10H16M16 10L11 5M16 10L11 15"

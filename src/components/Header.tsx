@@ -55,7 +55,7 @@ export default function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`text-base ${isActive ? "font-bold" : "font-normal"} text-brand transition-colors hover:text-brand-dark`}
+                className={`text-base ${isActive ? "font-bold" : "font-normal"} text-brand transition-all duration-200 hover:scale-105 hover:text-brand-dark`}
               >
                 {link.label}
               </Link>
@@ -66,7 +66,7 @@ export default function Header() {
         {/* Desktop nav — button far right */}
         <Link
           href="/contact"
-          className="hidden h-10 w-36 items-center justify-center rounded-[66px] bg-brand text-base font-semibold text-white transition-colors hover:bg-brand-dark md:flex"
+          className="hidden h-10 w-36 items-center justify-center rounded-[66px] bg-brand text-base font-semibold text-white transition-all duration-200 hover:scale-105 hover:shadow-[0_4px_16px_rgba(247,117,44,0.4)] md:flex"
         >
           Contact us
         </Link>

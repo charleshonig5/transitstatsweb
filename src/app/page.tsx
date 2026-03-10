@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 /* ------------------------------------------------------------------ */
 const features = [
   {
-    icon: "🚦",
+    icon: "/images/emoji/emoji-tracking.svg",
     title: "Auto live tracking",
     body: (
       <>
@@ -28,7 +28,7 @@ const features = [
     alt: "Auto live tracking feature showing real-time ride logging with distance, time, and route details",
   },
   {
-    icon: "📊",
+    icon: "/images/emoji/emoji-stats.svg",
     title: "In-depth stats",
     body: (
       <>
@@ -43,7 +43,7 @@ const features = [
     alt: "In-depth stats showing total distance, ride time, trips, CO₂ saved, and most used CTA line",
   },
   {
-    icon: "🏆",
+    icon: "/images/emoji/emoji-leaderboards.svg",
     title: "City leaderboards",
     body: (
       <>
@@ -58,7 +58,7 @@ const features = [
     alt: "City leaderboards showing rankings for most trips, greatest distance, and most emissions saved",
   },
   {
-    icon: "📓",
+    icon: "/images/emoji/emoji-history.svg",
     title: "Ride history",
     body: (
       <>
@@ -76,7 +76,7 @@ const features = [
     alt: "Ride history with complete list of past rides, coverage map, and stops visited across Chicago's transit network",
   },
   {
-    icon: "🔓",
+    icon: "/images/emoji/emoji-achievements.svg",
     title: "Unlock achievements",
     body: (
       <>
@@ -123,19 +123,11 @@ export default function Home() {
                 {/* Badges */}
                 <div className="flex items-center gap-11">
                   <span className="flex items-center gap-2.5">
-                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
-                      <rect x="2" y="6" width="24" height="16" rx="3" fill="#16a34a" />
-                      <rect x="6" y="9" width="4" height="8" rx="1" fill="white" />
-                      <rect x="12" y="6" width="4" height="14" rx="1" fill="#F7752C" />
-                    </svg>
+                    <Image src="/images/emoji/emoji-free.svg" alt="" width={28} height={28} aria-hidden="true" />
                     <span className="text-sm text-dark md:text-base">Available for free</span>
                   </span>
                   <span className="flex items-center gap-2.5">
-                    <svg width="20" height="28" viewBox="0 0 20 28" fill="none" aria-hidden="true">
-                      <rect x="4" y="5" width="12" height="22" rx="3" fill="#16a34a" />
-                      <rect x="4" y="1" width="12" height="6" rx="2" fill="#84cc16" />
-                      <circle cx="10" cy="13" r="3" fill="white" />
-                    </svg>
+                    <Image src="/images/emoji/emoji-battery.svg" alt="" width={28} height={28} aria-hidden="true" />
                     <span className="text-sm text-dark md:text-base">Battery efficient</span>
                   </span>
                 </div>
@@ -144,8 +136,10 @@ export default function Home() {
               {/* App Store buttons */}
               <div className="flex gap-6">
                 <a
-                  href="#"
-                  className="flex items-center gap-3 whitespace-nowrap rounded-[100px] bg-brand px-6 py-3 text-white transition-colors hover:bg-brand-dark"
+                  href="https://apps.apple.com/us/app/transit-stats-cta-analytics/id6747690858"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 whitespace-nowrap rounded-[100px] bg-brand px-6 py-3 text-white transition-all duration-200 hover:scale-105 hover:shadow-[0_4px_20px_rgba(247,117,44,0.4)]"
                   aria-label="Download Transit Stats on the App Store"
                 >
                   <svg width="32" height="38" viewBox="0 0 32 38" fill="currentColor" aria-hidden="true">
@@ -157,8 +151,10 @@ export default function Home() {
                   </span>
                 </a>
                 <a
-                  href="#"
-                  className="flex items-center gap-3 whitespace-nowrap rounded-[100px] bg-brand px-6 py-3 text-white transition-colors hover:bg-brand-dark"
+                  href="https://play.google.com/store/apps/details?id=com.mycompany.transitstatsapp"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 whitespace-nowrap rounded-[100px] bg-brand px-6 py-3 text-white transition-all duration-200 hover:scale-105 hover:shadow-[0_4px_20px_rgba(247,117,44,0.4)]"
                   aria-label="Get Transit Stats on Google Play"
                 >
                   <svg width="34" height="38" viewBox="0 0 34 38" fill="none" aria-hidden="true">
@@ -211,9 +207,7 @@ export default function Home() {
                 {/* Text */}
                 <div className="order-1 w-full flex-1 flex flex-col gap-3.5 lg:order-none">
                   <div className="flex items-center gap-5">
-                    <span className="text-4xl" role="img" aria-hidden="true">
-                      {feature.icon}
-                    </span>
+                    <Image src={feature.icon} alt="" width={36} height={36} aria-hidden="true" />
                     <h3 className="text-2xl font-semibold leading-tight text-white md:text-3xl lg:text-4xl">
                       {feature.title}
                     </h3>
@@ -230,7 +224,7 @@ export default function Home() {
                     alt={feature.alt}
                     width={744}
                     height={727}
-                    className="h-auto w-full max-w-[744px]"
+                    className="h-auto w-full max-w-[744px] transition-transform duration-300 hover:scale-[1.03]"
                   />
                 </div>
               </article>
@@ -278,7 +272,7 @@ export default function Home() {
                     alt="Illustration of data analytics showing CO₂ savings from choosing public transit over driving"
                     width={365}
                     height={311}
-                    className="h-auto w-full max-w-[365px] mx-auto"
+                    className="h-auto w-full max-w-[365px] mx-auto transition-transform duration-300 hover:scale-105"
                   />
                 </div>
               </article>
@@ -291,7 +285,7 @@ export default function Home() {
                     alt="Illustration of a CTA bus and Chicago cityscape representing supported transit systems"
                     width={329}
                     height={311}
-                    className="h-auto w-full max-w-[329px] mx-auto"
+                    className="h-auto w-full max-w-[329px] mx-auto transition-transform duration-300 hover:scale-105"
                   />
                 </div>
                 <div className="order-1 lg:order-2 flex flex-1 flex-col gap-3.5">
@@ -336,7 +330,7 @@ export default function Home() {
                     alt="Shield and lock illustration representing data privacy and industry-standard security protection"
                     width={365}
                     height={311}
-                    className="h-auto w-full max-w-[365px] mx-auto"
+                    className="h-auto w-full max-w-[365px] mx-auto transition-transform duration-300 hover:scale-105"
                   />
                 </div>
               </article>

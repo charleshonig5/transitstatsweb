@@ -46,10 +46,10 @@ export default function ContactPage() {
             {/* Social links */}
             <div className="flex flex-col gap-3.5">
               <a
-                href="https://instagram.com/transitstats"
+                href="https://www.instagram.com/transitstats/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3.5 text-sm font-bold text-white transition-opacity hover:opacity-80 md:text-base"
+                className="flex items-center gap-3.5 text-sm font-bold text-white transition-all duration-200 hover:translate-x-1 hover:scale-105 md:text-base"
               >
                 {/* Instagram icon */}
                 <svg
@@ -81,10 +81,10 @@ export default function ContactPage() {
                 @transitstats
               </a>
               <a
-                href="https://tiktok.com/@transitstats"
+                href="https://www.tiktok.com/@transitstats"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3.5 text-sm font-bold text-white transition-opacity hover:opacity-80 md:text-base"
+                className="flex items-center gap-3.5 text-sm font-bold text-white transition-all duration-200 hover:translate-x-1 hover:scale-105 md:text-base"
               >
                 {/* TikTok icon */}
                 <svg
