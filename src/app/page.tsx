@@ -192,7 +192,7 @@ export default function Home() {
 
       {/* ===== FEATURES (on orange gradient bg) ===== */}
       <section
-        className="py-10 md:py-14"
+        className="py-10 md:py-[74px]"
         aria-labelledby="features-heading"
       >
         <h2 id="features-heading" className="sr-only">
@@ -228,9 +228,9 @@ export default function Home() {
                   <Image
                     src={feature.image}
                     alt={feature.alt}
-                    width={620}
-                    height={606}
-                    className="h-auto w-full max-w-[620px]"
+                    width={744}
+                    height={727}
+                    className="h-auto w-full max-w-[744px]"
                   />
                 </div>
               </article>
@@ -241,7 +241,7 @@ export default function Home() {
 
       {/* ===== BEYOND THE DATA (full-bleed white, rounded top corners) ===== */}
       <section
-        className="w-full rounded-[36px] bg-white py-10 md:py-14"
+        className="w-full rounded-[36px] bg-white py-10 md:py-[74px]"
         style={{ boxShadow: "0 0 55px rgba(0, 0, 0, 0.16)" }}
         aria-labelledby="beyond-heading"
       >

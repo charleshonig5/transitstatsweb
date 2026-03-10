@@ -51,7 +51,7 @@ export default function AboutPage() {
   return (
     <div className="rounded-b-[36px] bg-white">
       {/* ── Hero: About heading + intro ── */}
-      <section className="container flex flex-col gap-10 py-10 md:py-14 lg:flex-row lg:items-start lg:gap-24">
+      <section className="container flex flex-col gap-10 py-10 md:py-[74px] lg:flex-row lg:items-start lg:gap-24">
         {/* Heading */}
         <h1 className="shrink-0 text-3xl leading-[1.2] text-brand md:text-4xl lg:text-5xl lg:leading-[58px]">
           <span className="font-bold">About</span>
@@ -79,7 +79,7 @@ export default function AboutPage() {
       </section>
 
       {/* ── Contact us card ── */}
-      <section className="container py-10 md:py-14" aria-label="Contact us">
+      <section className="container py-10 md:py-[74px]" aria-label="Contact us">
         <div className="flex flex-col gap-10 overflow-hidden rounded-[36px] bg-gradient-to-b from-brand to-brand-dark p-8 shadow-[0_0_30px_rgba(0,0,0,0.08)] md:p-14 lg:flex-row lg:items-start lg:gap-20 lg:p-[60px]">
           {/* Copy */}
           <div className="flex flex-1 flex-col gap-10">
@@ -181,7 +181,7 @@ export default function AboutPage() {
       </section>
 
       {/* ── Testimonials ── */}
-      <section className="container flex flex-col gap-10 py-10 md:py-14">
+      <section className="container flex flex-col gap-10 py-10 md:py-[74px]">
         <h2 className="text-2xl font-semibold text-brand md:text-3xl lg:text-4xl">
           What our users are saying
         </h2>

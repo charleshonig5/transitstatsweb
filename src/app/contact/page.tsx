@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <div className="rounded-b-[36px] bg-white">
-      <div className="container py-10 md:py-14">
+      <div className="container py-10 md:py-[74px]">
         {/* Orange contact card */}
         <div className="flex flex-col gap-10 overflow-hidden rounded-[36px] bg-gradient-to-b from-brand to-brand-dark p-8 shadow-[0_0_30px_rgba(0,0,0,0.08)] md:p-14 lg:flex-row lg:items-start lg:gap-20 lg:p-[60px]">
           {/* Copy */}

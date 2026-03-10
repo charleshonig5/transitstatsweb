@@ -61,7 +61,7 @@ const faqs = [
 export default function FAQPage() {
   return (
     <div className="rounded-b-[36px] bg-white">
-      <div className="container flex flex-col gap-16 py-10 md:py-14 lg:gap-20">
+      <div className="container flex flex-col gap-16 py-10 md:py-[74px] lg:gap-20">
         {/* Heading */}
         <h1 className="text-3xl font-bold leading-[1.2] text-brand md:text-4xl lg:text-5xl lg:leading-[58px]">
           FAQ
