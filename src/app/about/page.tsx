@@ -67,7 +67,7 @@ export default function AboutPage() {
       {/* ── Hero: About heading + intro ── */}
       <section className="container flex flex-col gap-10 py-10 md:py-[74px] lg:flex-row lg:items-start lg:gap-24">
         {/* Heading */}
-        <h1 className="shrink-0 text-3xl leading-[1.2] text-brand md:text-4xl lg:text-5xl lg:leading-[58px]">
+        <h1 className="shrink-0 text-4xl leading-[1.2] text-brand md:text-5xl lg:text-6xl lg:leading-[72px]">
           <span className="font-bold">About</span>
           <br />
           <span className="font-normal">Transit Stats</span>
@@ -98,7 +98,7 @@ export default function AboutPage() {
           {/* Copy */}
           <div className="flex flex-1 flex-col gap-10">
             <div className="flex flex-col gap-3.5">
-              <h2 className="text-2xl font-semibold text-white md:text-3xl lg:text-4xl">
+              <h2 className="text-3xl font-semibold text-white md:text-4xl lg:text-5xl">
                 Contact us
               </h2>
               <div className="text-sm leading-6 text-white md:text-base md:leading-7">
@@ -195,7 +195,7 @@ export default function AboutPage() {
 
       {/* ── Testimonials ── */}
       <section className="container flex flex-col gap-10 py-10 md:py-[74px]">
-        <h2 className="text-2xl font-semibold text-brand md:text-3xl lg:text-4xl">
+        <h2 className="text-3xl font-semibold text-brand md:text-4xl lg:text-5xl">
           What our users are saying
         </h2>
 

@@ -114,7 +114,7 @@ export default function Home() {
             <div className="w-full flex flex-col gap-12 lg:shrink-0 lg:basis-[38%]">
               <div className="flex flex-col gap-6">
                 <div className="flex flex-col gap-6">
-                  <h1 className="text-3xl font-bold leading-[1.2] text-brand md:text-4xl lg:text-5xl lg:leading-[58px]">
+                  <h1 className="text-4xl font-bold leading-[1.2] text-brand md:text-5xl lg:text-6xl lg:leading-[72px]">
                     CTA transit analytics{" "}
                     <span className="font-normal">made personal</span>
                   </h1>
@@ -252,7 +252,7 @@ export default function Home() {
         <div className="container flex flex-col gap-10">
             <h2
               id="beyond-heading"
-              className="text-center text-2xl font-bold text-brand md:text-3xl lg:text-4xl"
+              className="text-center text-3xl font-bold text-brand md:text-4xl lg:text-5xl"
             >
               Beyond the data
             </h2>
@@ -282,7 +282,7 @@ export default function Home() {
                     alt="Illustration of data analytics showing CO₂ savings from choosing public transit over driving"
                     width={365}
                     height={311}
-                    className="h-auto w-full max-w-[365px] mx-auto transition-transform duration-300 hover:scale-105"
+                    className="h-auto w-full max-w-[420px] mx-auto transition-transform duration-300 hover:scale-105"
                   />
                 </div>
               </article>
@@ -295,7 +295,7 @@ export default function Home() {
                     alt="Illustration of a CTA bus and Chicago cityscape representing supported transit systems"
                     width={329}
                     height={311}
-                    className="h-auto w-full max-w-[329px] mx-auto transition-transform duration-300 hover:scale-105"
+                    className="h-auto w-full max-w-[420px] mx-auto transition-transform duration-300 hover:scale-105"
                   />
                 </div>
                 <div className="order-1 lg:order-2 flex flex-1 flex-col gap-3.5">
@@ -340,7 +340,7 @@ export default function Home() {
                     alt="Shield and lock illustration representing data privacy and industry-standard security protection"
                     width={365}
                     height={311}
-                    className="h-auto w-full max-w-[365px] mx-auto transition-transform duration-300 hover:scale-105"
+                    className="h-auto w-full max-w-[420px] mx-auto transition-transform duration-300 hover:scale-105"
                   />
                 </div>
               </article>

@@ -35,7 +35,7 @@ export default function PrivacyPage() {
       />
       <div className="container flex flex-col gap-14 py-10 md:gap-20 md:py-[74px]">
         {/* Heading */}
-        <h1 className="text-3xl font-semibold leading-[1.2] text-brand md:text-4xl lg:text-5xl lg:leading-[58px]">
+        <h1 className="text-4xl font-semibold leading-[1.2] text-brand md:text-5xl lg:text-6xl lg:leading-[72px]">
           Privacy policy
         </h1>
 

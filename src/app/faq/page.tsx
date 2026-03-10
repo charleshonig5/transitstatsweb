@@ -110,7 +110,7 @@ export default function FAQPage() {
       />
       <div className="container flex flex-col gap-16 py-10 md:py-[74px] lg:gap-20">
         {/* Heading */}
-        <h1 className="text-3xl font-bold leading-[1.2] text-brand md:text-4xl lg:text-5xl lg:leading-[58px]">
+        <h1 className="text-4xl font-bold leading-[1.2] text-brand md:text-5xl lg:text-6xl lg:leading-[72px]">
           FAQ
         </h1>
 
@@ -120,7 +120,7 @@ export default function FAQPage() {
             <article key={faq.question} className="flex flex-col gap-3.5">
               <div className="flex items-center gap-5">
                 <Image src={faq.icon} alt="" width={faq.iconW} height={faq.iconH} className="h-8 w-auto" aria-hidden="true" />
-                <h2 className="text-xl font-semibold leading-tight text-brand md:text-2xl lg:text-[28px]">
+                <h2 className="text-2xl font-semibold leading-tight text-brand md:text-3xl lg:text-4xl">
                   {faq.question}
                 </h2>
               </div>
