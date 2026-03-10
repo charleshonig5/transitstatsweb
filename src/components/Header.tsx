@@ -37,12 +37,11 @@ export default function Header() {
       >
         {/* Logo */}
         <Link href="/" aria-label="Transit Stats home" className="shrink-0">
-          {/* Replace with exported SVG from Figma — drop it at /public/images/logo.svg */}
           <Image
             src="/images/logo.svg"
             alt="Transit Stats"
-            width={240}
-            height={36}
+            width={186}
+            height={29}
             priority
           />
         </Link>

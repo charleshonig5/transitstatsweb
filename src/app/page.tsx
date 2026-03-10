@@ -97,11 +97,11 @@ export default function Home() {
   return (
     <>
       {/* ===== HERO (white, rounded bottom to reveal orange) ===== */}
-      <div className="rounded-b-[36px] bg-white">
-        <section className="relative overflow-hidden py-10 md:py-14">
-          <div className="container flex flex-col gap-12 lg:flex-row lg:items-center lg:gap-20">
+      <div className="overflow-hidden rounded-b-[36px] bg-white">
+        <section className="relative pt-10 pb-10 md:pt-14 md:pb-[74px]">
+          <div className="container flex flex-col gap-12 lg:flex-row lg:items-center lg:gap-10">
             {/* Left — copy */}
-            <div className="w-full flex-1 flex flex-col gap-12">
+            <div className="w-full flex flex-col gap-12 lg:shrink-0 lg:basis-[38%]">
               <div className="flex flex-col gap-6">
                 <div className="flex flex-col gap-6">
                   <h1 className="text-3xl font-bold leading-[1.2] text-brand md:text-4xl lg:text-5xl lg:leading-[58px]">
@@ -145,84 +145,46 @@ export default function Home() {
               <div className="flex gap-6">
                 <a
                   href="#"
-                  className="flex h-14 w-48 items-center justify-center gap-3 rounded-[100px] bg-brand text-white transition-colors hover:bg-brand-dark"
+                  className="flex items-center gap-3 whitespace-nowrap rounded-[100px] bg-brand px-6 py-3 text-white transition-colors hover:bg-brand-dark"
                   aria-label="Download Transit Stats on the App Store"
                 >
-                  <svg width="20" height="24" viewBox="0 0 20 24" fill="currentColor" aria-hidden="true">
-                    <path d="M16.52 12.46c-.03-2.85 2.33-4.22 2.44-4.29-1.33-1.94-3.4-2.21-4.14-2.24-1.76-.18-3.43 1.04-4.33 1.04-.9 0-2.28-1.01-3.74-.99-1.93.03-3.71 1.12-4.7 2.85-2 3.47-.51 8.62 1.44 11.44.96 1.38 2.1 2.93 3.6 2.88 1.44-.06 1.99-.93 3.73-.93s2.24.93 3.76.9c1.56-.03 2.54-1.41 3.49-2.8 1.1-1.6 1.55-3.15 1.58-3.23-.03-.01-3.03-1.16-3.06-4.63zM13.67 3.88C14.47 2.92 15.02 1.6 14.87.25c-1.14.05-2.52.76-3.33 1.72-.73.84-1.37 2.19-1.2 3.48 1.27.1 2.57-.65 3.33-1.57z" />
+                  <svg width="32" height="38" viewBox="0 0 32 38" fill="currentColor" aria-hidden="true">
+                    <path d="M26.43 19.94c-.05-4.56 3.73-6.75 3.9-6.86-2.12-3.1-5.43-3.53-6.62-3.58-2.82-.29-5.49 1.66-6.92 1.66-1.43 0-3.65-1.62-5.99-1.58-3.08.05-5.93 1.8-7.52 4.56-3.2 5.55-.82 13.78 2.3 18.3 1.53 2.21 3.36 4.69 5.76 4.6 2.31-.09 3.18-1.49 5.97-1.49 2.79 0 3.58 1.49 6.02 1.44 2.49-.04 4.06-2.25 5.58-4.47 1.76-2.57 2.48-5.05 2.53-5.18-.06-.02-4.85-1.86-4.9-7.4zM21.87 6.21c1.28-1.54 2.14-3.66 1.9-5.79-1.84.07-4.05 1.22-5.36 2.75-1.17 1.35-2.19 3.51-1.92 5.58 2.04.16 4.12-1.04 5.38-2.54z" />
                   </svg>
                   <span className="flex flex-col items-start text-left">
-                    <span className="text-[10px] leading-tight">Download on the</span>
-                    <span className="text-base font-semibold leading-tight">App Store</span>
+                    <span className="text-xs leading-tight">Download on the</span>
+                    <span className="text-lg font-semibold leading-tight">App Store</span>
                   </span>
                 </a>
                 <a
                   href="#"
-                  className="flex h-14 w-48 items-center justify-center gap-2.5 rounded-[100px] bg-brand text-white transition-colors hover:bg-brand-dark"
+                  className="flex items-center gap-3 whitespace-nowrap rounded-[100px] bg-brand px-6 py-3 text-white transition-colors hover:bg-brand-dark"
                   aria-label="Get Transit Stats on Google Play"
                 >
-                  <svg width="20" height="22" viewBox="0 0 20 22" fill="none" aria-hidden="true">
-                    <path d="M0.5 1.1v19.8l10.4-9.9L0.5 1.1z" fill="#4285F4" />
-                    <path d="M0.5 1.1l10.4 9.9 3.2-3-13.6-6.9z" fill="#34A853" />
-                    <path d="M0.5 20.9l13.6-6.9-3.2-3L0.5 20.9z" fill="#EA4335" />
-                    <path d="M14.1 14l-3.2-3 3.2-3 5.3 3L14.1 14z" fill="#FBBC05" />
+                  <svg width="34" height="38" viewBox="0 0 34 38" fill="none" aria-hidden="true">
+                    <path d="M0.83 1.76v34.48l18.1-17.24L0.83 1.76z" fill="#4285F4" />
+                    <path d="M0.83 1.76L18.93 19l5.57-5.22L0.83 1.76z" fill="#34A853" />
+                    <path d="M0.83 36.24L24.5 24.22 18.93 19 0.83 36.24z" fill="#EA4335" />
+                    <path d="M24.5 24.22l-5.57-5.22 5.57-5.22 9.22 5.22-9.22 5.22z" fill="#FBBC05" />
                   </svg>
                   <span className="flex flex-col items-start text-left">
-                    <span className="text-[10px] leading-tight uppercase">Get it on</span>
-                    <span className="text-base font-semibold leading-tight">Google Play</span>
+                    <span className="text-xs leading-tight uppercase">Get it on</span>
+                    <span className="text-lg font-semibold leading-tight">Google Play</span>
                   </span>
                 </a>
               </div>
             </div>
 
             {/* Right — phone mockups */}
-            <div className="relative h-[545px] w-[531px] shrink-0 hidden lg:block">
-              <div className="absolute -inset-24 opacity-[0.06]">
-                <Image
-                  src="/images/transit-map-bg.png"
-                  alt=""
-                  fill
-                  className="object-contain"
-                  aria-hidden="true"
-                />
-              </div>
-              <div className="absolute left-0 top-[22px] w-[260px] origin-top-left -rotate-[5deg]">
-                <div className="overflow-hidden rounded-[32px] border-[3px] border-gray-800 bg-white shadow-2xl">
-                  <Image
-                    src="/images/hero-phone-tracking.png"
-                    alt="Transit Stats tracking screen showing live ride tracking, ride streak, weekly stats, and CTA service alerts"
-                    width={283}
-                    height={528}
-                    className="w-full"
-                    priority
-                  />
-                </div>
-              </div>
-              <div className="absolute right-0 top-0 w-[260px] origin-top-right rotate-[5deg]">
-                <div className="overflow-hidden rounded-[32px] border-[3px] border-gray-800 bg-white shadow-2xl">
-                  <Image
-                    src="/images/hero-phone-history.png"
-                    alt="Transit Stats history screen showing ride history, coverage map, and 23.4% of CTA stops visited"
-                    width={283}
-                    height={528}
-                    className="w-full"
-                    priority
-                  />
-                </div>
-              </div>
-            </div>
-
-            <div className="flex justify-center lg:hidden">
-              <div className="w-[260px] overflow-hidden rounded-[32px] border-[3px] border-gray-800 bg-white shadow-2xl">
-                <Image
-                  src="/images/hero-phone-tracking.png"
-                  alt="Transit Stats tracking screen showing live ride tracking, ride streak, weekly stats, and CTA service alerts"
-                  width={283}
-                  height={528}
-                  className="w-full"
-                  priority
-                />
-              </div>
+            <div className="w-full lg:flex-1">
+              <Image
+                src="/images/hero-phones.png"
+                alt="Transit Stats app screens showing live ride tracking, ride history, coverage map, and CTA service alerts"
+                width={769}
+                height={683}
+                className="h-auto w-full"
+                priority
+              />
             </div>
           </div>
         </section>
