@@ -32,7 +32,7 @@ export default function Header() {
       }`}
     >
       <nav
-        className="container flex items-center justify-between py-2 md:py-7"
+        className="container relative flex items-center justify-between py-2 md:py-7"
         aria-label="Main navigation"
       >
         {/* Logo */}
@@ -47,29 +47,29 @@ export default function Header() {
           />
         </Link>
 
-        {/* Desktop nav */}
-        <div className="hidden items-center gap-8 md:flex lg:gap-16">
-          <div className="flex items-center gap-8 lg:gap-16">
-            {navLinks.map((link) => {
-              const isActive = pathname === link.href;
-              return (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className={`text-base ${isActive ? "font-bold" : "font-normal"} text-brand transition-colors hover:text-brand-dark`}
-                >
-                  {link.label}
-                </Link>
-              );
-            })}
-          </div>
-          <Link
-            href="/contact"
-            className="flex h-10 w-36 items-center justify-center rounded-[66px] bg-brand text-base font-semibold text-white transition-colors hover:bg-brand-dark"
-          >
-            Contact us
-          </Link>
+        {/* Desktop nav — centered links */}
+        <div className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-8 md:flex lg:gap-16">
+          {navLinks.map((link) => {
+            const isActive = pathname === link.href;
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`text-base ${isActive ? "font-bold" : "font-normal"} text-brand transition-colors hover:text-brand-dark`}
+              >
+                {link.label}
+              </Link>
+            );
+          })}
         </div>
+
+        {/* Desktop nav — button far right */}
+        <Link
+          href="/contact"
+          className="hidden h-10 w-36 items-center justify-center rounded-[66px] bg-brand text-base font-semibold text-white transition-colors hover:bg-brand-dark md:flex"
+        >
+          Contact us
+        </Link>
 
         {/* Mobile menu button */}
         <button
