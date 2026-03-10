@@ -276,9 +276,9 @@ export default function Home() {
                   <Image
                     src="/images/illustration-climate.png"
                     alt="Illustration of data analytics showing CO₂ savings from choosing public transit over driving"
-                    width={486}
-                    height={415}
-                    className="w-full h-auto"
+                    width={365}
+                    height={311}
+                    className="h-auto w-full max-w-[365px] mx-auto"
                   />
                 </div>
               </article>
@@ -289,9 +289,9 @@ export default function Home() {
                   <Image
                     src="/images/illustration-cities.png"
                     alt="Illustration of a CTA bus and Chicago cityscape representing supported transit systems"
-                    width={439}
-                    height={415}
-                    className="w-full h-auto"
+                    width={329}
+                    height={311}
+                    className="h-auto w-full max-w-[329px] mx-auto"
                   />
                 </div>
                 <div className="order-1 lg:order-2 flex flex-1 flex-col gap-3.5">
@@ -334,9 +334,9 @@ export default function Home() {
                   <Image
                     src="/images/illustration-security.png"
                     alt="Shield and lock illustration representing data privacy and industry-standard security protection"
-                    width={486}
-                    height={415}
-                    className="w-full h-auto"
+                    width={365}
+                    height={311}
+                    className="h-auto w-full max-w-[365px] mx-auto"
                   />
                 </div>
               </article>

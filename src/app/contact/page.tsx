@@ -106,7 +106,7 @@ export default function ContactPage() {
           </div>
 
           {/* Illustration */}
-          <div className="hidden flex-1 items-center justify-center lg:flex">
+          <div className="flex flex-1 items-center justify-center">
             <Image
               src="/images/about-contact-illustration.png"
               alt="Illustration of a person at a desk working on Transit Stats"

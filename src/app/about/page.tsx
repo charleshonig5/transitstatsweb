@@ -169,7 +169,7 @@ export default function AboutPage() {
           {/* Illustration */}
           <div className="hidden flex-1 items-center justify-center lg:flex">
             <Image
-              src="/images/about-contact-illustration.svg"
+              src="/images/about-contact-illustration.png"
               alt="Illustration of a person at a desk working on Transit Stats"
               width={392}
               height={392}
