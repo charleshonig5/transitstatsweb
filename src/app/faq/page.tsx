@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import DownloadCTA from "@/components/DownloadCTA";
 
 export const metadata: Metadata = {
   title: "FAQ — Transit Stats | CTA Tracker & Chicago Transit Data Questions",
@@ -130,6 +131,9 @@ export default function FAQPage() {
             </article>
           ))}
         </div>
+
+        {/* ── Download CTA ── */}
+        <DownloadCTA />
       </div>
     </div>
   );

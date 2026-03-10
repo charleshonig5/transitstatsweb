@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import DownloadCTA from "@/components/DownloadCTA";
 
 export const metadata: Metadata = {
   title: "About Transit Stats — Chicago Transit Data & CTA Stats App",
@@ -255,6 +256,11 @@ export default function AboutPage() {
             </article>
           ))}
         </div>
+      </section>
+
+      {/* ── Download CTA ── */}
+      <section className="container py-10 md:py-[74px]">
+        <DownloadCTA />
       </section>
     </div>
   );
