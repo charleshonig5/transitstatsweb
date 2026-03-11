@@ -132,18 +132,27 @@ export default function Home() {
                   </p>
                 </div>
 
-                {/* Badges */}
-                <div className="flex items-center gap-11">
-                  <span className="flex items-center gap-2.5">
-                    <Image src="/images/emoji/emoji-free.svg" alt="" width={28} height={28} className="h-7 w-auto" aria-hidden="true" />
-                    <span className="text-sm text-dark md:text-base">Available for free</span>
-                  </span>
-                  <span className="flex items-center gap-2.5">
-                    <Image src="/images/emoji/emoji-battery.svg" alt="" width={21} height={28} className="h-7 w-auto" aria-hidden="true" />
-                    <span className="text-sm text-dark md:text-base">Battery efficient</span>
-                  </span>
+                {/* Social proof */}
+                <div className="flex items-start gap-8">
+                  <div className="flex flex-col">
+                    <span className="text-2xl font-bold text-brand md:text-3xl">4.7</span>
+                    <div className="mt-1 flex" aria-hidden="true">
+                      {[...Array(5)].map((_, i) => (
+                        <svg key={i} width="14" height="14" viewBox="0 0 20 20" fill="#F7752C" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10 1.25l2.47 5.01 5.53.8-4 3.9.94 5.51L10 13.77l-4.94 2.6.94-5.51-4-3.9 5.53-.8L10 1.25z" />
+                        </svg>
+                      ))}
+                    </div>
+                  </div>
+                  <div className="flex flex-col">
+                    <span className="text-2xl font-bold text-brand md:text-3xl">1,500+</span>
+                    <span className="mt-1 text-xs font-medium uppercase tracking-widest text-dark/40">Active users</span>
+                  </div>
+                  <div className="flex flex-col">
+                    <span className="text-2xl font-bold text-brand md:text-3xl">100% Free
+                    <span className="mt-1 text-xs font-medium uppercase tracking-widest text-dark/40">On iOS &amp; Android</span>
+                  </div>
                 </div>
-
               </div>
 
               {/* App Store buttons */}
@@ -181,20 +190,6 @@ export default function Home() {
                     <span className="text-lg font-semibold leading-tight">Google Play</span>
                   </span>
                 </a>
-              </div>
-
-              {/* Social proof */}
-              <div className="flex items-center gap-2">
-                <span className="text-sm font-semibold text-dark md:text-base">4.7</span>
-                <div className="flex" aria-hidden="true">
-                  {[...Array(5)].map((_, i) => (
-                    <svg key={i} width="18" height="18" viewBox="0 0 20 20" fill="#F7752C" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M10 1.25l2.47 5.01 5.53.8-4 3.9.94 5.51L10 13.77l-4.94 2.6.94-5.51-4-3.9 5.53-.8L10 1.25z" />
-                    </svg>
-                  ))}
-                </div>
-                <span className="text-sm text-dark/40 md:text-base">&middot;</span>
-                <span className="text-sm text-dark md:text-base">1,000s of riders</span>
               </div>
             </div>
 
