@@ -136,13 +136,12 @@ export default function Home() {
                 <div className="flex items-start gap-8">
                   <div className="flex flex-col">
                     <span className="text-2xl font-bold text-brand md:text-3xl">4.7</span>
-                    <div className="mt-1 flex" aria-hidden="true">
-                      {[...Array(5)].map((_, i) => (
-                        <svg key={i} width="14" height="14" viewBox="0 0 20 20" fill="#F7752C" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M10 1.25l2.47 5.01 5.53.8-4 3.9.94 5.51L10 13.77l-4.94 2.6.94-5.51-4-3.9 5.53-.8L10 1.25z" />
-                        </svg>
-                      ))}
-                    </div>
+                    <span className="mt-1 flex items-center gap-1 text-xs font-medium uppercase tracking-widest text-dark/40">
+                      <svg width="12" height="12" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M10 1.25l2.47 5.01 5.53.8-4 3.9.94 5.51L10 13.77l-4.94 2.6.94-5.51-4-3.9 5.53-.8L10 1.25z" />
+                      </svg>
+                      Rating
+                    </span>
                   </div>
                   <div className="flex flex-col">
                     <span className="text-2xl font-bold text-brand md:text-3xl">1,500+</span>
