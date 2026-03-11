@@ -46,6 +46,41 @@ body {
   }
 }
 
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Hero entrance animations */
+@keyframes hero-slide-down {
+  from { opacity: 0; transform: translateY(-30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes hero-fade-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Scroll-reveal transitions — start hidden, transition to visible */
+.scroll-reveal-up,
+.scroll-reveal-left,
+.scroll-reveal-right {
+  opacity: 0;
+  transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+.scroll-reveal-up    { transform: translateY(30px); }
+.scroll-reveal-left  { transform: translateX(-40px); }
+.scroll-reveal-right { transform: translateX(40px); }
+
+.scroll-reveal-visible {
+  opacity: 1 !important;
+  transform: translate(0) !important;
+}
+
 /* Article prose — matches site body-copy ramp: text-sm/leading-6 → md:text-base/leading-7 */
 .prose {
   font-size: 0.875rem;

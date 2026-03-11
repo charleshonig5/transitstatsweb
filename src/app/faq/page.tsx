@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import DownloadCTA from "@/components/DownloadCTA";
+import ScrollReveal from "@/components/ScrollReveal";
 
 export const metadata: Metadata = {
-  title: "FAQ — Transit Stats — CTA Tracker & Chicago Transit Data Questions",
+  title: "FAQ | Transit Stats | CTA Tracker & Chicago Transit Data Questions",
   description:
     "FAQ about Transit Stats, Chicago's CTA tracker. Learn how ride tracking works, CTA data usage, battery impact, privacy, Ventra compatibility, and more.",
   alternates: { canonical: "https://www.transitstats.co/faq" },
   openGraph: {
-    title: "FAQ — Transit Stats — CTA Tracker & Chicago Transit Data Questions",
+    title: "FAQ | Transit Stats | CTA Tracker & Chicago Transit Data Questions",
     description:
       "FAQ about Transit Stats, Chicago's CTA tracker. Learn how ride tracking works, CTA data usage, battery impact, privacy, Ventra compatibility, and more.",
     url: "https://www.transitstats.co/faq",
@@ -157,18 +158,20 @@ export default function FAQPage() {
 
         {/* FAQ items */}
         <div className="flex flex-col gap-14 lg:gap-20">
-          {faqs.map((faq) => (
-            <article key={faq.question} className="flex flex-col gap-3.5">
-              <div className="flex items-center gap-5">
-                <Image src={faq.icon} alt="" width={faq.iconW} height={faq.iconH} className="h-8 w-auto" aria-hidden="true" />
-                <h2 className="text-2xl font-semibold leading-tight text-brand md:text-3xl lg:text-4xl">
-                  {faq.question}
-                </h2>
-              </div>
-              <p className="text-sm leading-6 text-dark md:text-base md:leading-7">
-                {faq.answer}
-              </p>
-            </article>
+          {faqs.map((faq, i) => (
+            <ScrollReveal key={faq.question} direction="up" delay={i < 3 ? i * 75 : 0}>
+              <article className="flex flex-col gap-3.5">
+                <div className="flex flex-col gap-3 md:flex-row md:items-center md:gap-5">
+                  <Image src={faq.icon} alt="" width={faq.iconW} height={faq.iconH} className="h-8 w-auto self-start" aria-hidden="true" />
+                  <h2 className="text-2xl font-semibold leading-tight text-brand md:text-3xl lg:text-4xl">
+                    {faq.question}
+                  </h2>
+                </div>
+                <p className="text-sm leading-6 text-dark md:text-base md:leading-7">
+                  {faq.answer}
+                </p>
+              </article>
+            </ScrollReveal>
           ))}
         </div>
 

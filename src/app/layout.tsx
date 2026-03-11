@@ -13,8 +13,8 @@ const notoSans = Noto_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.transitstats.co"),
   title: {
-    default: "Transit Stats — Chicago Transit Data & CTA Statistics Made Personal",
-    template: "%s — Transit Stats",
+    default: "Transit Stats | Chicago Transit Data & CTA Statistics Made Personal",
+    template: "%s | Transit Stats",
   },
   description:
     "Transit Stats turns your Chicago CTA rides into personal data and stats. Track rides, view transit insights, climb leaderboards, and see CO₂ savings — free.",
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://www.transitstats.co",
     siteName: "Transit Stats",
-    title: "Transit Stats — Chicago Transit Data & CTA Statistics Made Personal",
+    title: "Transit Stats | Chicago Transit Data & CTA Statistics Made Personal",
     description:
       "The best CTA tracker app — view Chicago transit data, in-depth CTA stats, city leaderboards, and measure your CO₂ impact. Free for iOS and Android.",
     images: [
@@ -53,13 +53,13 @@ export const metadata: Metadata = {
         url: "/images/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Transit Stats — Chicago Transit Data & CTA Statistics Made Personal",
+        alt: "Transit Stats | Chicago Transit Data & CTA Statistics Made Personal",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Transit Stats — Chicago Transit Data & CTA Statistics Made Personal",
+    title: "Transit Stats | Chicago Transit Data & CTA Statistics Made Personal",
     description:
       "The best CTA tracker app — view Chicago transit data, in-depth CTA stats, city leaderboards, and measure your CO₂ impact.",
     images: ["/images/og-image.png"],

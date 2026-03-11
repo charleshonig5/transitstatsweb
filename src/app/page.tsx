@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import DownloadCTA from "@/components/DownloadCTA";
+import ScrollReveal from "@/components/ScrollReveal";
 
 export const metadata: Metadata = {
-  title: "Transit Stats — Chicago Transit Data & CTA Statistics Made Personal",
+  title: "Transit Stats | Chicago Transit Data & CTA Statistics Made Personal",
   description:
     "Transit Stats turns your Chicago CTA rides into personal data and stats. Auto-track rides, view transit insights, and measure CO₂ savings. Free on iOS & Android.",
   alternates: { canonical: "https://www.transitstats.co" },
@@ -108,18 +109,18 @@ export default function Home() {
   return (
     <>
       {/* ===== HERO (white, rounded bottom to reveal orange) ===== */}
-      <div className="overflow-hidden rounded-b-[36px] bg-white">
+      <div className="animate-[hero-slide-down_0.7s_ease-out_both] overflow-hidden rounded-b-[36px] bg-white">
         <section className="relative pt-10 pb-10 md:pt-14 md:pb-[74px]">
           <div className="container flex flex-col gap-12 lg:flex-row lg:items-center lg:gap-6">
             {/* Left — copy */}
             <div className="relative z-10 w-full flex flex-col gap-12 lg:shrink-0 lg:basis-[44%]">
               <div className="flex flex-col gap-6">
                 <div className="flex flex-col gap-6">
-                  <h1 className="text-4xl font-bold leading-[1.2] text-brand md:text-5xl lg:text-6xl lg:leading-[72px]">
+                  <h1 className="animate-[hero-fade-up_0.6s_ease-out_0.3s_both] text-4xl font-bold leading-[1.2] text-brand md:text-5xl lg:text-6xl lg:leading-[72px]">
                     CTA transit data{" "}
                     <span className="font-normal">made personal</span>
                   </h1>
-                  <p className="max-w-[90%] text-sm text-dark md:text-base">
+                  <p className="animate-[hero-fade-up_0.6s_ease-out_0.45s_both] max-w-[90%] text-sm text-dark md:text-base">
                     <strong>
                       Transit Stats turns your CTA rides into meaningful,
                       personal data.{" "}
@@ -132,32 +133,51 @@ export default function Home() {
                   </p>
                 </div>
 
-                {/* Social proof */}
-                <div className="flex items-start gap-4">
-                  <div className="flex flex-col rounded-[10px] bg-white px-4 py-3 shadow-[0_0_30px_rgba(0,0,0,0.08)] transition-all duration-200 hover:-translate-y-1 hover:shadow-[0_8px_40px_rgba(0,0,0,0.12)]">
-                    <span className="flex items-center gap-1.5 text-xl font-bold text-brand md:text-2xl">
-                      4.7
-                      <svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg" className="text-brand" aria-hidden="true">
-                        <path d="M10 1.25l2.47 5.01 5.53.8-4 3.9.94 5.51L10 13.77l-4.94 2.6.94-5.51-4-3.9 5.53-.8L10 1.25z" />
-                      </svg>
-                    </span>
-                    <span className="mt-0.5 text-xs font-medium uppercase tracking-widest text-dark/40">
-                      Rating
-                    </span>
-                  </div>
-                  <div className="flex flex-col rounded-[10px] bg-white px-4 py-3 shadow-[0_0_30px_rgba(0,0,0,0.08)] transition-all duration-200 hover:-translate-y-1 hover:shadow-[0_8px_40px_rgba(0,0,0,0.12)]">
-                    <span className="text-xl font-bold text-brand md:text-2xl">1,500+</span>
-                    <span className="mt-0.5 text-xs font-medium uppercase tracking-widest text-dark/40">Active users</span>
-                  </div>
-                  <div className="flex flex-col rounded-[10px] bg-white px-4 py-3 shadow-[0_0_30px_rgba(0,0,0,0.08)] transition-all duration-200 hover:-translate-y-1 hover:shadow-[0_8px_40px_rgba(0,0,0,0.12)]">
-                    <span className="text-xl font-bold text-brand md:text-2xl">100% Free</span>
-                    <span className="mt-0.5 text-xs font-medium uppercase tracking-widest text-dark/40">On iOS &amp; Android</span>
+                {/* Social proof — marquee on mobile, static row on sm+ */}
+                <div className="animate-[hero-fade-up_0.6s_ease-out_0.6s_both] -m-[30px] overflow-hidden p-[30px] sm:m-0 sm:overflow-visible sm:p-0">
+                  <div className="flex w-max gap-3 animate-[marquee_12s_linear_infinite] sm:w-auto sm:flex-wrap sm:gap-4 sm:animate-none">
+                    {/* Original cards */}
+                    <div className="flex shrink-0 flex-col whitespace-nowrap rounded-[10px] bg-white px-4 py-3 shadow-[0_0_30px_rgba(0,0,0,0.08)] sm:transition-all sm:duration-200 sm:hover:-translate-y-1 sm:hover:shadow-[0_8px_40px_rgba(0,0,0,0.12)]">
+                      <span className="flex items-center gap-1.5 text-xl font-bold text-brand md:text-2xl">
+                        4.7
+                        <svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg" className="text-brand" aria-hidden="true">
+                          <path d="M10 1.25l2.47 5.01 5.53.8-4 3.9.94 5.51L10 13.77l-4.94 2.6.94-5.51-4-3.9 5.53-.8L10 1.25z" />
+                        </svg>
+                      </span>
+                      <span className="mt-0.5 text-xs font-medium uppercase tracking-widest text-dark/40">Rating</span>
+                    </div>
+                    <div className="flex shrink-0 flex-col whitespace-nowrap rounded-[10px] bg-white px-4 py-3 shadow-[0_0_30px_rgba(0,0,0,0.08)] sm:transition-all sm:duration-200 sm:hover:-translate-y-1 sm:hover:shadow-[0_8px_40px_rgba(0,0,0,0.12)]">
+                      <span className="text-xl font-bold text-brand md:text-2xl">1,500+</span>
+                      <span className="mt-0.5 text-xs font-medium uppercase tracking-widest text-dark/40">Active users</span>
+                    </div>
+                    <div className="flex shrink-0 flex-col whitespace-nowrap rounded-[10px] bg-white px-4 py-3 shadow-[0_0_30px_rgba(0,0,0,0.08)] sm:transition-all sm:duration-200 sm:hover:-translate-y-1 sm:hover:shadow-[0_8px_40px_rgba(0,0,0,0.12)]">
+                      <span className="text-xl font-bold text-brand md:text-2xl">100% Free</span>
+                      <span className="mt-0.5 text-xs font-medium uppercase tracking-widest text-dark/40">On iOS &amp; Android</span>
+                    </div>
+                    {/* Cloned cards for seamless loop */}
+                    <div className="flex shrink-0 flex-col whitespace-nowrap rounded-[10px] bg-white px-4 py-3 shadow-[0_0_30px_rgba(0,0,0,0.08)] sm:hidden" aria-hidden="true">
+                      <span className="flex items-center gap-1.5 text-xl font-bold text-brand">
+                        4.7
+                        <svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg" className="text-brand" aria-hidden="true">
+                          <path d="M10 1.25l2.47 5.01 5.53.8-4 3.9.94 5.51L10 13.77l-4.94 2.6.94-5.51-4-3.9 5.53-.8L10 1.25z" />
+                        </svg>
+                      </span>
+                      <span className="mt-0.5 text-xs font-medium uppercase tracking-widest text-dark/40">Rating</span>
+                    </div>
+                    <div className="flex shrink-0 flex-col whitespace-nowrap rounded-[10px] bg-white px-4 py-3 shadow-[0_0_30px_rgba(0,0,0,0.08)] sm:hidden" aria-hidden="true">
+                      <span className="text-xl font-bold text-brand">1,500+</span>
+                      <span className="mt-0.5 text-xs font-medium uppercase tracking-widest text-dark/40">Active users</span>
+                    </div>
+                    <div className="flex shrink-0 flex-col whitespace-nowrap rounded-[10px] bg-white px-4 py-3 shadow-[0_0_30px_rgba(0,0,0,0.08)] sm:hidden" aria-hidden="true">
+                      <span className="text-xl font-bold text-brand">100% Free</span>
+                      <span className="mt-0.5 text-xs font-medium uppercase tracking-widest text-dark/40">On iOS &amp; Android</span>
+                    </div>
                   </div>
                 </div>
               </div>
 
               {/* App Store buttons */}
-              <div className="flex gap-6">
+              <div className="animate-[hero-fade-up_0.6s_ease-out_0.75s_both] flex flex-wrap gap-4 sm:gap-6">
                 <a
                   href="https://apps.apple.com/us/app/transit-stats-cta-analytics/id6747690858"
                   target="_blank"
@@ -195,13 +215,13 @@ export default function Home() {
             </div>
 
             {/* Right — phone mockups */}
-            <div className="w-full lg:flex-1">
+            <div className="animate-[hero-fade-up_0.8s_ease-out_0.5s_both] w-full lg:flex-1">
               <Image
                 src="/images/hero-phones.png"
                 alt="Transit Stats CTA tracker app showing Chicago transit data, live ride tracking, ride history, and coverage map"
                 width={769}
                 height={683}
-                className="h-auto w-full lg:scale-110 lg:origin-right"
+                className="h-auto w-full scale-110 lg:origin-right"
                 priority
               />
             </div>
@@ -228,28 +248,32 @@ export default function Home() {
                 }`}
               >
                 {/* Text */}
-                <div className="order-1 w-full flex-1 flex flex-col gap-3.5 lg:order-none">
-                  <div className="flex items-center gap-5">
-                    <Image src={feature.icon} alt="" width={feature.iconW} height={feature.iconH} className="h-9 w-auto" aria-hidden="true" />
-                    <h3 className="text-2xl font-semibold leading-tight text-white md:text-3xl lg:text-4xl">
-                      {feature.title}
-                    </h3>
+                <ScrollReveal direction={isReversed ? "right" : "left"} className="order-1 w-full flex-1 lg:order-none">
+                  <div className="flex flex-col gap-3.5">
+                    <div className="flex items-center gap-5">
+                      <Image src={feature.icon} alt="" width={feature.iconW} height={feature.iconH} className="h-9 w-auto" aria-hidden="true" />
+                      <h3 className="text-2xl font-semibold leading-tight text-white md:text-3xl lg:text-4xl">
+                        {feature.title}
+                      </h3>
+                    </div>
+                    <p className="text-sm leading-6 text-white md:text-base md:leading-7">
+                      {feature.body}
+                    </p>
                   </div>
-                  <p className="text-sm leading-6 text-white md:text-base md:leading-7">
-                    {feature.body}
-                  </p>
-                </div>
+                </ScrollReveal>
 
                 {/* Image */}
-                <div className="order-2 w-full flex-1 flex items-center justify-center lg:order-none">
-                  <Image
-                    src={feature.image}
-                    alt={feature.alt}
-                    width={744}
-                    height={727}
-                    className="h-auto w-full max-w-[818px] transition-transform duration-300 hover:scale-[1.03]"
-                  />
-                </div>
+                <ScrollReveal direction={isReversed ? "left" : "right"} delay={100} className="order-2 w-full flex-1 lg:order-none">
+                  <div className="flex items-center justify-center">
+                    <Image
+                      src={feature.image}
+                      alt={feature.alt}
+                      width={744}
+                      height={727}
+                      className="h-auto w-full max-w-[818px] transition-transform duration-300 hover:scale-[1.03]"
+                    />
+                  </div>
+                </ScrollReveal>
               </article>
             );
           })}
@@ -260,36 +284,28 @@ export default function Home() {
       <section
         className="w-full rounded-[36px] bg-white py-10 md:py-[74px]"
         style={{ boxShadow: "0 0 55px rgba(0, 0, 0, 0.16)" }}
-        aria-labelledby="beyond-heading"
       >
-        <div className="container flex flex-col gap-10">
-            <h2
-              id="beyond-heading"
-              className="text-center text-3xl font-bold text-brand md:text-4xl lg:text-5xl"
-            >
-              Beyond the data
-            </h2>
-
-            <div className="flex w-full flex-col gap-10 md:gap-14">
+        <div className="container flex flex-col gap-10 md:gap-14">
               {/* Climate change */}
               <article className="flex w-full flex-col gap-10 lg:flex-row lg:items-center lg:gap-14">
-                <div className="flex flex-1 flex-col gap-3.5">
-                  <h3 className="text-2xl font-semibold leading-tight text-brand md:text-3xl lg:text-4xl">
-                    Every transit ride fights climate change
-                  </h3>
-                  <p className="text-sm text-dark md:text-base">
-                    When you choose the train or bus over driving, you&apos;re
-                    making a difference.{" "}
-                    <strong>
-                      Transit Stats shows you exactly how much CO₂ you save
-                      with every ride
-                    </strong>{" "}
-                    – and how Chicago riders are collectively helping the
-                    planet.
-                  </p>
-                </div>
-                <div className="w-full flex-1">
-                  {/* Export illustration from Figma as SVG/PNG */}
+                <ScrollReveal direction="left" className="flex-1">
+                  <div className="flex flex-col gap-3.5">
+                    <h3 className="text-2xl font-semibold leading-tight text-brand md:text-3xl lg:text-4xl">
+                      Every transit ride fights climate change
+                    </h3>
+                    <p className="text-sm text-dark md:text-base">
+                      When you choose the train or bus over driving, you&apos;re
+                      making a difference.{" "}
+                      <strong>
+                        Transit Stats shows you exactly how much CO₂ you save
+                        with every ride
+                      </strong>{" "}
+                      – and how Chicago riders are collectively helping the
+                      planet.
+                    </p>
+                  </div>
+                </ScrollReveal>
+                <ScrollReveal direction="right" delay={100} className="w-full flex-1">
                   <Image
                     src="/images/illustration-climate.png"
                     alt="Chicago transit CO₂ savings illustration showing environmental impact of CTA rides versus driving"
@@ -297,12 +313,12 @@ export default function Home() {
                     height={311}
                     className="h-auto w-full max-w-[420px] mx-auto transition-transform duration-300 hover:scale-105"
                   />
-                </div>
+                </ScrollReveal>
               </article>
 
               {/* Supported cities */}
               <article className="flex w-full flex-col gap-10 lg:flex-row lg:items-center lg:gap-14">
-                <div className="order-2 lg:order-1 w-full flex-1">
+                <ScrollReveal direction="left" delay={100} className="order-2 lg:order-1 w-full flex-1">
                   <Image
                     src="/images/illustration-cities.png"
                     alt="CTA bus and Chicago cityscape illustration representing supported Chicago transit systems"
@@ -310,41 +326,45 @@ export default function Home() {
                     height={311}
                     className="h-auto w-full max-w-[420px] mx-auto transition-transform duration-300 hover:scale-105"
                   />
-                </div>
-                <div className="order-1 lg:order-2 flex flex-1 flex-col gap-3.5">
-                  <h3 className="text-2xl font-semibold text-brand md:text-3xl lg:text-4xl">
-                    Supported cities
-                  </h3>
-                  <p className="text-sm text-dark md:text-base">
-                    Transit Stats currently supports{" "}
-                    <strong>Chicago transit — including every CTA train line and bus route.</strong>{" "}
-                    We pull real-time CTA data to power ride tracking, stats,
-                    and leaderboards across the entire network. More cities
-                    coming soon.
-                  </p>
-                </div>
+                </ScrollReveal>
+                <ScrollReveal direction="right" className="order-1 lg:order-2 flex-1">
+                  <div className="flex flex-col gap-3.5">
+                    <h3 className="text-2xl font-semibold text-brand md:text-3xl lg:text-4xl">
+                      Supported cities
+                    </h3>
+                    <p className="text-sm text-dark md:text-base">
+                      Transit Stats currently supports{" "}
+                      <strong>Chicago transit — including every CTA train line and bus route.</strong>{" "}
+                      We pull real-time CTA data to power ride tracking, stats,
+                      and leaderboards across the entire network. More cities
+                      coming soon.
+                    </p>
+                  </div>
+                </ScrollReveal>
               </article>
 
               {/* Data safety */}
               <article className="flex w-full flex-col gap-10 lg:flex-row lg:items-center lg:gap-14">
-                <div className="flex flex-1 flex-col gap-3.5">
-                  <h3 className="text-2xl font-semibold leading-tight text-brand md:text-3xl lg:text-4xl">
-                    Data safety and security
-                  </h3>
-                  <p className="text-sm text-dark md:text-base">
-                    Transit Stats collects only the essentials needed to show
-                    you real-time transit information.{" "}
-                    <strong>
-                      We don&apos;t collect or sell personal information to
-                      third parties
-                    </strong>
-                    , and we never track sensitive data or financial
-                    information. Your account data is protected with
-                    industry-standard security measures and is automatically
-                    deleted when you close your account.
-                  </p>
-                </div>
-                <div className="w-full flex-1">
+                <ScrollReveal direction="left" className="flex-1">
+                  <div className="flex flex-col gap-3.5">
+                    <h3 className="text-2xl font-semibold leading-tight text-brand md:text-3xl lg:text-4xl">
+                      Data safety and security
+                    </h3>
+                    <p className="text-sm text-dark md:text-base">
+                      Transit Stats collects only the essentials needed to show
+                      you real-time transit information.{" "}
+                      <strong>
+                        We don&apos;t collect or sell personal information to
+                        third parties
+                      </strong>
+                      , and we never track sensitive data or financial
+                      information. Your account data is protected with
+                      industry-standard security measures and is automatically
+                      deleted when you close your account.
+                    </p>
+                  </div>
+                </ScrollReveal>
+                <ScrollReveal direction="right" delay={100} className="w-full flex-1">
                   <Image
                     src="/images/illustration-security.png"
                     alt="Shield and lock illustration representing data privacy and industry-standard security protection"
@@ -352,9 +372,8 @@ export default function Home() {
                     height={311}
                     className="h-auto w-full max-w-[420px] mx-auto transition-transform duration-300 hover:scale-105"
                   />
-                </div>
+                </ScrollReveal>
               </article>
-            </div>
 
             {/* ── Download CTA ── */}
             <div className="mt-4 md:mt-10">
