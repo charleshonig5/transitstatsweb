@@ -143,6 +143,7 @@ export default function Home() {
                     <span className="text-sm text-dark md:text-base">Battery efficient</span>
                   </span>
                 </div>
+
               </div>
 
               {/* App Store buttons */}
@@ -180,6 +181,20 @@ export default function Home() {
                     <span className="text-lg font-semibold leading-tight">Google Play</span>
                   </span>
                 </a>
+              </div>
+
+              {/* Social proof */}
+              <div className="flex items-center gap-2">
+                <span className="text-sm font-semibold text-dark md:text-base">4.7</span>
+                <div className="flex" aria-hidden="true">
+                  {[...Array(5)].map((_, i) => (
+                    <svg key={i} width="18" height="18" viewBox="0 0 20 20" fill="#F7752C" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10 1.25l2.47 5.01 5.53.8-4 3.9.94 5.51L10 13.77l-4.94 2.6.94-5.51-4-3.9 5.53-.8L10 1.25z" />
+                    </svg>
+                  ))}
+                </div>
+                <span className="text-sm text-dark/40 md:text-base">&middot;</span>
+                <span className="text-sm text-dark md:text-base">1,000s of riders</span>
               </div>
             </div>
 
