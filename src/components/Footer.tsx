@@ -1,54 +1,67 @@
 import Image from "next/image";
 import Link from "next/link";
 
+const linkClass =
+  "text-sm leading-6 text-white transition-opacity duration-200 hover:opacity-80 md:text-base md:leading-7";
+
 export default function Footer() {
   return (
     <footer>
-      <div className="container flex flex-col items-start gap-5 py-10 md:flex-row md:items-center md:justify-between md:py-[49px]">
-        <Image
-          src="/images/logomark.svg"
-          alt="Transit Stats"
-          width={42}
-          height={42}
-        />
-
-        <nav className="flex items-center gap-6 text-base font-normal text-white" aria-label="Footer navigation">
-          <Link href="/" className="transition-opacity duration-200 hover:opacity-80">Home</Link>
-          <Link href="/about" className="transition-opacity duration-200 hover:opacity-80">About</Link>
-          <Link href="/resources" className="transition-opacity duration-200 hover:opacity-80">Resources</Link>
-          <Link href="/faq" className="transition-opacity duration-200 hover:opacity-80">FAQ</Link>
-          <Link href="/contact" className="transition-opacity duration-200 hover:opacity-80">Contact</Link>
-        </nav>
-
-        <p className="text-base font-normal text-white">
-          Transit Stats {new Date().getFullYear()}. All rights reserved.
-        </p>
-
-        {/* Privacy policy link */}
-        <Link
-          href="/privacypolicy"
-          className="group flex items-center gap-2.5 text-base font-normal text-white transition-all duration-200 hover:translate-x-1"
-        >
-          Privacy policy
-          {/* Arrow icon */}
-          <svg
-            width="20"
-            height="20"
-            viewBox="0 0 20 20"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            aria-hidden="true"
-            className="transition-transform duration-200 group-hover:translate-x-1"
-          >
-            <path
-              d="M4 10H16M16 10L11 5M16 10L11 15"
-              stroke="white"
-              strokeWidth="1.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
+      <div className="container py-10 md:py-14">
+        {/* ── Top section: logo + link columns ── */}
+        <div className="grid grid-cols-2 gap-10 md:grid-cols-4 md:gap-8">
+          {/* Logo + tagline */}
+          <div className="col-span-2 md:col-span-1">
+            <Image
+              src="/images/logomark.svg"
+              alt="Transit Stats"
+              width={42}
+              height={42}
             />
-          </svg>
-        </Link>
+            <p className="mt-4 text-sm leading-6 text-white md:text-base md:leading-7">
+              Track your CTA rides and see your personal transit stats.
+            </p>
+          </div>
+
+          {/* Pages */}
+          <nav className="flex flex-col gap-2.5" aria-label="Footer navigation">
+            <h3 className="text-xs font-medium uppercase tracking-widest text-white/40">
+              Pages
+            </h3>
+            <Link href="/" className={linkClass}>Home</Link>
+            <Link href="/about" className={linkClass}>About</Link>
+            <Link href="/resources" className={linkClass}>Resources</Link>
+            <Link href="/faq" className={linkClass}>FAQ</Link>
+            <Link href="/contact" className={linkClass}>Contact</Link>
+          </nav>
+
+          {/* Articles */}
+          <nav className="flex flex-col gap-2.5" aria-label="Footer articles">
+            <h3 className="text-xs font-medium uppercase tracking-widest text-white/40">
+              Articles
+            </h3>
+            <Link href="/most-popular-cta-stops-lines" className={linkClass}>Popular CTA Stops</Link>
+            <Link href="/co2-savings-cta-riders" className={linkClass}>CO2 Savings</Link>
+            <Link href="/cta-ridership-data" className={linkClass}>Ridership Data</Link>
+            <Link href="/cta-rush-hour-data" className={linkClass}>Rush Hour Data</Link>
+            <Link href="/cta-commute-pairs" className={linkClass}>Commute Routes</Link>
+          </nav>
+
+          {/* Legal */}
+          <nav className="flex flex-col gap-2.5" aria-label="Legal">
+            <h3 className="text-xs font-medium uppercase tracking-widest text-white/40">
+              Legal
+            </h3>
+            <Link href="/privacypolicy" className={linkClass}>Privacy Policy</Link>
+          </nav>
+        </div>
+
+        {/* ── Divider + copyright ── */}
+        <div className="mt-10 border-t border-white/10 pt-6 md:mt-12">
+          <p className="text-sm leading-6 text-white/40">
+            &copy; {new Date().getFullYear()} Transit Stats. All rights reserved.
+          </p>
+        </div>
       </div>
     </footer>
   );
