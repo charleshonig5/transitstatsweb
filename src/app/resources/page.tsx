@@ -5,12 +5,12 @@ import DownloadCTA from "@/components/DownloadCTA";
 import { posts } from "@/data/posts";
 
 export const metadata: Metadata = {
-  title: "Resources | Transit Stats | Chicago Transit Data & CTA Insights",
+  title: "Resources | Transit Stats | CTA Data & Insights",
   description:
     "Chicago transit tips, CTA statistics, and rider insights from Transit Stats. Save money, track rides, and get the most from Chicago's transit system.",
   alternates: { canonical: "https://www.transitstats.co/resources" },
   openGraph: {
-    title: "Resources | Transit Stats | Chicago Transit Data & CTA Insights",
+    title: "Resources | Transit Stats | CTA Data & Insights",
     description:
       "Chicago transit tips, CTA statistics, and rider insights from Transit Stats.",
     url: "https://www.transitstats.co/resources",

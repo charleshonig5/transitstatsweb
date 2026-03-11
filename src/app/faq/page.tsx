@@ -1,15 +1,17 @@
 import type { Metadata } from "next";
+import type { ReactNode } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import DownloadCTA from "@/components/DownloadCTA";
 import ScrollReveal from "@/components/ScrollReveal";
 
 export const metadata: Metadata = {
-  title: "FAQ | Transit Stats | CTA Tracker & Chicago Transit Data Questions",
+  title: "FAQ | Transit Stats | CTA Tracker Questions",
   description:
     "FAQ about Transit Stats, Chicago's CTA tracker. Learn how ride tracking works, CTA data usage, battery impact, privacy, Ventra compatibility, and more.",
   alternates: { canonical: "https://www.transitstats.co/faq" },
   openGraph: {
-    title: "FAQ | Transit Stats | CTA Tracker & Chicago Transit Data Questions",
+    title: "FAQ | Transit Stats | CTA Tracker Questions",
     description:
       "FAQ about Transit Stats, Chicago's CTA tracker. Learn how ride tracking works, CTA data usage, battery impact, privacy, Ventra compatibility, and more.",
     url: "https://www.transitstats.co/faq",
@@ -88,6 +90,12 @@ const faqs = [
     question: "How are CO\u2082 savings calculated?",
     answer:
       "Every time you track a CTA ride, Transit Stats calculates how much carbon dioxide you saved compared to driving the same distance alone in a car. We use EPA emissions data for the average passenger vehicle (about 404 grams of CO\u2082 per mile) and subtract the per-rider emissions of CTA trains and buses. The difference is your savings. Over time these add up fast. The average Chicago CTA rider in our app saves over 900 kg of CO\u2082 per year just by choosing public transit over driving.",
+    answerJsx: (
+      <>
+        Every time you track a CTA ride, Transit Stats calculates how much carbon dioxide you saved compared to driving the same distance alone in a car. We use EPA emissions data for the average passenger vehicle (about 404 grams of CO₂ per mile) and subtract the per-rider emissions of CTA trains and buses. The difference is your savings. Over time these add up fast. The average Chicago CTA rider in our app saves over 900 kg of CO₂ per year just by choosing public transit over driving.{" "}
+        <Link href="/co2-savings-cta-riders" className="text-brand underline underline-offset-2 transition-colors hover:text-brand-dark">See the full CO₂ data</Link>.
+      </>
+    ),
   },
   {
     icon: "/images/emoji/emoji-history.svg",
@@ -168,7 +176,7 @@ export default function FAQPage() {
                   </h2>
                 </div>
                 <p className="text-sm leading-6 text-dark md:text-base md:leading-7">
-                  {faq.answer}
+                  {faq.answerJsx ?? faq.answer}
                 </p>
               </article>
             </ScrollReveal>

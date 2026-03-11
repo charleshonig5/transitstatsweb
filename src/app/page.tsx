@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import DownloadCTA from "@/components/DownloadCTA";
 import ScrollReveal from "@/components/ScrollReveal";
 
 export const metadata: Metadata = {
-  title: "Transit Stats | Chicago Transit Data & CTA Statistics Made Personal",
+  title: "Transit Stats | Chicago CTA Data Made Personal",
   description:
-    "Transit Stats turns your Chicago CTA rides into personal data and stats. Auto-track rides, view transit insights, and measure CO₂ savings. Free on iOS & Android.",
+    "Transit Stats turns your Chicago CTA rides into personal data. Auto-track rides, view transit insights, and measure CO₂ savings. Free on iOS & Android.",
   alternates: { canonical: "https://www.transitstats.co" },
 };
 
@@ -109,18 +110,18 @@ export default function Home() {
   return (
     <>
       {/* ===== HERO (white, rounded bottom to reveal orange) ===== */}
-      <div className="animate-[hero-card-enter_0.9s_cubic-bezier(0.22,1,0.36,1)_both] overflow-hidden rounded-b-[36px] bg-white">
+      <div className="animate-[hero-card-enter_1s_cubic-bezier(0.16,1,0.3,1)_both] overflow-hidden rounded-b-[36px] bg-white">
         <section className="relative pt-10 pb-10 md:pt-14 md:pb-[74px]">
           <div className="container flex flex-col gap-12 lg:flex-row lg:items-center lg:gap-6">
             {/* Left — copy */}
             <div className="relative z-10 w-full flex flex-col gap-12 lg:shrink-0 lg:basis-[44%]">
               <div className="flex flex-col gap-6">
                 <div className="flex flex-col gap-6">
-                  <h1 className="animate-[hero-fade-up_0.8s_cubic-bezier(0.22,1,0.36,1)_0.35s_both] text-4xl font-bold leading-[1.2] text-brand md:text-5xl lg:text-6xl lg:leading-[72px]">
+                  <h1 className="text-4xl font-bold leading-[1.2] text-brand md:text-5xl lg:text-6xl lg:leading-[72px]">
                     CTA transit data{" "}
                     <span className="font-normal">made personal</span>
                   </h1>
-                  <p className="animate-[hero-fade-up_0.8s_cubic-bezier(0.22,1,0.36,1)_0.5s_both] max-w-[90%] text-sm text-dark md:text-base">
+                  <p className="max-w-[90%] text-sm text-dark md:text-base">
                     <strong>
                       Transit Stats turns your CTA rides into meaningful,
                       personal data.{" "}
@@ -134,7 +135,7 @@ export default function Home() {
                 </div>
 
                 {/* Social proof — marquee on mobile, static row on sm+ */}
-                <div className="animate-[hero-fade-up_0.8s_cubic-bezier(0.22,1,0.36,1)_0.65s_both] -m-[30px] overflow-hidden p-[30px] sm:m-0 sm:overflow-visible sm:p-0">
+                <div className="-m-[30px] overflow-hidden p-[30px] sm:m-0 sm:overflow-visible sm:p-0">
                   <div className="flex w-max gap-3 animate-[marquee_12s_linear_infinite] sm:w-auto sm:flex-wrap sm:gap-4 sm:animate-none">
                     {/* Original cards */}
                     <div className="flex shrink-0 flex-col whitespace-nowrap rounded-[10px] bg-white px-4 py-3 shadow-[0_0_30px_rgba(0,0,0,0.08)] sm:transition-all sm:duration-200 sm:hover:-translate-y-1 sm:hover:shadow-[0_8px_40px_rgba(0,0,0,0.12)]">
@@ -177,7 +178,7 @@ export default function Home() {
               </div>
 
               {/* App Store buttons */}
-              <div className="animate-[hero-fade-up_0.8s_cubic-bezier(0.22,1,0.36,1)_0.8s_both] flex flex-wrap gap-4 sm:gap-6">
+              <div className="flex flex-wrap gap-4 sm:gap-6">
                 <a
                   href="https://apps.apple.com/us/app/transit-stats-cta-analytics/id6747690858"
                   target="_blank"
@@ -215,7 +216,7 @@ export default function Home() {
             </div>
 
             {/* Right — phone mockups */}
-            <div className="animate-[hero-slide-in-right_1s_cubic-bezier(0.22,1,0.36,1)_0.4s_both] w-full lg:flex-1">
+            <div className="w-full lg:flex-1">
               <Image
                 src="/images/hero-phones.png"
                 alt="Transit Stats CTA tracker app showing Chicago transit data, live ride tracking, ride history, and coverage map"
@@ -284,7 +285,11 @@ export default function Home() {
       <section
         className="w-full rounded-[36px] bg-white py-10 md:py-[74px]"
         style={{ boxShadow: "0 0 55px rgba(0, 0, 0, 0.16)" }}
+        aria-labelledby="beyond-heading"
       >
+        <h2 id="beyond-heading" className="sr-only">
+          Why Transit Matters
+        </h2>
         <div className="container flex flex-col gap-10 md:gap-14">
               {/* Climate change */}
               <article className="flex w-full flex-col gap-10 lg:flex-row lg:items-center lg:gap-14">
@@ -297,8 +302,9 @@ export default function Home() {
                       When you choose the train or bus over driving, you&apos;re
                       making a difference.{" "}
                       <strong>
-                        Transit Stats shows you exactly how much CO₂ you save
-                        with every ride
+                          Transit Stats shows you exactly{" "}
+                        <Link href="/co2-savings-cta-riders" className="text-brand underline underline-offset-2 transition-colors hover:text-brand-dark">how much CO₂ you save
+                        with every ride</Link>
                       </strong>{" "}
                       – and how Chicago riders are collectively helping the
                       planet.
@@ -360,7 +366,8 @@ export default function Home() {
                       , and we never track sensitive data or financial
                       information. Your account data is protected with
                       industry-standard security measures and is automatically
-                      deleted when you close your account.
+                      deleted when you close your account. Read our{" "}
+                      <Link href="/privacypolicy" className="text-brand underline underline-offset-2 transition-colors hover:text-brand-dark">privacy policy</Link>.
                     </p>
                   </div>
                 </ScrollReveal>

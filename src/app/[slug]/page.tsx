@@ -116,7 +116,7 @@ export default async function ArticlePage({ params }: PageProps) {
             {post.title}
           </h1>
           <p className="mt-4 text-xs font-medium uppercase tracking-widest text-dark/40 md:mt-6">
-            {post.date} / {post.author}
+            {post.displayDate} / {post.author}
           </p>
         </div>
 
