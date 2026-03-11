@@ -134,7 +134,7 @@ export default function Home() {
 
                 {/* Social proof */}
                 <div className="flex items-start gap-4">
-                  <div className="flex flex-col rounded-[10px] bg-white px-4 py-3 shadow-[0_0_30px_rgba(0,0,0,0.08)]">
+                  <div className="flex flex-col rounded-[10px] bg-white px-4 py-3 shadow-[0_0_30px_rgba(0,0,0,0.08)] transition-all duration-200 hover:-translate-y-1 hover:shadow-[0_8px_40px_rgba(0,0,0,0.12)]">
                     <span className="text-xl font-bold text-brand md:text-2xl">4.7</span>
                     <span className="mt-0.5 flex items-center gap-1 text-xs font-medium uppercase tracking-widest text-dark/40">
                       <svg width="12" height="12" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -143,11 +143,11 @@ export default function Home() {
                       Rating
                     </span>
                   </div>
-                  <div className="flex flex-col rounded-[10px] bg-white px-4 py-3 shadow-[0_0_30px_rgba(0,0,0,0.08)]">
+                  <div className="flex flex-col rounded-[10px] bg-white px-4 py-3 shadow-[0_0_30px_rgba(0,0,0,0.08)] transition-all duration-200 hover:-translate-y-1 hover:shadow-[0_8px_40px_rgba(0,0,0,0.12)]">
                     <span className="text-xl font-bold text-brand md:text-2xl">1,500+</span>
                     <span className="mt-0.5 text-xs font-medium uppercase tracking-widest text-dark/40">Active users</span>
                   </div>
-                  <div className="flex flex-col rounded-[10px] bg-white px-4 py-3 shadow-[0_0_30px_rgba(0,0,0,0.08)]">
+                  <div className="flex flex-col rounded-[10px] bg-white px-4 py-3 shadow-[0_0_30px_rgba(0,0,0,0.08)] transition-all duration-200 hover:-translate-y-1 hover:shadow-[0_8px_40px_rgba(0,0,0,0.12)]">
                     <span className="text-xl font-bold text-brand md:text-2xl">100% Free</span>
                     <span className="mt-0.5 text-xs font-medium uppercase tracking-widest text-dark/40">On iOS &amp; Android</span>
                   </div>
@@ -245,7 +245,7 @@ export default function Home() {
                     alt={feature.alt}
                     width={744}
                     height={727}
-                    className="h-auto w-full max-w-[744px] transition-transform duration-300 hover:scale-[1.03]"
+                    className="h-auto w-full max-w-[818px] transition-transform duration-300 hover:scale-[1.03]"
                   />
                 </div>
               </article>
