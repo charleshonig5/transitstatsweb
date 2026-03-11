@@ -86,7 +86,7 @@ const faqs = [
     iconH: 44,
     question: "How are CO\u2082 savings calculated?",
     answer:
-      "Every time you track a CTA ride, Transit Stats calculates how much carbon dioxide you saved compared to driving the same distance alone in a car. We use EPA emissions data for the average passenger vehicle (about 400 grams of CO\u2082 per mile) and subtract the per-rider emissions of CTA trains and buses. The difference is your savings. Over time these add up fast. The average Chicago CTA rider in our app saves over 2,000 pounds of CO\u2082 per year just by choosing public transit over driving.",
+      "Every time you track a CTA ride, Transit Stats calculates how much carbon dioxide you saved compared to driving the same distance alone in a car. We use EPA emissions data for the average passenger vehicle (about 404 grams of CO\u2082 per mile) and subtract the per-rider emissions of CTA trains and buses. The difference is your savings. Over time these add up fast. The average Chicago CTA rider in our app saves over 900 kg of CO\u2082 per year just by choosing public transit over driving.",
   },
   {
     icon: "/images/emoji/emoji-history.svg",
@@ -94,7 +94,7 @@ const faqs = [
     iconH: 44,
     question: "Can I see my complete CTA ride history?",
     answer:
-      "Yes. Transit Stats saves every ride you track and organizes it into a complete CTA ride history. You can scroll back through all your past trips and see the date, time, route, direction, stops, distance, and CO\u2082 saved for each one. You can also filter by train or bus, sort by date or distance, and view monthly or yearly breakdowns. It's like having a personal logbook of every CTA trip you've ever taken in Chicago.",
+      "Yes. Transit Stats saves every ride you track and organizes it into a complete CTA ride history. You can scroll back through all your past trips and see the date, time, route, direction, stops, distance, and CO\u2082 saved for each one. Filter by type (all, bus, or train) to find exactly what you're looking for. You can also view every stop you've visited on a coverage map, so you can see how much of the Chicago transit system you've explored. It's like having a personal logbook of every CTA trip you've ever taken.",
   },
   {
     icon: "/images/emoji/emoji-tracking.svg",
