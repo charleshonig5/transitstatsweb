@@ -110,9 +110,9 @@ export default function Home() {
       {/* ===== HERO (white, rounded bottom to reveal orange) ===== */}
       <div className="overflow-hidden rounded-b-[36px] bg-white">
         <section className="relative pt-10 pb-10 md:pt-14 md:pb-[74px]">
-          <div className="container flex flex-col gap-12 lg:flex-row lg:items-center lg:gap-10">
+          <div className="container flex flex-col gap-12 lg:flex-row lg:items-center lg:gap-6">
             {/* Left — copy */}
-            <div className="w-full flex flex-col gap-12 lg:shrink-0 lg:basis-[38%]">
+            <div className="w-full flex flex-col gap-12 lg:shrink-0 lg:basis-[44%]">
               <div className="flex flex-col gap-6">
                 <div className="flex flex-col gap-6">
                   <h1 className="text-4xl font-bold leading-[1.2] text-brand md:text-5xl lg:text-6xl lg:leading-[72px]">
@@ -133,23 +133,23 @@ export default function Home() {
                 </div>
 
                 {/* Social proof */}
-                <div className="flex items-start gap-8">
-                  <div className="flex flex-col">
-                    <span className="text-2xl font-bold text-brand md:text-3xl">4.7</span>
-                    <span className="mt-1 flex items-center gap-1 text-xs font-medium uppercase tracking-widest text-dark/40">
+                <div className="flex items-start gap-4">
+                  <div className="flex flex-col rounded-[10px] bg-white px-4 py-3 shadow-[0_0_30px_rgba(0,0,0,0.08)]">
+                    <span className="text-xl font-bold text-brand md:text-2xl">4.7</span>
+                    <span className="mt-0.5 flex items-center gap-1 text-xs font-medium uppercase tracking-widest text-dark/40">
                       <svg width="12" height="12" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                         <path d="M10 1.25l2.47 5.01 5.53.8-4 3.9.94 5.51L10 13.77l-4.94 2.6.94-5.51-4-3.9 5.53-.8L10 1.25z" />
                       </svg>
                       Rating
                     </span>
                   </div>
-                  <div className="flex flex-col">
-                    <span className="text-2xl font-bold text-brand md:text-3xl">1,500+</span>
-                    <span className="mt-1 text-xs font-medium uppercase tracking-widest text-dark/40">Active users</span>
+                  <div className="flex flex-col rounded-[10px] bg-white px-4 py-3 shadow-[0_0_30px_rgba(0,0,0,0.08)]">
+                    <span className="text-xl font-bold text-brand md:text-2xl">1,500+</span>
+                    <span className="mt-0.5 text-xs font-medium uppercase tracking-widest text-dark/40">Active users</span>
                   </div>
-                  <div className="flex flex-col">
-                    <span className="text-2xl font-bold text-brand md:text-3xl">100% Free</span>
-                    <span className="mt-1 text-xs font-medium uppercase tracking-widest text-dark/40">On iOS &amp; Android</span>
+                  <div className="flex flex-col rounded-[10px] bg-white px-4 py-3 shadow-[0_0_30px_rgba(0,0,0,0.08)]">
+                    <span className="text-xl font-bold text-brand md:text-2xl">100% Free</span>
+                    <span className="mt-0.5 text-xs font-medium uppercase tracking-widest text-dark/40">On iOS &amp; Android</span>
                   </div>
                 </div>
               </div>
@@ -199,7 +199,7 @@ export default function Home() {
                 alt="Transit Stats CTA tracker app showing Chicago transit data, live ride tracking, ride history, and coverage map"
                 width={769}
                 height={683}
-                className="h-auto w-full"
+                className="h-auto w-full lg:scale-110 lg:origin-right"
                 priority
               />
             </div>
