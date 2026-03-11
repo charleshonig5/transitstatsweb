@@ -7,11 +7,15 @@ import DownloadCTA from "@/components/DownloadCTA";
 import MostPopularCtaStopsLines from "@/data/articles/most-popular-cta-stops-lines";
 import Co2SavingsCtaRiders from "@/data/articles/co2-savings-cta-riders";
 import CtaRidershipData from "@/data/articles/cta-ridership-data";
+import CtaRushHourData from "@/data/articles/cta-rush-hour-data";
+import CtaCommutePairs from "@/data/articles/cta-commute-pairs";
 
 const articleContent: Record<string, ReactNode> = {
   "most-popular-cta-stops-lines": <MostPopularCtaStopsLines />,
   "co2-savings-cta-riders": <Co2SavingsCtaRiders />,
   "cta-ridership-data": <CtaRidershipData />,
+  "cta-rush-hour-data": <CtaRushHourData />,
+  "cta-commute-pairs": <CtaCommutePairs />,
 };
 
 interface PageProps {
@@ -35,6 +39,14 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       title: `${post.title} | Transit Stats`,
       description: post.description,
       url: `https://www.transitstats.co/${post.slug}`,
+      images: [
+        {
+          url: `https://www.transitstats.co/images/articles/${post.slug}.png`,
+          width: 1440,
+          height: 900,
+          alt: post.title,
+        },
+      ],
     },
   };
 }

@@ -9,7 +9,7 @@ interface StatGridProps {
 
 export default function StatGrid({ stats }: StatGridProps) {
   return (
-    <div className="my-6 grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4">
+    <div className="my-6 grid grid-cols-2 gap-3 sm:gap-4">
       {stats.map((stat) => (
         <div
           key={stat.label}
