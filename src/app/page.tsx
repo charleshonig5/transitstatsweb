@@ -135,11 +135,13 @@ export default function Home() {
                 {/* Social proof */}
                 <div className="flex items-start gap-4">
                   <div className="flex flex-col rounded-[10px] bg-white px-4 py-3 shadow-[0_0_30px_rgba(0,0,0,0.08)] transition-all duration-200 hover:-translate-y-1 hover:shadow-[0_8px_40px_rgba(0,0,0,0.12)]">
-                    <span className="text-xl font-bold text-brand md:text-2xl">4.7</span>
-                    <span className="mt-0.5 flex items-center gap-1 text-xs font-medium uppercase tracking-widest text-dark/40">
-                      <svg width="12" height="12" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <span className="flex items-center gap-1.5 text-xl font-bold text-brand md:text-2xl">
+                      4.7
+                      <svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg" className="text-brand" aria-hidden="true">
                         <path d="M10 1.25l2.47 5.01 5.53.8-4 3.9.94 5.51L10 13.77l-4.94 2.6.94-5.51-4-3.9 5.53-.8L10 1.25z" />
                       </svg>
+                    </span>
+                    <span className="mt-0.5 text-xs font-medium uppercase tracking-widest text-dark/40">
                       Rating
                     </span>
                   </div>

@@ -9,7 +9,7 @@ export default function Footer() {
     <footer>
       <div className="container py-10 md:py-14">
         {/* ── Top section: logo + link columns ── */}
-        <div className="flex flex-col gap-10 md:flex-row md:gap-16">
+        <div className="flex flex-col gap-10 md:flex-row md:gap-[84px]">
           {/* Logo + tagline */}
           <div className="md:w-[240px] md:shrink-0">
             <Image
@@ -64,7 +64,7 @@ export default function Footer() {
           </div>
 
           {/* Link columns */}
-          <div className="grid grid-cols-2 gap-x-10 gap-y-8 md:flex md:gap-16">
+          <div className="grid grid-cols-2 gap-x-10 gap-y-8 md:flex md:gap-[84px]">
             {/* Pages */}
             <nav className="flex flex-col gap-2.5" aria-label="Footer navigation">
               <h3 className="text-xs font-medium uppercase tracking-widest text-white/40">
