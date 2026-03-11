@@ -11,7 +11,7 @@ export interface Post {
 export const posts: Post[] = [
   {
     slug: "most-popular-cta-stops-lines",
-    title: "Chicago's Most Popular CTA Stops and Lines",
+    title: "Chicago's most popular CTA stops and lines",
     subtitle:
       "The most popular CTA stops and train lines in Chicago based on real rider data from 23,000+ tracked rides across the L and bus network.",
     description:
@@ -23,7 +23,7 @@ export const posts: Post[] = [
   },
   {
     slug: "co2-savings-cta-riders",
-    title: "How Much CO2 Do CTA Riders Actually Save?",
+    title: "How much CO2 do CTA riders actually save?",
     subtitle:
       "We analyzed 23,000+ CTA rides to measure the real CO2 impact of riding public transit in Chicago. Here's how much carbon CTA riders actually save.",
     description:
@@ -35,7 +35,7 @@ export const posts: Post[] = [
   },
   {
     slug: "cta-ridership-data",
-    title: "Chicago CTA Ridership by the Numbers",
+    title: "Chicago CTA ridership by the numbers",
     subtitle:
       "Real CTA ridership data from thousands of Chicago riders and 23,000 trips. How Chicagoans commute, which routes dominate, and what the data reveals.",
     description:
@@ -47,7 +47,7 @@ export const posts: Post[] = [
   },
   {
     slug: "cta-rush-hour-data",
-    title: "When Does Chicago Ride the CTA? Rush Hour Data",
+    title: "When does Chicago ride the CTA? Rush hour data",
     subtitle:
       "Real hour-by-hour CTA ridership data from 23,000+ tracked rides in 2026. See when Chicagoans actually ride the bus and Chicago L train, from morning rush to late night.",
     description:
@@ -59,7 +59,7 @@ export const posts: Post[] = [
   },
   {
     slug: "cta-commute-pairs",
-    title: "Chicago's Most Common CTA Commute Routes",
+    title: "Chicago's most common CTA commute routes",
     subtitle:
       "The most popular CTA commute routes in Chicago in 2026 based on real rider data. See the top origin-destination pairs for trains and buses across the city.",
     description:
