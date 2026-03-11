@@ -9,9 +9,9 @@ export default function Footer() {
     <footer>
       <div className="container py-10 md:py-14">
         {/* ── Top section: logo + link columns ── */}
-        <div className="grid grid-cols-2 gap-x-6 gap-y-6 md:grid-cols-4 md:gap-8">
+        <div className="flex flex-col gap-10 md:flex-row md:gap-16">
           {/* Logo + tagline */}
-          <div className="col-span-2 md:col-span-1">
+          <div className="md:w-[240px] md:shrink-0">
             <Image
               src="/images/logomark.svg"
               alt="Transit Stats"
@@ -23,6 +23,16 @@ export default function Footer() {
             </p>
             {/* Social links */}
             <div className="mt-4 flex items-center gap-4">
+              <a
+                href="mailto:contact@transitstats.co"
+                aria-label="Email Transit Stats"
+                className="text-white transition-opacity duration-200 hover:opacity-80"
+              >
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <rect x="2" y="4" width="20" height="16" rx="3" stroke="currentColor" strokeWidth="2" />
+                  <path d="M2 7l10 7 10-7" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
+                </svg>
+              </a>
               <a
                 href="https://www.instagram.com/transitstats/"
                 target="_blank"
@@ -53,57 +63,60 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Pages */}
-          <nav className="flex flex-col gap-2.5" aria-label="Footer navigation">
-            <h3 className="text-xs font-medium uppercase tracking-widest text-white/40">
-              Pages
-            </h3>
-            <Link href="/" className={linkClass}>Home</Link>
-            <Link href="/about" className={linkClass}>About</Link>
-            <Link href="/resources" className={linkClass}>Resources</Link>
-            <Link href="/faq" className={linkClass}>FAQ</Link>
-            <Link href="/contact" className={linkClass}>Contact</Link>
-          </nav>
+          {/* Link columns — equal width */}
+          <div className="grid flex-1 grid-cols-2 gap-x-8 gap-y-8 md:grid-cols-3">
+            {/* Pages */}
+            <nav className="flex flex-col gap-2.5" aria-label="Footer navigation">
+              <h3 className="text-xs font-medium uppercase tracking-widest text-white/40">
+                Pages
+              </h3>
+              <Link href="/" className={linkClass}>Home</Link>
+              <Link href="/about" className={linkClass}>About</Link>
+              <Link href="/resources" className={linkClass}>Resources</Link>
+              <Link href="/faq" className={linkClass}>FAQ</Link>
+              <Link href="/contact" className={linkClass}>Contact</Link>
+            </nav>
 
-          {/* Articles */}
-          <nav className="flex flex-col gap-2.5" aria-label="Footer articles">
-            <h3 className="text-xs font-medium uppercase tracking-widest text-white/40">
-              Articles
-            </h3>
-            <Link href="/most-popular-cta-stops-lines" className={linkClass}>Popular CTA Stops</Link>
-            <Link href="/co2-savings-cta-riders" className={linkClass}>CO2 Savings</Link>
-            <Link href="/cta-ridership-data" className={linkClass}>Ridership Data</Link>
-            <Link href="/cta-rush-hour-data" className={linkClass}>Rush Hour Data</Link>
-            <Link href="/cta-commute-pairs" className={linkClass}>Commute Routes</Link>
-          </nav>
+            {/* Articles */}
+            <nav className="flex flex-col gap-2.5" aria-label="Footer articles">
+              <h3 className="text-xs font-medium uppercase tracking-widest text-white/40">
+                Articles
+              </h3>
+              <Link href="/most-popular-cta-stops-lines" className={linkClass}>Popular CTA Stops</Link>
+              <Link href="/co2-savings-cta-riders" className={linkClass}>CO2 Savings</Link>
+              <Link href="/cta-ridership-data" className={linkClass}>Ridership Data</Link>
+              <Link href="/cta-rush-hour-data" className={linkClass}>Rush Hour Data</Link>
+              <Link href="/cta-commute-pairs" className={linkClass}>Commute Routes</Link>
+            </nav>
 
-          {/* Legal + Download */}
-          <nav className="flex flex-col gap-2.5" aria-label="Legal">
-            <h3 className="text-xs font-medium uppercase tracking-widest text-white/40">
-              Legal
-            </h3>
-            <Link href="/privacypolicy" className={linkClass}>Privacy Policy</Link>
+            {/* Legal + Download */}
+            <nav className="flex flex-col gap-2.5" aria-label="Legal">
+              <h3 className="text-xs font-medium uppercase tracking-widest text-white/40">
+                Legal
+              </h3>
+              <Link href="/privacypolicy" className={linkClass}>Privacy Policy</Link>
 
-            <h3 className="mt-4 text-xs font-medium uppercase tracking-widest text-white/40">
-              Download
-            </h3>
-            <a
-              href="https://apps.apple.com/us/app/transit-stats-cta-analytics/id6747690858"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={linkClass}
-            >
-              App Store
-            </a>
-            <a
-              href="https://play.google.com/store/apps/details?id=com.mycompany.transitstatsapp"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={linkClass}
-            >
-              Google Play
-            </a>
-          </nav>
+              <h3 className="mt-4 text-xs font-medium uppercase tracking-widest text-white/40">
+                Download
+              </h3>
+              <a
+                href="https://apps.apple.com/us/app/transit-stats-cta-analytics/id6747690858"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={linkClass}
+              >
+                App Store
+              </a>
+              <a
+                href="https://play.google.com/store/apps/details?id=com.mycompany.transitstatsapp"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={linkClass}
+              >
+                Google Play
+              </a>
+            </nav>
+          </div>
         </div>
       </div>
     </footer>
