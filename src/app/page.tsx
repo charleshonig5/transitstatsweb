@@ -112,14 +112,14 @@ export default function Home() {
         <section className="relative pt-10 pb-10 md:pt-14 md:pb-[74px]">
           <div className="container flex flex-col gap-12 lg:flex-row lg:items-center lg:gap-6">
             {/* Left — copy */}
-            <div className="w-full flex flex-col gap-12 lg:shrink-0 lg:basis-[44%]">
+            <div className="relative z-10 w-full flex flex-col gap-12 lg:shrink-0 lg:basis-[44%]">
               <div className="flex flex-col gap-6">
                 <div className="flex flex-col gap-6">
                   <h1 className="text-4xl font-bold leading-[1.2] text-brand md:text-5xl lg:text-6xl lg:leading-[72px]">
                     CTA transit data{" "}
                     <span className="font-normal">made personal</span>
                   </h1>
-                  <p className="text-sm text-dark md:text-base">
+                  <p className="max-w-[90%] text-sm text-dark md:text-base">
                     <strong>
                       Transit Stats turns your CTA rides into meaningful,
                       personal data.{" "}
