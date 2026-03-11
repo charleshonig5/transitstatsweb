@@ -149,7 +149,7 @@ export default function Home() {
                     <span className="mt-1 text-xs font-medium uppercase tracking-widest text-dark/40">Active users</span>
                   </div>
                   <div className="flex flex-col">
-                    <span className="text-2xl font-bold text-brand md:text-3xl">100% Free
+                    <span className="text-2xl font-bold text-brand md:text-3xl">100% Free</span>
                     <span className="mt-1 text-xs font-medium uppercase tracking-widest text-dark/40">On iOS &amp; Android</span>
                   </div>
                 </div>
