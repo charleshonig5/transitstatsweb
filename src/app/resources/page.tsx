@@ -49,7 +49,7 @@ export default function ResourcesPage() {
               <div className="relative aspect-[16/10] w-full bg-dark/5">
                 <Image
                   src={`/images/articles/${post.slug}.png`}
-                  alt={post.title}
+                  alt={post.imageAlt}
                   fill
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"

@@ -45,7 +45,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
           url: `https://www.transitstats.co/images/articles/${post.slug}.png`,
           width: 1440,
           height: 900,
-          alt: post.title,
+          alt: post.imageAlt,
         },
       ],
     },
@@ -92,7 +92,7 @@ export default async function ArticlePage({ params }: PageProps) {
         <div className="relative mx-auto aspect-[16/10] w-full max-w-[720px] overflow-hidden rounded-xl">
           <Image
             src={`/images/articles/${post.slug}.png`}
-            alt={post.title}
+            alt={post.imageAlt}
             fill
             className="object-cover"
             sizes="(max-width: 768px) 100vw, 720px"
