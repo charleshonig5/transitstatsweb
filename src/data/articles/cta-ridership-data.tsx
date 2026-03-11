@@ -13,14 +13,14 @@ export default function ArticleContent() {
   return (
     <>
       <p>
-        Real CTA ridership statistics from 1,300+ Chicago riders and 23,000
+        Real CTA ridership statistics from thousands of Chicago riders and 23,000
         trips in 2026. How Chicagoans commute, which routes dominate, and what
         the data reveals about Chicago public transit.
       </p>
       <p>
         We built <Link href="/">Transit Stats</Link>, a CTA tracker app, to
         help individual Chicago L train riders track their rides. But when you
-        zoom out and look at the data from over 1,300 users, patterns start to
+        zoom out and look at the data from thousands of users, patterns start to
         emerge about how Chicago actually commutes.
       </p>
       <p>

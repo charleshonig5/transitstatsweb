@@ -32,9 +32,9 @@ export const posts: Post[] = [
     slug: "cta-ridership-data",
     title: "Chicago CTA Ridership by the Numbers",
     subtitle:
-      "Real CTA ridership data from 1,300+ Chicago riders and 23,000 trips. How Chicagoans commute, which routes dominate, and what the data reveals.",
+      "Real CTA ridership data from thousands of Chicago riders and 23,000 trips. How Chicagoans commute, which routes dominate, and what the data reveals.",
     description:
-      "Real CTA ridership data from 1,300+ Chicago riders and 23,000 trips. How Chicagoans commute, which routes dominate, and what the data reveals.",
+      "Real CTA ridership data from thousands of Chicago riders and 23,000 trips. How Chicagoans commute, which routes dominate, and what the data reveals.",
     date: "March 10, 2026",
     author: "Transit Stats Team",
   },

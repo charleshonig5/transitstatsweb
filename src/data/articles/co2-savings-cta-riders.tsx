@@ -36,7 +36,7 @@ export default function ArticleContent() {
         <li>Powering an average American home for nearly 3 years</li>
       </ul>
       <p>
-        And that&rsquo;s just from 1,300 riders. Imagine the sustainability
+        And that&rsquo;s just from thousands of riders. Imagine the sustainability
         impact if every CTA rider in Chicago could see these numbers.
       </p>
 

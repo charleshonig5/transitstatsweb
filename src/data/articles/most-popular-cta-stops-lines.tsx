@@ -125,7 +125,7 @@ export default function ArticleContent() {
       <p>
         This data comes from <Link href="/">Transit Stats</Link>, a free CTA
         tracker app that lets Chicago riders track their Ventra card rides and
-        see personal transit analytics. Over 1,300 riders have logged more than
+        see personal transit analytics. Thousands of riders have logged more than
         23,000 rides on the platform, giving us a unique look at how Chicagoans
         actually use Chicago public transit, and how much{" "}
         <Link href="/co2-savings-cta-riders">
