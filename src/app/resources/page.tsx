@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import DownloadCTA from "@/components/DownloadCTA";
 import { posts } from "@/data/posts";
@@ -45,8 +46,15 @@ export default function ResourcesPage() {
               href={`/${post.slug}`}
               className="flex flex-col justify-between overflow-hidden rounded-[10px] bg-white shadow-[0_0_30px_rgba(0,0,0,0.08)] transition-all duration-200 hover:-translate-y-1 hover:shadow-[0_8px_40px_rgba(0,0,0,0.12)]"
             >
-              {/* Placeholder for stock photography */}
-              <div className="aspect-[16/10] w-full bg-dark/5" />
+              <div className="relative aspect-[16/10] w-full bg-dark/5">
+                <Image
+                  src={`/images/articles/${post.slug}.png`}
+                  alt={post.title}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                />
+              </div>
               <div className="flex flex-1 flex-col p-8 md:p-10">
                 <h2 className="text-xl font-semibold leading-snug text-brand md:text-2xl md:leading-snug">
                   {post.title}
