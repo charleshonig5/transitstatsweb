@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { posts } from "@/data/posts";
 import DownloadCTA from "@/components/DownloadCTA";
@@ -85,6 +86,18 @@ export default async function ArticlePage({ params }: PageProps) {
           <p className="mt-4 text-xs font-medium uppercase tracking-widest text-dark/40 md:mt-6">
             {post.date} / {post.author}
           </p>
+        </div>
+
+        {/* ── Cover image ── */}
+        <div className="relative mx-auto aspect-[16/10] w-full max-w-[720px] overflow-hidden rounded-xl">
+          <Image
+            src={`/images/articles/${post.slug}.png`}
+            alt={post.title}
+            fill
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, 720px"
+            priority
+          />
         </div>
 
         {/* ── Article body (standard blog width) ── */}
