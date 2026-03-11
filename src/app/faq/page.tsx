@@ -112,7 +112,7 @@ export default function FAQPage() {
       <div className="container flex flex-col gap-16 py-10 md:py-[74px] lg:gap-20">
         {/* Heading */}
         <h1 className="text-4xl font-bold leading-[1.2] text-brand md:text-5xl lg:text-6xl lg:leading-[72px]">
-          Transit Stats FAQ
+          FAQ
         </h1>
 
         {/* FAQ items */}

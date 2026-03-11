@@ -15,6 +15,7 @@ export default function Footer() {
         <nav className="flex items-center gap-6 text-base font-normal text-white" aria-label="Footer navigation">
           <Link href="/" className="transition-opacity duration-200 hover:opacity-80">Home</Link>
           <Link href="/about" className="transition-opacity duration-200 hover:opacity-80">About</Link>
+          <Link href="/resources" className="transition-opacity duration-200 hover:opacity-80">Resources</Link>
           <Link href="/faq" className="transition-opacity duration-200 hover:opacity-80">FAQ</Link>
           <Link href="/contact" className="transition-opacity duration-200 hover:opacity-80">Contact</Link>
         </nav>
