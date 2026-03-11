@@ -3,12 +3,12 @@ import Image from "next/image";
 import DownloadCTA from "@/components/DownloadCTA";
 
 export const metadata: Metadata = {
-  title: "Contact Us | Transit Stats | Chicago's CTA Tracker App",
+  title: "Contact Us | Transit Stats",
   description:
     "Get in touch with the Transit Stats team. Send feedback, report bugs, share transit achievements, or suggest features for Chicago's favorite CTA tracker.",
   alternates: { canonical: "https://www.transitstats.co/contact" },
   openGraph: {
-    title: "Contact Us | Transit Stats | Chicago's CTA Tracker App",
+    title: "Contact Us | Transit Stats",
     description:
       "Get in touch with the Transit Stats team. Send feedback, report bugs, share transit achievements, or suggest features for Chicago's favorite CTA tracker.",
     url: "https://www.transitstats.co/contact",

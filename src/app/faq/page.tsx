@@ -6,12 +6,12 @@ import DownloadCTA from "@/components/DownloadCTA";
 import ScrollReveal from "@/components/ScrollReveal";
 
 export const metadata: Metadata = {
-  title: "FAQ | Transit Stats | CTA Tracker Questions",
+  title: "CTA Tracker FAQ | Transit Stats",
   description:
     "FAQ about Transit Stats, Chicago's CTA tracker. Learn how ride tracking works, CTA data usage, battery impact, privacy, Ventra compatibility, and more.",
   alternates: { canonical: "https://www.transitstats.co/faq" },
   openGraph: {
-    title: "FAQ | Transit Stats | CTA Tracker Questions",
+    title: "CTA Tracker FAQ | Transit Stats",
     description:
       "FAQ about Transit Stats, Chicago's CTA tracker. Learn how ride tracking works, CTA data usage, battery impact, privacy, Ventra compatibility, and more.",
     url: "https://www.transitstats.co/faq",
