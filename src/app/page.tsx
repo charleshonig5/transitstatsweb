@@ -5,7 +5,7 @@ import DownloadCTA from "@/components/DownloadCTA";
 export const metadata: Metadata = {
   title: "Transit Stats — Chicago Transit Data & CTA Statistics Made Personal",
   description:
-    "Transit Stats is the ultimate CTA tracker — turning your Chicago transit rides into personal data and CTA stats. Auto-track rides, view in-depth transit data, climb leaderboards, and measure your CO₂ savings. Free on iOS and Android.",
+    "Transit Stats turns your Chicago CTA rides into personal data and stats. Auto-track rides, view transit insights, and measure CO₂ savings. Free on iOS & Android.",
   alternates: { canonical: "https://www.transitstats.co" },
 };
 

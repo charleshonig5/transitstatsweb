@@ -1,15 +1,16 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import DownloadCTA from "@/components/DownloadCTA";
 
 export const metadata: Metadata = {
-  title: "Contact Us — Transit Stats | Chicago's CTA Tracker App",
+  title: "Contact Us — Transit Stats — Chicago's CTA Tracker App",
   description:
-    "Get in touch with the Transit Stats team — the makers of Chicago's favorite CTA tracker. Send us feedback about transit data, report bugs, share achievements, or suggest new features.",
+    "Get in touch with the Transit Stats team. Send feedback, report bugs, share transit achievements, or suggest features for Chicago's favorite CTA tracker.",
   alternates: { canonical: "https://www.transitstats.co/contact" },
   openGraph: {
-    title: "Contact Us — Transit Stats | Chicago's CTA Tracker App",
+    title: "Contact Us — Transit Stats — Chicago's CTA Tracker App",
     description:
-      "Get in touch with the Transit Stats team — the makers of Chicago's favorite CTA tracker. Send us feedback about transit data, report bugs, share achievements, or suggest new features.",
+      "Get in touch with the Transit Stats team. Send feedback, report bugs, share transit achievements, or suggest features for Chicago's favorite CTA tracker.",
     url: "https://www.transitstats.co/contact",
   },
 };
@@ -31,7 +32,7 @@ export default function ContactPage() {
           }),
         }}
       />
-      <div className="container py-10 md:py-[74px]">
+      <div className="container flex flex-col gap-16 py-10 md:py-[74px] lg:gap-20">
         {/* Orange contact card */}
         <div className="flex flex-col gap-10 overflow-hidden rounded-[36px] bg-gradient-to-b from-brand to-brand-dark p-8 shadow-[0_0_30px_rgba(0,0,0,0.08)] md:p-14 lg:flex-row lg:items-start lg:gap-20 lg:p-[60px]">
           {/* Copy */}
@@ -162,6 +163,9 @@ export default function ContactPage() {
             />
           </div>
         </div>
+
+        {/* Download CTA */}
+        <DownloadCTA />
       </div>
     </div>
   );

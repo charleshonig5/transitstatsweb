@@ -5,12 +5,12 @@ import DownloadCTA from "@/components/DownloadCTA";
 export const metadata: Metadata = {
   title: "About Transit Stats — Chicago Transit Data & CTA Stats App",
   description:
-    "Transit Stats is the first app that turns your CTA rides into personal transit data — showing your real CTA statistics, environmental impact, and Chicago transit patterns. Built by CTA riders, for CTA riders.",
+    "Transit Stats turns your CTA rides into personal transit data — real statistics, environmental impact, and Chicago transit patterns. Built by riders, for riders.",
   alternates: { canonical: "https://www.transitstats.co/about" },
   openGraph: {
     title: "About Transit Stats — Chicago Transit Data & CTA Stats App",
     description:
-      "Transit Stats is the first app that turns your CTA rides into personal transit data — showing your real CTA statistics, environmental impact, and Chicago transit patterns.",
+      "Transit Stats turns your CTA rides into personal transit data — real statistics, environmental impact, and Chicago transit patterns. Built by riders, for riders.",
     url: "https://www.transitstats.co/about",
   },
 };

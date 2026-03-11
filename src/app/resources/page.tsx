@@ -5,12 +5,12 @@ import DownloadCTA from "@/components/DownloadCTA";
 import { posts } from "@/data/posts";
 
 export const metadata: Metadata = {
-  title: "Resources — Transit Stats | Chicago Transit Data & CTA Insights",
+  title: "Resources — Transit Stats — Chicago Transit Data & CTA Insights",
   description:
-    "Chicago transit tips, CTA statistics, and rider insights from Transit Stats. Learn how to save money, track your rides, and make the most of Chicago's transit system.",
+    "Chicago transit tips, CTA statistics, and rider insights from Transit Stats. Save money, track rides, and get the most from Chicago's transit system.",
   alternates: { canonical: "https://www.transitstats.co/resources" },
   openGraph: {
-    title: "Resources — Transit Stats | Chicago Transit Data & CTA Insights",
+    title: "Resources — Transit Stats — Chicago Transit Data & CTA Insights",
     description:
       "Chicago transit tips, CTA statistics, and rider insights from Transit Stats.",
     url: "https://www.transitstats.co/resources",
@@ -31,6 +31,22 @@ export default function ResourcesPage() {
               { "@type": "ListItem", position: 1, name: "Home", item: "https://www.transitstats.co" },
               { "@type": "ListItem", position: 2, name: "Resources" },
             ],
+          }),
+        }}
+      />
+      {/* ItemList structured data for carousel rich results */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            itemListElement: posts.map((post, i) => ({
+              "@type": "ListItem",
+              position: i + 1,
+              url: `https://www.transitstats.co/${post.slug}`,
+              name: post.title,
+            })),
           }),
         }}
       />

@@ -14,10 +14,10 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.transitstats.co"),
   title: {
     default: "Transit Stats — Chicago Transit Data & CTA Statistics Made Personal",
-    template: "%s | Transit Stats",
+    template: "%s — Transit Stats",
   },
   description:
-    "Transit Stats is the ultimate CTA tracker — turning your Chicago transit rides into personal CTA data and statistics. Track rides, view in-depth CTA stats, climb leaderboards, and see your CO₂ savings — all for free.",
+    "Transit Stats turns your Chicago CTA rides into personal data and stats. Track rides, view transit insights, climb leaderboards, and see CO₂ savings — free.",
   keywords: [
     "transit stats",
     "transit data",
@@ -119,8 +119,8 @@ export default function RootLayout({
               },
               aggregateRating: {
                 "@type": "AggregateRating",
-                ratingValue: "5",
-                ratingCount: "36",
+                ratingValue: "4.7",
+                ratingCount: "1500",
               },
               featureList: [
                 "Auto live tracking",

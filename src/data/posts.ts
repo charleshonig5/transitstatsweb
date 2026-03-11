@@ -51,7 +51,7 @@ export const posts: Post[] = [
     subtitle:
       "Real hour-by-hour CTA ridership data from 23,000+ tracked rides in 2026. See when Chicagoans actually ride the bus and Chicago L train, from morning rush to late night.",
     description:
-      "Real hour-by-hour CTA ridership data from 23,000+ tracked rides in 2026. See when Chicagoans actually ride the bus and Chicago L train, from morning rush to late night.",
+      "Hour-by-hour CTA ridership data from 23,000+ rides in 2026. See when Chicagoans ride the bus and L train, from morning rush to late night.",
     imageAlt:
       "Crowded CTA train platform during evening rush hour in Chicago with commuters waiting",
     date: "March 11, 2026",

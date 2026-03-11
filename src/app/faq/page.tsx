@@ -3,14 +3,14 @@ import Image from "next/image";
 import DownloadCTA from "@/components/DownloadCTA";
 
 export const metadata: Metadata = {
-  title: "FAQ — Transit Stats | CTA Tracker & Chicago Transit Data Questions",
+  title: "FAQ — Transit Stats — CTA Tracker & Chicago Transit Data Questions",
   description:
-    "Frequently asked questions about Transit Stats — Chicago's CTA tracker. Learn how ride tracking works, how we use CTA data, battery usage, data privacy, Ventra compatibility, and more.",
+    "FAQ about Transit Stats, Chicago's CTA tracker. Learn how ride tracking works, CTA data usage, battery impact, privacy, Ventra compatibility, and more.",
   alternates: { canonical: "https://www.transitstats.co/faq" },
   openGraph: {
-    title: "FAQ — Transit Stats | CTA Tracker & Chicago Transit Data Questions",
+    title: "FAQ — Transit Stats — CTA Tracker & Chicago Transit Data Questions",
     description:
-      "Frequently asked questions about Transit Stats — Chicago's CTA tracker. Learn how ride tracking works, how we use CTA data, battery usage, data privacy, Ventra compatibility, and more.",
+      "FAQ about Transit Stats, Chicago's CTA tracker. Learn how ride tracking works, CTA data usage, battery impact, privacy, Ventra compatibility, and more.",
     url: "https://www.transitstats.co/faq",
   },
 };

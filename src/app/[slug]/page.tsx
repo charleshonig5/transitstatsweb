@@ -33,11 +33,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!post) return {};
 
   return {
-    title: `${post.title} | Transit Stats`,
+    title: `${post.title} — Transit Stats`,
     description: post.description,
     alternates: { canonical: `https://www.transitstats.co/${post.slug}` },
     openGraph: {
-      title: `${post.title} | Transit Stats`,
+      title: `${post.title} — Transit Stats`,
       description: post.description,
       url: `https://www.transitstats.co/${post.slug}`,
       images: [
@@ -73,6 +73,38 @@ export default async function ArticlePage({ params }: PageProps) {
               { "@type": "ListItem", position: 2, name: "Resources", item: "https://www.transitstats.co/resources" },
               { "@type": "ListItem", position: 3, name: post.title },
             ],
+          }),
+        }}
+      />
+      {/* Article structured data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            headline: post.title,
+            description: post.description,
+            image: `https://www.transitstats.co/images/articles/${post.slug}.png`,
+            datePublished: post.date,
+            author: {
+              "@type": "Organization",
+              name: post.author,
+              url: "https://www.transitstats.co",
+            },
+            publisher: {
+              "@type": "Organization",
+              name: "Transit Stats",
+              url: "https://www.transitstats.co",
+              logo: {
+                "@type": "ImageObject",
+                url: "https://www.transitstats.co/images/og-image.png",
+              },
+            },
+            mainEntityOfPage: {
+              "@type": "WebPage",
+              "@id": `https://www.transitstats.co/${post.slug}`,
+            },
           }),
         }}
       />
