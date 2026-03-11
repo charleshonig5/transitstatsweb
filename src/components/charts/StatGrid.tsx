@@ -13,7 +13,7 @@ export default function StatGrid({ stats }: StatGridProps) {
       {stats.map((stat) => (
         <div
           key={stat.label}
-          className="rounded-lg border border-dark/10 px-3 py-2.5 sm:px-4 sm:py-3"
+          className="rounded-[10px] bg-white px-3 py-2.5 shadow-[0_0_30px_rgba(0,0,0,0.08)] sm:px-4 sm:py-3"
         >
           <span className="block text-lg font-bold leading-tight text-brand sm:text-xl">
             {stat.value}

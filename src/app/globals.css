@@ -52,14 +52,22 @@ body {
 }
 
 /* Hero entrance animations */
-@keyframes hero-slide-down {
-  from { opacity: 0; transform: translateY(-30px); }
-  to   { opacity: 1; transform: translateY(0); }
+@keyframes hero-card-enter {
+  0%   { opacity: 0; transform: translateY(-80px) scale(0.96); }
+  70%  { opacity: 1; transform: translateY(8px) scale(1.005); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
 }
 
 @keyframes hero-fade-up {
-  from { opacity: 0; transform: translateY(20px); }
-  to   { opacity: 1; transform: translateY(0); }
+  0%   { opacity: 0; transform: translateY(40px); }
+  70%  { opacity: 1; transform: translateY(-4px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes hero-slide-in-right {
+  0%   { opacity: 0; transform: translateX(80px) scale(0.95); }
+  70%  { opacity: 1; transform: translateX(-6px) scale(1.005); }
+  100% { opacity: 1; transform: translateX(0) scale(1); }
 }
 
 /* Scroll-reveal transitions — start hidden, transition to visible */
