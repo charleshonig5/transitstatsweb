@@ -306,7 +306,7 @@ export default function Home() {
                         <Link href="/co2-savings-cta-riders" className="text-brand underline underline-offset-2 transition-colors hover:text-brand-dark">how much CO₂ you save
                         with every ride</Link>
                       </strong>{" "}
-                      – and how Chicago riders are collectively helping the
+                      - and how Chicago riders are collectively helping the
                       planet.
                     </p>
                   </div>
@@ -340,7 +340,7 @@ export default function Home() {
                     </h3>
                     <p className="text-sm text-dark md:text-base">
                       Transit Stats currently supports{" "}
-                      <strong>Chicago transit — including every CTA train line and bus route.</strong>{" "}
+                      <strong>Chicago transit - including every CTA train line and bus route.</strong>{" "}
                       We pull real-time CTA data to power ride tracking, stats,
                       and leaderboards across the entire network. More cities
                       coming soon.
