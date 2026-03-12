@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Transit Stats",
+  title: "Privacy Policy",
   description:
     "Transit Stats privacy policy — how we collect, use, and protect your data. We don't sell personal information to third parties.",
   alternates: { canonical: "https://www.transitstats.co/privacypolicy" },

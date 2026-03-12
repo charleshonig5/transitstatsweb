@@ -3,7 +3,7 @@ import Image from "next/image";
 import DownloadCTA from "@/components/DownloadCTA";
 
 export const metadata: Metadata = {
-  title: "Contact Us | Transit Stats",
+  title: "Contact Us",
   description:
     "Get in touch with the Transit Stats team. Send feedback, report bugs, share transit achievements, or suggest features for Chicago's favorite CTA tracker.",
   alternates: { canonical: "https://www.transitstats.co/contact" },

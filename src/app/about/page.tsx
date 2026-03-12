@@ -4,8 +4,7 @@ import Link from "next/link";
 import DownloadCTA from "@/components/DownloadCTA";
 
 export const metadata: Metadata = {
-  title: "About | Transit Stats",
-  description:
+  title: "About",  description:
     "Transit Stats turns your CTA rides into personal data — real statistics, environmental impact, and Chicago transit patterns. Built by riders, for riders.",
   alternates: { canonical: "https://www.transitstats.co/about" },
   openGraph: {

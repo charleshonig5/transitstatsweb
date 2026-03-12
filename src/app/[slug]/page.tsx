@@ -33,7 +33,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!post) return {};
 
   return {
-    title: `${post.title} | Transit Stats`,
+    title: post.title,
     description: post.description,
     alternates: { canonical: `https://www.transitstats.co/${post.slug}` },
     openGraph: {

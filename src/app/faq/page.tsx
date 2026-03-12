@@ -6,7 +6,7 @@ import DownloadCTA from "@/components/DownloadCTA";
 import ScrollReveal from "@/components/ScrollReveal";
 
 export const metadata: Metadata = {
-  title: "CTA Tracker FAQ | Transit Stats",
+  title: "CTA Tracker FAQ",
   description:
     "FAQ about Transit Stats, Chicago's CTA tracker. Learn how ride tracking works, CTA data usage, battery impact, privacy, Ventra compatibility, and more.",
   alternates: { canonical: "https://www.transitstats.co/faq" },

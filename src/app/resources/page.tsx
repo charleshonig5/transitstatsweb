@@ -5,7 +5,7 @@ import DownloadCTA from "@/components/DownloadCTA";
 import { posts } from "@/data/posts";
 
 export const metadata: Metadata = {
-  title: "CTA Data & Insights | Transit Stats",
+  title: "CTA Data & Insights",
   description:
     "Chicago transit tips, CTA statistics, and rider insights from Transit Stats. Save money, track rides, and get the most from Chicago's transit system.",
   alternates: { canonical: "https://www.transitstats.co/resources" },
