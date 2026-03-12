@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
 import DownloadCTA from "@/components/DownloadCTA";
 
 export const metadata: Metadata = {
@@ -88,9 +87,7 @@ export default function AboutPage() {
             <strong>
               Every CTA train ride and bus trip deserves to be celebrated,
               tracked, and rewarded.
-            </strong>{" "}
-            Curious what the data shows? Check out our{" "}
-            <Link href="/resources" className="text-brand underline underline-offset-2 transition-colors hover:text-brand-dark">CTA insights and articles</Link>.
+            </strong>
           </p>
         </div>
       </section>
