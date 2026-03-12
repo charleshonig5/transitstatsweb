@@ -2,9 +2,9 @@ export default function DownloadCTA() {
   return (
     <div className="flex flex-col items-center gap-6 rounded-[36px] bg-gradient-to-b from-brand to-brand-dark p-8 text-center shadow-[0_0_30px_rgba(0,0,0,0.08)] md:gap-8 md:p-14">
         <div className="flex flex-col items-center gap-2">
-          <h2 className="text-3xl font-bold text-white md:text-4xl lg:text-5xl">
+          <p className="text-3xl font-bold text-white md:text-4xl lg:text-5xl">
             Try Transit Stats for free!
-          </h2>
+          </p>
           <p className="text-sm text-white md:text-base">
             Available on iOS and Android. No Ventra account needed.
           </p>

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { posts } from "@/data/posts";
 import DownloadCTA from "@/components/DownloadCTA";
@@ -112,6 +113,29 @@ export default async function ArticlePage({ params }: PageProps) {
       <div className="container flex flex-col gap-10 py-10 md:gap-14 md:py-[74px]">
         {/* ── Article header ── */}
         <div className="mx-auto flex w-full max-w-[720px] flex-col">
+          {/* Back to Resources */}
+          <Link
+            href="/resources"
+            className="group mb-6 flex items-center gap-2.5 text-sm font-semibold text-brand transition-all duration-200 hover:-translate-x-1 md:text-base"
+          >
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              aria-hidden="true"
+              className="transition-transform duration-200 group-hover:-translate-x-1"
+            >
+              <path
+                d="M16 10H4M4 10L9 5M4 10L9 15"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+            Back to resources
+          </Link>
           <h1 className="text-4xl font-bold leading-[1.2] text-brand md:text-5xl lg:text-6xl lg:leading-[72px]">
             {post.title}
           </h1>
