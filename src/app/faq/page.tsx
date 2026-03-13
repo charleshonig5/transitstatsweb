@@ -170,7 +170,7 @@ export default function FAQPage() {
             <ScrollReveal key={faq.question} direction="up" delay={i < 3 ? i * 75 : 0}>
               <article className="flex flex-col gap-3.5">
                 <div className="flex flex-col gap-3 md:flex-row md:items-center md:gap-5">
-                  <Image src={faq.icon} alt="" width={faq.iconW} height={faq.iconH} className="h-8 w-auto self-start" aria-hidden="true" />
+                  <Image src={faq.icon} alt="" width={faq.iconW} height={faq.iconH} className="h-8 w-auto self-start md:self-center" aria-hidden="true" />
                   <h2 className="text-2xl font-semibold leading-tight text-brand md:text-3xl lg:text-4xl">
                     {faq.question}
                   </h2>
