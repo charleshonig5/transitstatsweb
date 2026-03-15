@@ -121,6 +121,14 @@ const faqs = [
     answer:
       "Achievements are milestones you earn by riding CTA. Transit Stats tracks your rides and automatically awards achievements when you hit certain goals, like completing your first 10 rides, riding all eight L lines, or logging 100 miles on CTA buses. There are dozens of achievements to unlock across categories like distance, frequency, and exploration. They give you something fun to work toward and help you discover parts of the Chicago transit system you might not have tried yet.",
   },
+  {
+    icon: "/images/emoji/emoji-stats.svg",
+    iconW: 44,
+    iconH: 44,
+    question: "Can I see my all-time CTA stats?",
+    answer:
+      "Yes. Transit Stats gives you a complete breakdown of your all-time Chicago transit data. You can see your total CTA rides, total distance traveled, total CO\u2082 saved, and your longest ride streak across all time. Your stats page also breaks down your riding patterns by train vs bus, shows your most-visited CTA stops, and tracks which L lines and bus routes you use the most. Everything updates automatically after each ride so you always have an up-to-date snapshot of your entire CTA history in one place.",
+  },
 ];
 
 export default function FAQPage() {
