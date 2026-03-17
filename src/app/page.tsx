@@ -5,12 +5,12 @@ import DownloadCTA from "@/components/DownloadCTA";
 import ScrollReveal from "@/components/ScrollReveal";
 
 export const metadata: Metadata = {
-  title: "Chicago CTA Data Made Personal | Transit Stats",
+  title: "Transit Stats | Chicago CTA Data Made Personal",
   description:
     "Transit Stats turns your Chicago CTA rides into personal data. Auto-track rides, view transit insights, and measure CO₂ savings. Free on iOS & Android.",
   alternates: { canonical: "https://www.transitstats.co" },
   openGraph: {
-    title: "Chicago CTA Data Made Personal | Transit Stats",
+    title: "Transit Stats | Chicago CTA Data Made Personal",
     description:
       "Transit Stats turns your Chicago CTA rides into personal data. Auto-track rides, view transit insights, and measure CO₂ savings. Free on iOS & Android.",
   },
