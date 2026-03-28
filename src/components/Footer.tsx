@@ -61,7 +61,7 @@ export default function Footer() {
           </div>
 
           {/* Link columns */}
-          <div className="grid grid-cols-[auto_auto] justify-start gap-x-12 gap-y-8 md:flex md:gap-24">
+          <div className="grid grid-cols-[auto_auto] justify-start gap-x-12 gap-y-8 md:flex md:gap-32">
             {/* Pages */}
             <nav className="flex flex-col gap-2.5" aria-label="Footer navigation">
               <h3 className="text-xs font-medium uppercase tracking-widest text-white/40">
