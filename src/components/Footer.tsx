@@ -9,7 +9,7 @@ export default function Footer() {
     <footer>
       <div className="container py-10 md:py-14">
         {/* ── Top section: logo + link columns ── */}
-        <div className="flex flex-col gap-10 md:flex-row md:gap-[104px]">
+        <div className="flex flex-col gap-10 md:flex-row md:justify-between">
           {/* Logo + tagline */}
           <div className="md:w-[240px] md:shrink-0">
             <Image
@@ -19,7 +19,7 @@ export default function Footer() {
               height={42}
             />
             {/* Social links */}
-            <div className="mt-4 flex flex-col gap-2.5">
+            <div className="mt-8 flex flex-col gap-2.5">
               <a
                 href="mailto:contact@transitstats.co"
                 className="flex items-center gap-2.5 text-sm leading-6 text-white transition-opacity duration-200 hover:opacity-80"
@@ -61,7 +61,7 @@ export default function Footer() {
           </div>
 
           {/* Link columns */}
-          <div className="grid grid-cols-2 gap-x-6 gap-y-8 md:flex md:gap-[104px]">
+          <div className="grid grid-cols-[auto_auto] justify-start gap-x-12 gap-y-8 md:flex md:gap-24">
             {/* Pages */}
             <nav className="flex flex-col gap-2.5" aria-label="Footer navigation">
               <h3 className="text-xs font-medium uppercase tracking-widest text-white/40">
