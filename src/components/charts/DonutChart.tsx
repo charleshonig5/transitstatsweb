@@ -7,6 +7,21 @@ interface DonutChartProps {
   busRides: number;
 }
 
+/**
+ * Compact-format big numbers so they fit inside the donut center.
+ * Small numbers (under 1M) render with full commas to preserve existing styling
+ * in articles where the donut shows precise ride counts (e.g. 23,478).
+ */
+function formatTotal(n: number): string {
+  if (n >= 1_000_000_000) {
+    return (n / 1_000_000_000).toFixed(1).replace(/\.0$/, "") + "B";
+  }
+  if (n >= 1_000_000) {
+    return (n / 1_000_000).toFixed(1).replace(/\.0$/, "") + "M";
+  }
+  return n.toLocaleString();
+}
+
 export default function DonutChart({ trainRides, busRides }: DonutChartProps) {
   const total = trainRides + busRides;
   const trainPct = Math.round((trainRides / total) * 100);
@@ -44,7 +59,7 @@ export default function DonutChart({ trainRides, busRides }: DonutChartProps) {
         </ResponsiveContainer>
         <div className="absolute inset-0 flex flex-col items-center justify-center">
           <span className="text-2xl font-bold text-dark">
-            {total.toLocaleString()}
+            {formatTotal(total)}
           </span>
           <span className="text-xs text-dark/50">rides</span>
         </div>
