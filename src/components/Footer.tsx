@@ -79,6 +79,7 @@ export default function Footer() {
               <h3 className="text-xs font-medium uppercase tracking-widest text-white/40">
                 Articles
               </h3>
+              <Link href="/cta-ridership-growth-2026" className={linkClass}>Ridership Growth</Link>
               <Link href="/most-popular-cta-stops-lines" className={linkClass}>Popular CTA Stops</Link>
               <Link href="/co2-savings-cta-riders" className={linkClass}>CO2 Savings</Link>
               <Link href="/cta-ridership-data" className={linkClass}>Ridership Data</Link>
