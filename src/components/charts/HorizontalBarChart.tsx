@@ -7,11 +7,14 @@ interface DataPoint {
 interface HorizontalBarChartProps {
   data: DataPoint[];
   barColor?: string;
+  /** Suffix appended after each value (e.g. "M", "%", " rides"). Default: none. */
+  valueSuffix?: string;
 }
 
 export default function HorizontalBarChart({
   data,
   barColor = "#F7752C",
+  valueSuffix = "",
 }: HorizontalBarChartProps) {
   const maxValue = Math.max(...data.map((d) => d.value));
 
@@ -23,6 +26,7 @@ export default function HorizontalBarChart({
             <span className="font-medium text-dark">{entry.name}</span>
             <span className="font-semibold text-dark">
               {entry.value.toLocaleString()}
+              {valueSuffix}
             </span>
           </div>
           <div className="mt-1 h-5 w-full rounded-md bg-dark/5">

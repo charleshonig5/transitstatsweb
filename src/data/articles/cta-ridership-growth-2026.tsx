@@ -99,7 +99,7 @@ export default function ArticleContent() {
         Here&rsquo;s how 2025&rsquo;s 373.5 million rides break down across
         Chicago&rsquo;s regional transit agencies (in millions):
       </p>
-      <HorizontalBarChart data={ridershipByAgency} />
+      <HorizontalBarChart data={ridershipByAgency} valueSuffix="M" />
       <ol>
         <li>CTA Bus: 184 million rides</li>
         <li>CTA Rail: 135.2 million rides</li>
@@ -118,7 +118,7 @@ export default function ArticleContent() {
         year-over-year increase, followed by CTA rail at 6%. CTA bus posted a
         smaller 1% gain, and Pace saw ridership dip 3%.
       </p>
-      <HorizontalBarChart data={growthByMode} />
+      <HorizontalBarChart data={growthByMode} valueSuffix="%" />
       <ol>
         <li>Metra: +8% year over year</li>
         <li>CTA Rail: +6%</li>
