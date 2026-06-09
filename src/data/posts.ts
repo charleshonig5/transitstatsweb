@@ -11,6 +11,19 @@ export interface Post {
 
 export const posts: Post[] = [
   {
+    slug: "cta-ridership-growth-2026",
+    title: "Chicago CTA ridership continues to grow in 2026",
+    subtitle:
+      "Chicago CTA ridership grew 3% in 2025, marking the fourth straight year of growth. See the latest regional transit ridership data and what 2026 looks like ahead.",
+    description:
+      "Chicago CTA ridership grew 3% in 2025, marking the fourth straight year of growth. See the latest regional transit ridership data and what 2026 looks like ahead.",
+    imageAlt:
+      "CTA L train traveling on an elevated track through Chicago's Loop, framed by historic Loop architecture and the steel bridge truss below",
+    date: "2026-06-09",
+    displayDate: "June 9, 2026",
+    author: "Transit Stats Team",
+  },
+  {
     slug: "most-popular-cta-stops-lines",
     title: "Chicago's most popular CTA stops and lines",
     subtitle:
