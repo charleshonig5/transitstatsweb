@@ -21,7 +21,7 @@ export default function NotFound() {
         </p>
         <Link
           href="/"
-          className="mt-8 rounded-full bg-brand px-8 py-3 text-sm font-semibold text-white transition-all duration-200 hover:brightness-110 md:text-base"
+          className="mt-8 rounded-full bg-brand px-8 py-3 text-sm font-semibold text-white transition-all duration-200 hover:brightness-110 active:scale-[0.97] md:text-base"
         >
           Back to home
         </Link>

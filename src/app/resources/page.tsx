@@ -60,7 +60,7 @@ export default function ResourcesPage() {
             <Link
               key={post.slug}
               href={`/${post.slug}`}
-              className="flex flex-col justify-between overflow-hidden rounded-[10px] bg-white shadow-[0_0_30px_rgba(0,0,0,0.08)] transition-all duration-200 hover:-translate-y-1 hover:shadow-[0_8px_40px_rgba(0,0,0,0.12)]"
+              className="flex flex-col justify-between overflow-hidden rounded-[10px] bg-white shadow-[0_0_30px_rgba(0,0,0,0.08)] transition-all duration-200 hover:-translate-y-1 hover:shadow-[0_8px_40px_rgba(0,0,0,0.12)] active:translate-y-0 active:scale-[0.98]"
             >
               <div className="relative aspect-[16/10] w-full bg-dark/5">
                 <Image

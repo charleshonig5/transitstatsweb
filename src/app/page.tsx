@@ -186,7 +186,7 @@ export default function Home() {
                   href="https://apps.apple.com/us/app/transit-stats-cta-analytics/id6747690858"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 sm:gap-3 whitespace-nowrap rounded-[100px] bg-brand px-[18px] py-3 sm:px-6 text-white transition-all duration-200 hover:scale-105 hover:shadow-[0_4px_20px_rgba(247,117,44,0.4)]"
+                  className="flex items-center gap-2 sm:gap-3 whitespace-nowrap rounded-[100px] bg-brand px-[18px] py-3 sm:px-6 text-white transition-all duration-200 hover:scale-105 hover:shadow-[0_4px_20px_rgba(247,117,44,0.4)] active:scale-[0.97]"
                   aria-label="Download Transit Stats on the App Store"
                 >
                   <svg width="32" height="38" viewBox="0 0 32 38" fill="currentColor" aria-hidden="true" className="size-7 sm:size-auto">
@@ -201,7 +201,7 @@ export default function Home() {
                   href="https://play.google.com/store/apps/details?id=com.mycompany.transitstatsapp"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 sm:gap-3 whitespace-nowrap rounded-[100px] bg-brand px-[18px] py-3 sm:px-6 text-white transition-all duration-200 hover:scale-105 hover:shadow-[0_4px_20px_rgba(247,117,44,0.4)]"
+                  className="flex items-center gap-2 sm:gap-3 whitespace-nowrap rounded-[100px] bg-brand px-[18px] py-3 sm:px-6 text-white transition-all duration-200 hover:scale-105 hover:shadow-[0_4px_20px_rgba(247,117,44,0.4)] active:scale-[0.97]"
                   aria-label="Get Transit Stats on Google Play"
                 >
                   <svg width="34" height="38" viewBox="0 0 34 38" fill="none" aria-hidden="true" className="size-7 sm:size-auto">
@@ -306,7 +306,7 @@ export default function Home() {
                       making a difference.{" "}
                       <strong>
                           Transit Stats shows you exactly{" "}
-                        <Link href="/co2-savings-cta-riders" className="text-brand underline underline-offset-2 transition-colors hover:text-brand-dark">how much CO₂ you save
+                        <Link href="/co2-savings-cta-riders" className="text-brand underline underline-offset-2 transition-all hover:text-brand-dark active:opacity-60">how much CO₂ you save
                         with every ride</Link>
                       </strong>{" "}
                       - and how Chicago riders are collectively helping the
@@ -370,7 +370,7 @@ export default function Home() {
                       information. Your account data is protected with
                       industry-standard security measures and is automatically
                       deleted when you close your account. Read our{" "}
-                      <Link href="/privacypolicy" className="text-brand underline underline-offset-2 transition-colors hover:text-brand-dark">privacy policy</Link>.
+                      <Link href="/privacypolicy" className="text-brand underline underline-offset-2 transition-all hover:text-brand-dark active:opacity-60">privacy policy</Link>.
                     </p>
                   </div>
                 </ScrollReveal>

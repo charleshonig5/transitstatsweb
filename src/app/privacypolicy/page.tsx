@@ -69,7 +69,7 @@ export default function PrivacyPage() {
               please contact us at{" "}
               <a
                 href="mailto:contact@transitstats.co"
-                className="underline underline-offset-2"
+                className="underline underline-offset-2 transition-opacity duration-200 active:opacity-60"
               >
                 contact@transitstats.co
               </a>
@@ -466,7 +466,7 @@ export default function PrivacyPage() {
                 href="https://tools.google.com/dlpage/gaoptout"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="underline underline-offset-2"
+                className="underline underline-offset-2 transition-opacity duration-200 active:opacity-60"
               >
                 https://tools.google.com/dlpage/gaoptout
               </a>
@@ -477,7 +477,7 @@ export default function PrivacyPage() {
                 href="http://optout.networkadvertising.org/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="underline underline-offset-2"
+                className="underline underline-offset-2 transition-opacity duration-200 active:opacity-60"
               >
                 http://optout.networkadvertising.org/
               </a>{" "}
@@ -486,7 +486,7 @@ export default function PrivacyPage() {
                 href="http://www.networkadvertising.org/mobile-choice"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="underline underline-offset-2"
+                className="underline underline-offset-2 transition-opacity duration-200 active:opacity-60"
               >
                 http://www.networkadvertising.org/mobile-choice
               </a>
@@ -605,7 +605,7 @@ export default function PrivacyPage() {
               collected from children under age 18, please contact us at{" "}
               <a
                 href="mailto:contact@transitstats.co"
-                className="underline underline-offset-2"
+                className="underline underline-offset-2 transition-opacity duration-200 active:opacity-60"
               >
                 contact@transitstats.co
               </a>
@@ -661,7 +661,7 @@ export default function PrivacyPage() {
               may email us at{" "}
               <a
                 href="mailto:contact@transitstats.co"
-                className="underline underline-offset-2"
+                className="underline underline-offset-2 transition-opacity duration-200 active:opacity-60"
               >
                 contact@transitstats.co
               </a>
@@ -930,7 +930,7 @@ export default function PrivacyPage() {
               subject access request, by emailing us at{" "}
               <a
                 href="mailto:contact@transitstats.co"
-                className="underline underline-offset-2"
+                className="underline underline-offset-2 transition-opacity duration-200 active:opacity-60"
               >
                 contact@transitstats.co
               </a>
@@ -971,7 +971,7 @@ export default function PrivacyPage() {
               emailing us at{" "}
               <a
                 href="mailto:contact@transitstats.co"
-                className="underline underline-offset-2"
+                className="underline underline-offset-2 transition-opacity duration-200 active:opacity-60"
               >
                 contact@transitstats.co
               </a>
@@ -1030,7 +1030,7 @@ export default function PrivacyPage() {
               us at{" "}
               <a
                 href="mailto:contact@transitstats.co"
-                className="underline underline-offset-2"
+                className="underline underline-offset-2 transition-opacity duration-200 active:opacity-60"
               >
                 contact@transitstats.co
               </a>
@@ -1058,7 +1058,7 @@ export default function PrivacyPage() {
               Contact Email:{" "}
               <a
                 href="mailto:contact@transitstats.co"
-                className="underline underline-offset-2"
+                className="underline underline-offset-2 transition-opacity duration-200 active:opacity-60"
               >
                 contact@transitstats.co
               </a>

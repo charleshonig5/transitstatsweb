@@ -45,7 +45,7 @@ export default function Header() {
         aria-label="Main navigation"
       >
         {/* Logo */}
-        <Link href="/" aria-label="Transit Stats home" className="shrink-0">
+        <Link href="/" aria-label="Transit Stats home" className="block shrink-0 transition-transform duration-200 active:scale-95">
           <Image
             src="/images/logo.svg"
             alt="Transit Stats"
@@ -64,7 +64,7 @@ export default function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`text-base ${isActive ? "font-bold" : "font-normal"} text-brand transition-all duration-200 hover:scale-105 hover:text-brand-dark`}
+                className={`text-base ${isActive ? "font-bold" : "font-normal"} text-brand transition-all duration-200 hover:scale-105 hover:text-brand-dark active:scale-95`}
               >
                 {link.label}
               </Link>
@@ -75,7 +75,7 @@ export default function Header() {
         {/* Desktop nav — button far right */}
         <Link
           href="/contact"
-          className="hidden h-10 w-36 items-center justify-center rounded-[66px] bg-brand text-base font-semibold text-white transition-all duration-200 hover:scale-105 hover:shadow-[0_4px_16px_rgba(247,117,44,0.4)] lg:flex"
+          className="hidden h-10 w-36 items-center justify-center rounded-[66px] bg-brand text-base font-semibold text-white transition-all duration-200 hover:scale-105 hover:shadow-[0_4px_16px_rgba(247,117,44,0.4)] active:scale-[0.97] lg:flex"
         >
           Contact us
         </Link>
@@ -83,7 +83,7 @@ export default function Header() {
         {/* Mobile menu button */}
         <button
           type="button"
-          className={`rounded-md p-2 lg:hidden transition-colors duration-300 ${mobileOpen ? "text-white" : "text-brand"}`}
+          className={`rounded-md p-2 lg:hidden transition-all duration-200 active:scale-90 ${mobileOpen ? "text-white" : "text-brand"}`}
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-expanded={mobileOpen}
           aria-label="Toggle navigation menu"
@@ -119,7 +119,7 @@ export default function Header() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`block text-base ${isActive ? "font-bold" : "font-normal"} text-white transition-all duration-300`}
+                  className={`group block text-base ${isActive ? "font-bold" : "font-normal"} text-white transition-all duration-300`}
                   style={{
                     opacity: mobileOpen ? 1 : 0,
                     transform: mobileOpen ? "translateY(0)" : "translateY(-8px)",
@@ -127,13 +127,15 @@ export default function Header() {
                   }}
                   onClick={() => setMobileOpen(false)}
                 >
-                  {link.label}
+                  <span className="block w-fit transition-transform duration-200 group-active:scale-95">
+                    {link.label}
+                  </span>
                 </Link>
               );
             })}
             <Link
               href="/contact"
-              className="block rounded-[66px] bg-white py-2.5 text-center text-base font-semibold text-brand transition-all duration-300"
+              className="group block transition-all duration-300"
               style={{
                 opacity: mobileOpen ? 1 : 0,
                 transform: mobileOpen ? "translateY(0)" : "translateY(-8px)",
@@ -141,7 +143,9 @@ export default function Header() {
               }}
               onClick={() => setMobileOpen(false)}
             >
-              Contact us
+              <span className="block rounded-[66px] bg-white py-2.5 text-center text-base font-semibold text-brand transition-transform duration-200 group-active:scale-[0.97]">
+                Contact us
+              </span>
             </Link>
           </div>
         </div>

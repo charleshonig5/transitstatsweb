@@ -63,7 +63,7 @@ export default function ContactPage() {
             <div className="flex flex-col gap-3.5">
               <a
                 href="mailto:contact@transitstats.co"
-                className="flex items-center gap-3.5 text-sm font-bold text-white transition-all duration-200 hover:translate-x-1 hover:scale-105 md:text-base"
+                className="flex items-center gap-3.5 text-sm font-bold text-white transition-all duration-200 hover:translate-x-1 hover:scale-105 active:scale-[0.97] md:text-base"
               >
                 {/* Email icon */}
                 <svg
@@ -96,7 +96,7 @@ export default function ContactPage() {
                 href="https://www.instagram.com/transitstats/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3.5 text-sm font-bold text-white transition-all duration-200 hover:translate-x-1 hover:scale-105 md:text-base"
+                className="flex items-center gap-3.5 text-sm font-bold text-white transition-all duration-200 hover:translate-x-1 hover:scale-105 active:scale-[0.97] md:text-base"
               >
                 {/* Instagram icon */}
                 <svg
@@ -131,7 +131,7 @@ export default function ContactPage() {
                 href="https://www.tiktok.com/@transitstats"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3.5 text-sm font-bold text-white transition-all duration-200 hover:translate-x-1 hover:scale-105 md:text-base"
+                className="flex items-center gap-3.5 text-sm font-bold text-white transition-all duration-200 hover:translate-x-1 hover:scale-105 active:scale-[0.97] md:text-base"
               >
                 {/* TikTok icon */}
                 <svg

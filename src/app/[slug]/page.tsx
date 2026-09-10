@@ -118,7 +118,7 @@ export default async function ArticlePage({ params }: PageProps) {
           {/* Back to Resources */}
           <Link
             href="/resources"
-            className="group mb-6 flex items-center gap-2.5 text-sm font-semibold text-brand transition-all duration-200 hover:-translate-x-1 md:text-base"
+            className="group mb-6 flex items-center gap-2.5 text-sm font-semibold text-brand transition-all duration-200 hover:-translate-x-1 active:scale-95 md:text-base"
           >
             <svg
               width="20"

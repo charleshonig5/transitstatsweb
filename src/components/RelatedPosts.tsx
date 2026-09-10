@@ -15,7 +15,7 @@ export default function RelatedPosts({ currentSlug }: { currentSlug: string }) {
           <Link
             key={post.slug}
             href={`/${post.slug}`}
-            className="flex flex-col overflow-hidden rounded-[10px] bg-white shadow-[0_0_30px_rgba(0,0,0,0.08)] transition-all duration-200 hover:-translate-y-1 hover:shadow-[0_8px_40px_rgba(0,0,0,0.12)]"
+            className="flex flex-col overflow-hidden rounded-[10px] bg-white shadow-[0_0_30px_rgba(0,0,0,0.08)] transition-all duration-200 hover:-translate-y-1 hover:shadow-[0_8px_40px_rgba(0,0,0,0.12)] active:translate-y-0 active:scale-[0.98]"
           >
             <div className="flex flex-1 flex-col p-6 md:p-8">
               <h3 className="text-base font-semibold leading-snug text-brand md:text-lg md:leading-snug">

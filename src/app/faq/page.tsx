@@ -93,7 +93,7 @@ const faqs = [
     answerJsx: (
       <>
         Every time you track a CTA ride, Transit Stats calculates how much carbon dioxide you saved compared to driving the same distance alone in a car. We use EPA emissions data for the average passenger vehicle (about 404 grams of CO₂ per mile) and subtract the per-rider emissions of CTA trains and buses. The difference is your savings. Over time these add up fast. The average Chicago CTA rider in our app saves over 900 kg of CO₂ per year just by choosing public transit over driving.{" "}
-        <Link href="/co2-savings-cta-riders" className="text-brand underline underline-offset-2 transition-colors hover:text-brand-dark">See the full CO₂ data</Link>.
+        <Link href="/co2-savings-cta-riders" className="text-brand underline underline-offset-2 transition-all hover:text-brand-dark active:opacity-60">See the full CO₂ data</Link>.
       </>
     ),
   },

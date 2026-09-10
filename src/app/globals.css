@@ -10,6 +10,7 @@
 html {
   background: linear-gradient(to bottom, #F7752C, #FF5C00) fixed;
   scrollbar-width: none; /* Firefox */
+  -webkit-tap-highlight-color: transparent;
 }
 
 html::-webkit-scrollbar {
@@ -140,11 +141,15 @@ body {
   color: #F7752C;
   text-decoration: underline;
   text-underline-offset: 2px;
-  transition: color 0.2s;
+  transition: color 0.2s, opacity 0.2s;
 }
 
 .prose a:hover {
   color: #FF5C00;
+}
+
+.prose a:active {
+  opacity: 0.6;
 }
 
 .prose strong {

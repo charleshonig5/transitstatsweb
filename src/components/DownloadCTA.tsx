@@ -14,7 +14,7 @@ export default function DownloadCTA() {
             href="https://apps.apple.com/us/app/transit-stats-cta-analytics/id6747690858"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-3 whitespace-nowrap rounded-[100px] bg-white px-6 py-3 text-brand transition-all duration-200 hover:scale-105 hover:shadow-[0_4px_20px_rgba(255,255,255,0.3)]"
+            className="flex items-center gap-3 whitespace-nowrap rounded-[100px] bg-white px-6 py-3 text-brand transition-all duration-200 hover:scale-105 hover:shadow-[0_4px_20px_rgba(255,255,255,0.3)] active:scale-[0.97]"
             aria-label="Download Transit Stats on the App Store"
           >
             <svg width="32" height="38" viewBox="0 0 32 38" fill="currentColor" aria-hidden="true">
@@ -29,7 +29,7 @@ export default function DownloadCTA() {
             href="https://play.google.com/store/apps/details?id=com.mycompany.transitstatsapp"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-3 whitespace-nowrap rounded-[100px] bg-white px-6 py-3 text-brand transition-all duration-200 hover:scale-105 hover:shadow-[0_4px_20px_rgba(255,255,255,0.3)]"
+            className="flex items-center gap-3 whitespace-nowrap rounded-[100px] bg-white px-6 py-3 text-brand transition-all duration-200 hover:scale-105 hover:shadow-[0_4px_20px_rgba(255,255,255,0.3)] active:scale-[0.97]"
             aria-label="Get Transit Stats on Google Play"
           >
             <svg width="34" height="38" viewBox="0 0 34 38" fill="none" aria-hidden="true">
