@@ -138,7 +138,7 @@ export default function Home() {
                 </div>
 
                 {/* Social proof — marquee on mobile, static row on sm+ */}
-                <div className="-m-[30px] overflow-hidden p-[30px] sm:m-0 sm:overflow-visible sm:p-0">
+                <div className="-mx-5 -my-[30px] overflow-hidden px-5 py-[30px] sm:m-0 sm:overflow-visible sm:p-0">
                   <div className="flex w-max gap-3 animate-[marquee_12s_linear_infinite] sm:w-auto sm:flex-wrap sm:gap-4 sm:animate-none">
                     {/* Original cards */}
                     <div className="flex shrink-0 flex-col whitespace-nowrap rounded-[10px] bg-white px-4 py-3 shadow-[0_0_30px_rgba(0,0,0,0.08)] sm:transition-all sm:duration-200 sm:hover:-translate-y-1 sm:hover:shadow-[0_8px_40px_rgba(0,0,0,0.12)]">
