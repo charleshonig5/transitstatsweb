@@ -36,7 +36,7 @@ export default function Header() {
         mobileOpen
           ? "bg-brand lg:bg-white"
           : scrolled
-            ? "bg-white/80 backdrop-blur-md shadow-[0_4px_30px_rgba(0,0,0,0.06)]"
+            ? "bg-white/90 backdrop-blur-md shadow-[0_4px_30px_rgba(0,0,0,0.06)]"
             : "bg-white shadow-[0_4px_30px_rgba(0,0,0,0.06)] lg:shadow-none"
       }`}
     >
