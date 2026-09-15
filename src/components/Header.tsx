@@ -24,17 +24,20 @@ export default function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  /* Lock body scroll when mobile menu is open */
+  /* Lock page scroll while the mobile menu is open. The lock lives on <html>,
+     never <body>: an overflow on body (with html's overflow-x: clip) turns
+     body into its own scroll container and detaches the sticky header. */
   useEffect(() => {
-    document.body.style.overflow = mobileOpen ? "hidden" : "";
-    return () => { document.body.style.overflow = ""; };
+    document.documentElement.style.overflow = mobileOpen ? "hidden" : "";
+    return () => { document.documentElement.style.overflow = ""; };
   }, [mobileOpen]);
 
   return (
+    <>
     <header
       className={`sticky top-0 z-50 transition-all duration-300 ${
         mobileOpen
-          ? "bg-brand lg:bg-white"
+          ? "bg-transparent lg:bg-white"
           : scrolled
             ? "bg-white/90 backdrop-blur-md shadow-[0_4px_30px_rgba(0,0,0,0.06)]"
             : "bg-white shadow-[0_4px_30px_rgba(0,0,0,0.06)] lg:shadow-none"
@@ -105,51 +108,54 @@ export default function Header() {
         </button>
       </nav>
 
-      {/* Mobile nav — always rendered, animated with grid rows */}
-      <div
-        className={`grid lg:hidden transition-[grid-template-rows] duration-300 ease-in-out ${
-          mobileOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
-        }`}
-      >
-        <div className="overflow-hidden">
-          <div className="border-t border-white/20 bg-brand px-6 py-6 space-y-4">
-            {navLinks.map((link, i) => {
-              const isActive = pathname === link.href;
-              return (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className={`group block text-base ${isActive ? "font-bold" : "font-normal"} text-white transition-all duration-300`}
-                  style={{
-                    opacity: mobileOpen ? 1 : 0,
-                    transform: mobileOpen ? "translateY(0)" : "translateY(-8px)",
-                    transitionDelay: mobileOpen ? `${75 * i}ms` : "0ms",
-                  }}
-                  onClick={() => setMobileOpen(false)}
-                >
-                  <span className="block w-fit transition-transform duration-200 group-active:scale-95">
-                    {link.label}
-                  </span>
-                </Link>
-              );
-            })}
-            <Link
-              href="/contact"
-              className="group block transition-all duration-300"
-              style={{
-                opacity: mobileOpen ? 1 : 0,
-                transform: mobileOpen ? "translateY(0)" : "translateY(-8px)",
-                transitionDelay: mobileOpen ? `${75 * navLinks.length}ms` : "0ms",
-              }}
-              onClick={() => setMobileOpen(false)}
-            >
-              <span className="block rounded-[66px] bg-white py-2.5 text-center text-base font-semibold text-brand transition-transform duration-200 group-active:scale-[0.97]">
-                Contact us
-              </span>
-            </Link>
-          </div>
-        </div>
-      </div>
     </header>
+
+    {/* Mobile nav — full-screen frosted overlay, fixed to the viewport so it
+        works at any scroll position. Sibling of <header> (not a child): the
+        header's backdrop-blur would otherwise become the containing block for
+        position: fixed and pin the overlay to the header instead. */}
+    <div
+      className={`fixed inset-0 z-40 flex flex-col items-center justify-center gap-10 bg-brand/90 backdrop-blur-md transition-opacity duration-300 lg:hidden ${
+        mobileOpen ? "opacity-100" : "pointer-events-none opacity-0"
+      }`}
+      aria-hidden={!mobileOpen}
+      inert={!mobileOpen}
+    >
+      {navLinks.map((link, i) => {
+        const isActive = pathname === link.href;
+        return (
+          <Link
+            key={link.href}
+            href={link.href}
+            className={`group block text-3xl ${isActive ? "font-bold" : "font-semibold"} text-white transition-all duration-300`}
+            style={{
+              opacity: mobileOpen ? 1 : 0,
+              transform: mobileOpen ? "translateY(0)" : "translateY(12px)",
+              transitionDelay: mobileOpen ? `${75 * i}ms` : "0ms",
+            }}
+            onClick={() => setMobileOpen(false)}
+          >
+            <span className="block text-center transition-transform duration-200 group-active:scale-95">
+              {link.label}
+            </span>
+          </Link>
+        );
+      })}
+      <Link
+        href="/contact"
+        className="group block transition-all duration-300"
+        style={{
+          opacity: mobileOpen ? 1 : 0,
+          transform: mobileOpen ? "translateY(0)" : "translateY(12px)",
+          transitionDelay: mobileOpen ? `${75 * navLinks.length}ms` : "0ms",
+        }}
+        onClick={() => setMobileOpen(false)}
+      >
+        <span className="block rounded-[66px] bg-white px-10 py-3 text-center text-lg font-semibold text-brand transition-transform duration-200 group-active:scale-[0.97]">
+          Contact us
+        </span>
+      </Link>
+    </div>
+    </>
   );
 }
