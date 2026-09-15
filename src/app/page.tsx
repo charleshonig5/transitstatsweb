@@ -235,7 +235,7 @@ export default function Home() {
 
       {/* ===== FEATURES (on orange gradient bg) ===== */}
       <section
-        className="py-10 md:py-[74px]"
+        className="overflow-x-clip py-10 md:py-[74px]"
         aria-labelledby="features-heading"
       >
         <h2 id="features-heading" className="sr-only">
@@ -286,7 +286,7 @@ export default function Home() {
 
       {/* ===== BEYOND THE DATA (full-bleed white, rounded top corners) ===== */}
       <section
-        className="w-full rounded-[36px] bg-white py-10 md:py-[74px]"
+        className="w-full overflow-x-clip rounded-[36px] bg-white py-10 md:py-[74px]"
         style={{ boxShadow: "0 0 55px rgba(0, 0, 0, 0.16)" }}
         aria-labelledby="beyond-heading"
       >

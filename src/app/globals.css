@@ -11,8 +11,11 @@ html {
   background: linear-gradient(to bottom, #F7752C, #FF5C00) fixed;
   scrollbar-width: none; /* Firefox */
   -webkit-tap-highlight-color: transparent;
-  /* Hard-block horizontal panning (mobile Safari pans "hidden" viewport
-     overflow, e.g. from pre-reveal translateX offsets) */
+  /* Viewport-level guard against horizontal panning (mobile Safari pans
+     "hidden" overflow, so hidden alone is not enough). clip is safe for the
+     sticky header ONLY while body declares no overflow-x of its own: a
+     non-propagated overflow-x:hidden on body silently becomes a body scroll
+     container and detaches position:sticky from the viewport. */
   overflow-x: clip;
 }
 
@@ -23,7 +26,7 @@ html::-webkit-scrollbar {
 body {
   background: transparent;
   color: #000100;
-  overflow-x: hidden;
+  /* No overflow-x here - see the html rule above. */
 }
 
 .container {
