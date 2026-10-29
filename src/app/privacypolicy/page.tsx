@@ -68,10 +68,10 @@ export default function PrivacyPage() {
               use our Services. If you still have any questions or concerns,
               please contact us at{" "}
               <a
-                href="mailto:contact@transitstats.co"
+                href="mailto:transitstatsllc@gmail.com"
                 className="underline underline-offset-2 transition-opacity duration-200 active:opacity-60"
               >
-                contact@transitstats.co
+                transitstatsllc@gmail.com
               </a>
               .
             </p>
@@ -604,10 +604,10 @@ export default function PrivacyPage() {
               from our records. If you become aware of any data we may have
               collected from children under age 18, please contact us at{" "}
               <a
-                href="mailto:contact@transitstats.co"
+                href="mailto:transitstatsllc@gmail.com"
                 className="underline underline-offset-2 transition-opacity duration-200 active:opacity-60"
               >
-                contact@transitstats.co
+                transitstatsllc@gmail.com
               </a>
               .
             </p>
@@ -660,10 +660,10 @@ export default function PrivacyPage() {
               If you have questions or comments about your privacy rights, you
               may email us at{" "}
               <a
-                href="mailto:contact@transitstats.co"
+                href="mailto:transitstatsllc@gmail.com"
                 className="underline underline-offset-2 transition-opacity duration-200 active:opacity-60"
               >
-                contact@transitstats.co
+                transitstatsllc@gmail.com
               </a>
               .
             </p>
@@ -929,10 +929,10 @@ export default function PrivacyPage() {
               To exercise these rights, you can contact us by submitting a data
               subject access request, by emailing us at{" "}
               <a
-                href="mailto:contact@transitstats.co"
+                href="mailto:transitstatsllc@gmail.com"
                 className="underline underline-offset-2 transition-opacity duration-200 active:opacity-60"
               >
-                contact@transitstats.co
+                transitstatsllc@gmail.com
               </a>
               , or by referring to the contact details at the bottom of this
               document.
@@ -970,10 +970,10 @@ export default function PrivacyPage() {
               action regarding your request, you may appeal our decision by
               emailing us at{" "}
               <a
-                href="mailto:contact@transitstats.co"
+                href="mailto:transitstatsllc@gmail.com"
                 className="underline underline-offset-2 transition-opacity duration-200 active:opacity-60"
               >
-                contact@transitstats.co
+                transitstatsllc@gmail.com
               </a>
               . We will inform you in writing of any action taken or not taken in
               response to the appeal, including a written explanation of the
@@ -1029,10 +1029,10 @@ export default function PrivacyPage() {
               If you have questions or comments about this notice, you may email
               us at{" "}
               <a
-                href="mailto:contact@transitstats.co"
+                href="mailto:transitstatsllc@gmail.com"
                 className="underline underline-offset-2 transition-opacity duration-200 active:opacity-60"
               >
-                contact@transitstats.co
+                transitstatsllc@gmail.com
               </a>
             </p>
           </section>
@@ -1057,10 +1057,10 @@ export default function PrivacyPage() {
             <p>
               Contact Email:{" "}
               <a
-                href="mailto:contact@transitstats.co"
+                href="mailto:transitstatsllc@gmail.com"
                 className="underline underline-offset-2 transition-opacity duration-200 active:opacity-60"
               >
-                contact@transitstats.co
+                transitstatsllc@gmail.com
               </a>
             </p>
           </section>

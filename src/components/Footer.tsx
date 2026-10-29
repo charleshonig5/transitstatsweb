@@ -21,14 +21,14 @@ export default function Footer() {
             {/* Social links */}
             <div className="mt-8 flex flex-col gap-2.5">
               <a
-                href="mailto:contact@transitstats.co"
+                href="mailto:transitstatsllc@gmail.com"
                 className="flex items-center gap-2.5 text-sm leading-6 text-white transition-opacity duration-200 hover:opacity-80 active:opacity-60"
               >
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="shrink-0" aria-hidden="true">
                   <rect x="2" y="4" width="20" height="16" rx="3" stroke="currentColor" strokeWidth="2" />
                   <path d="M2 7l10 7 10-7" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
                 </svg>
-                contact@transitstats.co
+                transitstatsllc@gmail.com
               </a>
               <a
                 href="https://www.instagram.com/transitstats/"
