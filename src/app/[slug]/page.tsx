@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { posts } from "@/data/posts";
+import ArticleFaq from "@/components/ArticleFaq";
 import DownloadCTA from "@/components/DownloadCTA";
 
 import MostPopularCtaStopsLines from "@/data/articles/most-popular-cta-stops-lines";
@@ -26,6 +27,15 @@ interface PageProps {
   params: Promise<{ slug: string }>;
 }
 
+// Share/schema image: a 1200x750 JPEG made from the 2880x1800 cover PNG.
+// The PNGs are 5-10 MB - over X's 5 MB card limit - so social cards and
+// structured data point here; the page itself keeps the PNG through
+// next/image, which resizes it.
+const SOCIAL_IMAGE_WIDTH = 1200;
+const SOCIAL_IMAGE_HEIGHT = 750;
+const socialImage = (slug: string) =>
+  `https://www.transitstats.co/images/articles/social/${slug}.jpg`;
+
 export async function generateStaticParams() {
   return posts.map((post) => ({ slug: post.slug }));
 }
@@ -35,22 +45,39 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const post = posts.find((p) => p.slug === slug);
   if (!post) return {};
 
+  const url = `https://www.transitstats.co/${post.slug}`;
+  const image = {
+    url: socialImage(post.slug),
+    width: SOCIAL_IMAGE_WIDTH,
+    height: SOCIAL_IMAGE_HEIGHT,
+    alt: post.imageAlt,
+  };
+
+  // A page's openGraph/twitter objects REPLACE the root layout's (no deep
+  // merge), so every field an article needs is set here, including the
+  // site-wide ones (siteName, locale) and the whole twitter card.
   return {
     title: post.title,
     description: post.description,
-    alternates: { canonical: `https://www.transitstats.co/${post.slug}` },
+    alternates: { canonical: url },
     openGraph: {
+      type: "article",
+      siteName: "Transit Stats",
+      locale: "en_US",
       title: `${post.title} | Transit Stats`,
       description: post.description,
-      url: `https://www.transitstats.co/${post.slug}`,
-      images: [
-        {
-          url: `https://www.transitstats.co/images/articles/${post.slug}.png`,
-          width: 1440,
-          height: 900,
-          alt: post.imageAlt,
-        },
-      ],
+      url,
+      publishedTime: post.date,
+      modifiedTime: post.updated,
+      authors: [post.author],
+      section: "CTA Data & Insights",
+      images: [image],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${post.title} | Transit Stats`,
+      description: post.description,
+      images: [image],
     },
   };
 }
@@ -88,12 +115,30 @@ export default async function ArticlePage({ params }: PageProps) {
             "@type": "Article",
             headline: post.title,
             description: post.description,
-            image: `https://www.transitstats.co/images/articles/${post.slug}.png`,
+            image: {
+              "@type": "ImageObject",
+              url: socialImage(post.slug),
+              width: SOCIAL_IMAGE_WIDTH,
+              height: SOCIAL_IMAGE_HEIGHT,
+            },
             datePublished: post.date,
+            dateModified: post.updated,
+            inLanguage: "en-US",
+            articleSection: "CTA Data & Insights",
+            about: {
+              "@type": "Organization",
+              name: "Chicago Transit Authority",
+              sameAs: "https://en.wikipedia.org/wiki/Chicago_Transit_Authority",
+            },
+            isPartOf: {
+              "@type": "WebSite",
+              name: "Transit Stats",
+              url: "https://www.transitstats.co",
+            },
             author: {
               "@type": "Organization",
               name: post.author,
-              url: "https://www.transitstats.co",
+              url: "https://www.transitstats.co/about",
             },
             publisher: {
               "@type": "Organization",
@@ -111,6 +156,23 @@ export default async function ArticlePage({ params }: PageProps) {
           }),
         }}
       />
+      {/* FAQ structured data - built from the same post.faqs the page renders */}
+      {post.faqs.length > 0 && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              mainEntity: post.faqs.map((faq) => ({
+                "@type": "Question",
+                name: faq.question,
+                acceptedAnswer: { "@type": "Answer", text: faq.answer },
+              })),
+            }),
+          }}
+        />
+      )}
 
       <div className="container flex flex-col gap-10 py-10 md:gap-14 md:py-[74px]">
         {/* ── Article header ── */}
@@ -142,7 +204,9 @@ export default async function ArticlePage({ params }: PageProps) {
             {post.title}
           </h1>
           <p className="mt-4 text-xs font-medium uppercase tracking-widest text-dark/40 md:mt-6">
-            {post.displayDate} / {post.author}
+            Updated <time dateTime={post.updated}>{post.displayUpdated}</time>
+            {" / "}
+            {post.author}
           </p>
         </div>
 
@@ -166,6 +230,8 @@ export default async function ArticlePage({ params }: PageProps) {
             </p>
           )}
         </article>
+
+        <ArticleFaq faqs={post.faqs} />
 
         {/* ── Download CTA ── */}
         <DownloadCTA />

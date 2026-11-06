@@ -1,16 +1,17 @@
 import type { Metadata } from "next";
+import { shareMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description:
     "Transit Stats privacy policy — how we collect, use, and protect your data. We don't sell personal information to third parties.",
   alternates: { canonical: "https://www.transitstats.co/privacypolicy" },
-  openGraph: {
+  ...shareMetadata({
     title: "Privacy Policy | Transit Stats",
     description:
       "Transit Stats privacy policy — how we collect, use, and protect your data. We don't sell personal information to third parties.",
-    url: "https://www.transitstats.co/privacypolicy",
-  },
+    path: "/privacypolicy",
+  }),
 };
 
 export default function PrivacyPage() {
@@ -43,6 +44,9 @@ export default function PrivacyPage() {
         <div className={`flex flex-col gap-10 ${body}`}>
           {/* ── Intro ── */}
           <section className="flex flex-col gap-4">
+            <p>
+              <strong>Last updated:</strong> November 5, 2026
+            </p>
             <p>
               This Privacy Notice for Transit Stats (&ldquo;we,&rdquo;
               &ldquo;us,&rdquo; or &ldquo;our&rdquo;), describes how and why we
@@ -106,7 +110,9 @@ export default function PrivacyPage() {
               <strong>
                 Do we collect any information from third parties?
               </strong>{" "}
-              We do not collect any information from third parties.
+              If you sign in with Apple, we receive your name and email address
+              (or a private relay address) from Apple. We do not otherwise
+              collect information about you from third parties.
             </p>
             <p>
               <strong>How do we process your information?</strong> We process
@@ -213,19 +219,21 @@ export default function PrivacyPage() {
               <li>- email addresses</li>
               <li>- usernames</li>
               <li>- passwords</li>
+              <li>- profile photos, if you choose to add one</li>
+              <li>
+                - your ride history: the lines, stops, times, distances, and
+                durations of rides you track or add
+              </li>
             </ul>
             <p>
               <strong>Sensitive Information.</strong> We do not process sensitive
               information.
             </p>
             <p>
-              <strong>Social Media Login Data.</strong> We may provide you with
-              the option to register with us using your existing social media
-              account details, like your Facebook, X, or other social media
-              account. If you choose to register in this way, we will collect
-              certain profile information about you from the social media
-              provider, as described in the section called &ldquo;HOW DO WE
-              HANDLE YOUR SOCIAL LOGINS?&rdquo; below.
+              <strong>Sign in with Apple.</strong> You can register and log in
+              with your Apple account. If you do, we receive certain profile
+              information from Apple, as described in the section called
+              &ldquo;HOW DO WE HANDLE YOUR SOCIAL LOGINS?&rdquo; below.
             </p>
             <p>
               <strong>Application Data.</strong> If you use our application(s),
@@ -236,9 +244,14 @@ export default function PrivacyPage() {
               <em>Geolocation Information.</em> We may request access or
               permission to track location-based information from your mobile
               device, either continuously or while you are using our mobile
-              application(s), to provide certain location-based services. If you
-              wish to change our access or permissions, you may do so in your
-              device&rsquo;s settings.
+              application(s), to provide certain location-based services. We use
+              your location only during a live ride you start: to suggest nearby
+              stops, to measure the distance you travel, and to suggest the stop
+              where your ride ends. If you turn on Background ride tracking, this
+              continues while your phone is locked during that ride. We store the
+              stops and distance of each ride, not a record of your GPS
+              positions. If you wish to change our access or permissions, you may
+              do so in your device&rsquo;s settings.
             </p>
             <p>
               <em>Push Notifications.</em> We may request to send you push
@@ -370,6 +383,24 @@ export default function PrivacyPage() {
               a portion of our business to another company.
             </p>
             <p>
+              <strong>Service providers.</strong> We use Google Firebase to run
+              our app, which stores your account, profile, and ride data on
+              Google Cloud servers. We use RevenueCat to process and restore
+              in-app purchases; it receives your account ID and purchase
+              history. Payments are handled by Apple, and we never see your
+              payment details.
+            </p>
+            <p>
+              <strong>Advertising.</strong> The free version of our app shows
+              ads served by Google AdMob. To serve and measure ads, AdMob may
+              collect your device&rsquo;s advertising identifier (only if you
+              allow tracking when your device asks), your IP address and
+              approximate location derived from it, and information about the
+              ads you see and tap. See &ldquo;DO WE USE COOKIES AND OTHER
+              TRACKING TECHNOLOGIES?&rdquo; below for how to opt out. Users who
+              purchase PRO do not see ads.
+            </p>
+            <p>
               <strong>When we use Google Maps Platform APIs.</strong> We may
               share your information with certain Google Maps Platform APIs
               (e.g., Google Maps API, Places API). Google Maps uses GPS, Wi-Fi,
@@ -455,24 +486,15 @@ export default function PrivacyPage() {
               can refuse certain cookies is set out in our Cookie Notice.
             </p>
 
-            <h3 className="mt-4 font-semibold">Google Analytics</h3>
+            <h3 className="mt-4 font-semibold">Google AdMob</h3>
             <p>
-              We may share your information with Google Analytics to track and
-              analyze the use of the Services. The Google Analytics Advertising
-              Features that we may use include: Google Display Network
-              Impressions Reporting. To opt out of being tracked by Google
-              Analytics across the Services, visit{" "}
-              <a
-                href="https://tools.google.com/dlpage/gaoptout"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline underline-offset-2 transition-opacity duration-200 active:opacity-60"
-              >
-                https://tools.google.com/dlpage/gaoptout
-              </a>
-              . You can opt out of Google Analytics Advertising Features through
-              Ads Settings and Ad Settings for mobile apps. Other opt out means
-              include{" "}
+              Our app uses Google AdMob to show ads to users who have not
+              purchased PRO. AdMob may use your device&rsquo;s advertising
+              identifier to show more relevant ads, but only if you allow
+              tracking when your device asks. You can change this at any time on
+              iPhone under Settings &gt; Privacy &amp; Security &gt; Tracking.
+              Where required by law, we ask for your consent before ads are
+              personalized. Other opt out means include{" "}
               <a
                 href="http://optout.networkadvertising.org/"
                 target="_blank"
@@ -507,14 +529,11 @@ export default function PrivacyPage() {
             </p>
             <p>
               Our Services offer you the ability to register and log in using
-              your third-party social media account details (like your Facebook
-              or X logins). Where you choose to do this, we will receive certain
-              profile information about you from your social media provider. The
-              profile information we receive may vary depending on the social
-              media provider concerned, but will often include your name, email
-              address, friends list, and profile picture, as well as other
-              information you choose to make public on such a social media
-              platform.
+              Sign in with Apple. Where you choose to do this, we receive your
+              name and your email address from Apple. If you choose to hide your
+              email, Apple gives us a private relay address that forwards to
+              you. If you delete your account, we also revoke the app&rsquo;s
+              access to your Apple account.
             </p>
             <p>
               We will use the information we receive only for the purposes that
@@ -1053,6 +1072,11 @@ export default function PrivacyPage() {
               limited in some circumstances by applicable law. To request to
               review, update, or delete your personal information, please fill
               out and submit a data subject access request.
+            </p>
+            <p>
+              You can also delete your account at any time in the app under
+              Profile &gt; Account &gt; Delete account. This deletes your
+              account, profile, profile photo, ride history, and stats.
             </p>
             <p>
               Contact Email:{" "}

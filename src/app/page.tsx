@@ -3,17 +3,19 @@ import Image from "next/image";
 import Link from "next/link";
 import DownloadCTA from "@/components/DownloadCTA";
 import ScrollReveal from "@/components/ScrollReveal";
+import { shareMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Transit Stats | Chicago CTA Data Made Personal",
   description:
-    "Transit Stats turns your Chicago CTA rides into personal data. Auto-track rides, view transit insights, and measure CO₂ savings. Free on iOS & Android.",
+    "Transit Stats turns your Chicago CTA rides into personal data. Auto-track rides, view transit insights, and measure CO₂ savings. Free on iPhone.",
   alternates: { canonical: "https://www.transitstats.co" },
-  openGraph: {
+  ...shareMetadata({
     title: "Transit Stats | Chicago CTA Data Made Personal",
     description:
-      "Transit Stats turns your Chicago CTA rides into personal data. Auto-track rides, view transit insights, and measure CO₂ savings. Free on iOS & Android.",
-  },
+      "Transit Stats turns your Chicago CTA rides into personal data. Auto-track rides, view transit insights, and measure CO₂ savings. Free on iPhone.",
+    path: "",
+  }),
 };
 
 /* ------------------------------------------------------------------ */
@@ -156,7 +158,7 @@ export default function Home() {
                     </div>
                     <div className="flex shrink-0 flex-col whitespace-nowrap rounded-[10px] bg-white px-4 py-3 shadow-[0_0_30px_rgba(0,0,0,0.08)] sm:transition-all sm:duration-200 sm:hover:-translate-y-1 sm:hover:shadow-[0_8px_40px_rgba(0,0,0,0.12)]">
                       <span className="text-xl font-bold text-brand md:text-2xl">100% Free</span>
-                      <span className="mt-0.5 text-xs font-medium uppercase tracking-widest text-dark/40">On iOS &amp; Android</span>
+                      <span className="mt-0.5 text-xs font-medium uppercase tracking-widest text-dark/40">On iPhone</span>
                     </div>
                     {/* Cloned cards for seamless loop */}
                     <div className="flex shrink-0 flex-col whitespace-nowrap rounded-[10px] bg-white px-4 py-3 shadow-[0_0_30px_rgba(0,0,0,0.08)] sm:hidden" aria-hidden="true">
@@ -174,13 +176,15 @@ export default function Home() {
                     </div>
                     <div className="flex shrink-0 flex-col whitespace-nowrap rounded-[10px] bg-white px-4 py-3 shadow-[0_0_30px_rgba(0,0,0,0.08)] sm:hidden" aria-hidden="true">
                       <span className="text-xl font-bold text-brand">100% Free</span>
-                      <span className="mt-0.5 text-xs font-medium uppercase tracking-widest text-dark/40">On iOS &amp; Android</span>
+                      <span className="mt-0.5 text-xs font-medium uppercase tracking-widest text-dark/40">On iPhone</span>
                     </div>
                   </div>
                 </div>
               </div>
 
-              {/* App Store buttons */}
+              {/* Primary: App Store download. Secondary: Contact (white with
+                  the stat cards' shadow, stretched to the primary's height by
+                  the flex row). */}
               <div className="flex flex-wrap gap-3 sm:gap-6">
                 <a
                   href="https://apps.apple.com/us/app/transit-stats-cta-analytics/id6747690858"
@@ -197,24 +201,12 @@ export default function Home() {
                     <span className="text-base sm:text-lg font-semibold leading-tight">App Store</span>
                   </span>
                 </a>
-                <a
-                  href="https://play.google.com/store/apps/details?id=com.mycompany.transitstatsapp"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 sm:gap-3 whitespace-nowrap rounded-[100px] bg-brand px-[18px] py-3 sm:px-6 text-white transition-all duration-200 hover:scale-105 hover:shadow-[0_4px_20px_rgba(247,117,44,0.4)] active:scale-[0.97]"
-                  aria-label="Get Transit Stats on Google Play"
+                <Link
+                  href="/contact"
+                  className="flex items-center whitespace-nowrap rounded-[100px] bg-white px-[18px] text-base font-semibold text-brand shadow-[0_0_30px_rgba(0,0,0,0.08)] transition-all duration-200 hover:scale-105 hover:shadow-[0_8px_40px_rgba(0,0,0,0.12)] active:scale-[0.97] sm:px-6 sm:text-lg"
                 >
-                  <svg width="34" height="38" viewBox="0 0 34 38" fill="none" aria-hidden="true" className="size-7 sm:size-auto">
-                    <path d="M0.83 1.76v34.48l18.1-17.24L0.83 1.76z" fill="#4285F4" />
-                    <path d="M0.83 1.76L18.93 19l5.57-5.22L0.83 1.76z" fill="#34A853" />
-                    <path d="M0.83 36.24L24.5 24.22 18.93 19 0.83 36.24z" fill="#EA4335" />
-                    <path d="M24.5 24.22l-5.57-5.22 5.57-5.22 9.22 5.22-9.22 5.22z" fill="#FBBC05" />
-                  </svg>
-                  <span className="flex flex-col items-start text-left">
-                    <span className="text-[10px] sm:text-xs leading-tight uppercase">Get it on</span>
-                    <span className="text-base sm:text-lg font-semibold leading-tight">Google Play</span>
-                  </span>
-                </a>
+                  Contact us
+                </Link>
               </div>
             </div>
 

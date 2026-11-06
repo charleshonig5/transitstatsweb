@@ -105,14 +105,6 @@ export default function Footer() {
               >
                 App Store
               </a>
-              <a
-                href="https://play.google.com/store/apps/details?id=com.mycompany.transitstatsapp"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={linkClass}
-              >
-                Google Play
-              </a>
             </nav>
           </div>
         </div>

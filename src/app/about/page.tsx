@@ -1,17 +1,18 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import DownloadCTA from "@/components/DownloadCTA";
+import { shareMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "About",  description:
     "Transit Stats turns your CTA rides into personal data — real statistics, environmental impact, and Chicago transit patterns. Built by riders, for riders.",
   alternates: { canonical: "https://www.transitstats.co/about" },
-  openGraph: {
+  ...shareMetadata({
     title: "About | Transit Stats",
     description:
       "Transit Stats turns your CTA rides into personal data — real statistics, environmental impact, and Chicago transit patterns. Built by riders, for riders.",
-    url: "https://www.transitstats.co/about",
-  },
+    path: "/about",
+  }),
 };
 
 const testimonials = [

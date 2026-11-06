@@ -6,7 +6,7 @@ export default function DownloadCTA() {
             Try Transit Stats for free!
           </p>
           <p className="text-sm text-white md:text-base">
-            Available on iOS and Android. No Ventra account needed.
+            Available on iPhone. No Ventra account needed.
           </p>
         </div>
         <div className="flex flex-wrap justify-center gap-6">
@@ -23,24 +23,6 @@ export default function DownloadCTA() {
             <span className="flex flex-col items-start text-left">
               <span className="text-xs leading-tight">Download on the</span>
               <span className="text-lg font-semibold leading-tight">App Store</span>
-            </span>
-          </a>
-          <a
-            href="https://play.google.com/store/apps/details?id=com.mycompany.transitstatsapp"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-3 whitespace-nowrap rounded-[100px] bg-white px-6 py-3 text-brand transition-all duration-200 hover:scale-105 hover:shadow-[0_4px_20px_rgba(255,255,255,0.3)] active:scale-[0.97]"
-            aria-label="Get Transit Stats on Google Play"
-          >
-            <svg width="34" height="38" viewBox="0 0 34 38" fill="none" aria-hidden="true">
-              <path d="M0.83 1.76v34.48l18.1-17.24L0.83 1.76z" fill="#4285F4" />
-              <path d="M0.83 1.76L18.93 19l5.57-5.22L0.83 1.76z" fill="#34A853" />
-              <path d="M0.83 36.24L24.5 24.22 18.93 19 0.83 36.24z" fill="#EA4335" />
-              <path d="M24.5 24.22l-5.57-5.22 5.57-5.22 9.22 5.22-9.22 5.22z" fill="#FBBC05" />
-            </svg>
-            <span className="flex flex-col items-start text-left">
-              <span className="text-xs leading-tight uppercase">Get it on</span>
-              <span className="text-lg font-semibold leading-tight">Google Play</span>
             </span>
           </a>
         </div>

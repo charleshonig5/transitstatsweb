@@ -1,18 +1,19 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import DownloadCTA from "@/components/DownloadCTA";
+import { shareMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Contact Us",
   description:
     "Get in touch with the Transit Stats team. Send feedback, report bugs, share transit achievements, or suggest features for Chicago's favorite CTA tracker.",
   alternates: { canonical: "https://www.transitstats.co/contact" },
-  openGraph: {
+  ...shareMetadata({
     title: "Contact Us | Transit Stats",
     description:
       "Get in touch with the Transit Stats team. Send feedback, report bugs, share transit achievements, or suggest features for Chicago's favorite CTA tracker.",
-    url: "https://www.transitstats.co/contact",
-  },
+    path: "/contact",
+  }),
 };
 
 export default function ContactPage() {

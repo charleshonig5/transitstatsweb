@@ -4,18 +4,19 @@ import Image from "next/image";
 import Link from "next/link";
 import DownloadCTA from "@/components/DownloadCTA";
 import ScrollReveal from "@/components/ScrollReveal";
+import { shareMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "CTA Tracker FAQ",
   description:
     "FAQ about Transit Stats, Chicago's CTA tracker. Learn how ride tracking works, CTA data usage, battery impact, privacy, Ventra compatibility, and more.",
   alternates: { canonical: "https://www.transitstats.co/faq" },
-  openGraph: {
+  ...shareMetadata({
     title: "CTA Tracker FAQ | Transit Stats",
     description:
       "FAQ about Transit Stats, Chicago's CTA tracker. Learn how ride tracking works, CTA data usage, battery impact, privacy, Ventra compatibility, and more.",
-    url: "https://www.transitstats.co/faq",
-  },
+    path: "/faq",
+  }),
 };
 
 const faqs = [
@@ -25,7 +26,7 @@ const faqs = [
     iconH: 32,
     question: "How does ride tracking work?",
     answer:
-      "You can start tracking a ride with one tap. Transit Stats acts as your personal CTA tracker, using GPS and real-time CTA data to automatically detect your train line, bus route, direction, and stops as you ride. It works across all CTA L lines (Red, Blue, Brown, Green, Orange, Pink, Purple, and Yellow) and every CTA bus route in Chicago. If you forget to track live, you can easily add rides manually later with our smart autofill feature that estimates time and distance using official Chicago transit data.",
+      "Tap Start live ride and Transit Stats works as your personal CTA tracker. The app looks for CTA stops within about 150 meters and suggests your line and starting stop, or you can pick them yourself. While you ride, GPS measures your distance, and when you end the ride, the app suggests the stop you got off at. It works on all eight L lines (Red, Blue, Brown, Green, Orange, Pink, Purple, and Yellow) and every CTA bus route. Forgot to track a ride? Add it afterward, and autofill estimates the time and distance from the stops you pick.",
   },
   {
     icon: "/images/emoji/emoji-battery.svg",
@@ -33,7 +34,7 @@ const faqs = [
     iconH: 28,
     question: "Will this drain my battery?",
     answer:
-      "Nope. Transit Stats is optimized for minimal battery usage, even during long CTA commutes. We use smart GPS polling that adapts to your movement and only tracks location during active rides. Most users see less than 2% additional battery drain per day, even with regular Chicago transit tracking. The app is designed to run efficiently in the background so you can track every CTA ride without worrying about your phone dying before you reach your stop.",
+      "Transit Stats only uses GPS while a live ride is running, and it stops as soon as you end the ride. When you're not riding, the app doesn't use your location at all. A long ride uses more battery than a short one, so if your phone is running low, you can skip live tracking and add the ride by hand afterward.",
   },
   {
     icon: "/images/emoji/emoji-achievements.svg",
@@ -41,7 +42,7 @@ const faqs = [
     iconH: 44,
     question: "Is my data private?",
     answer:
-      "Absolutely. Your privacy is a top priority. Transit Stats only stores location data during active ride tracking and never shares your personal information with third parties. Your ride history, stats, and account data are kept private and secure. We don\u2019t sell your data to advertisers or data brokers. Period. You can also delete your account and all associated data at any time from within the app.",
+      "Yes. We store your rides, not your GPS trail: each ride keeps its line, stops, distance, and time, and the app only uses your location during a live ride. We don\u2019t sell your data. The free version shows ads from Google AdMob, and if your iPhone asks and you allow tracking, Google can use your device\u2019s advertising ID to show more relevant ads. Upgrading to PRO removes the ads. You can delete your account, including your rides, stats, and profile, anytime from Profile > Account.",
   },
   {
     icon: "/images/emoji/emoji-bus.svg",
@@ -57,7 +58,7 @@ const faqs = [
     iconH: 28,
     question: "Is Transit Stats free?",
     answer:
-      "Yes! The entire core app is 100% free to use, including CTA ride tracking, in-depth stats, achievements, and city leaderboards. You get full access to all your transit data without paying a cent. Transit Stats Pro ($2.99 one-time purchase) removes ads and supports continued development, but every feature stays free forever. We believe every Chicago rider deserves access to their own stats.",
+      "Yes! CTA ride tracking, in-depth stats, achievements, and city leaderboards are all free, and you get full access to your transit data without paying a cent. Transit Stats PRO is a $2.99 one-time purchase that removes ads, lets you export your ride data as a CSV file, and supports continued development. We believe every Chicago rider deserves access to their own stats.",
   },
   {
     icon: "/images/emoji/emoji-leaderboards.svg",
@@ -65,7 +66,7 @@ const faqs = [
     iconH: 44,
     question: "How often do leaderboards update?",
     answer:
-      "Your personal stats and rankings update in real-time the moment you complete a ride. Citywide leaderboards refresh hourly to ensure fair competition across all Chicago riders. You can filter by time period (weekly, monthly, yearly, and all-time) to see where you stack up in categories like most CTA trips, greatest distance, and most CO\u2082 saved.",
+      "Your own stats update right after every ride. Citywide leaderboards refresh every 2 hours from 5 AM to midnight, Chicago time, so your rank catches up at the next refresh. You can rank by rides, distance, or CO\u2082 saved over the last week, month, year, or all time.",
   },
   {
     icon: "/images/emoji/emoji-flag.svg",
@@ -73,7 +74,7 @@ const faqs = [
     iconH: 32,
     question: "Do I need to keep location services on?",
     answer:
-      "Only if you want to use live CTA ride tracking. When location services are on, Transit Stats can automatically detect when you board a CTA train or bus and track your ride in real-time. If you prefer to add rides manually, you can turn off location services and still use all of Transit Stats\u2019 features like achievements, leaderboards, transit stats, and ride history. Either way, your Chicago transit data stays private and location is never tracked when you\u2019re not actively using the app.",
+      "Only for live ride tracking. With location on, Transit Stats suggests your line and stop when you start a ride and measures your distance as you go. If Background ride tracking is on (Profile > Ride settings), that continues while your phone is locked, but only during a ride you started. With location off, you can still add rides by hand and use your stats, ride history, achievements, and leaderboards.",
   },
   {
     icon: "/images/emoji/emoji-train.svg",
@@ -81,7 +82,7 @@ const faqs = [
     iconH: 32,
     question: "What CTA lines and bus routes does Transit Stats support?",
     answer:
-      "Transit Stats supports every CTA train line and bus route in Chicago. That includes all eight L lines (Red, Blue, Brown, Green, Orange, Pink, Purple, and Yellow) plus the full CTA bus network with over 100 routes. Whether you're commuting on the Red Line from Howard to 95th or catching the #8 Halsted bus, the app tracks your ride and adds it to your personal transit stats. We update our route data regularly to match CTA service changes so your tracking stays accurate.",
+      "Transit Stats supports every CTA train line and bus route in Chicago. That includes all eight L lines (Red, Blue, Brown, Green, Orange, Pink, Purple, and Yellow) plus the full CTA bus network with over 100 routes. Whether you're commuting on the Red Line from Howard to 95th or catching the #8 Halsted bus, the app tracks your ride and adds it to your personal transit stats. We refresh our route and stop data every month from the CTA’s official schedule data, so new and changed routes show up in the app.",
   },
   {
     icon: "/images/emoji/emoji-stats.svg",
@@ -89,10 +90,10 @@ const faqs = [
     iconH: 44,
     question: "How are CO\u2082 savings calculated?",
     answer:
-      "Every time you track a CTA ride, Transit Stats calculates how much carbon dioxide you saved compared to driving the same distance alone in a car. We use EPA emissions data for the average passenger vehicle (about 404 grams of CO\u2082 per mile) and subtract the per-rider emissions of CTA trains and buses. The difference is your savings. Over time these add up fast. The average Chicago CTA rider in our app saves over 900 kg of CO\u2082 per year just by choosing public transit over driving.",
+      "Every ride you track gets a CO\u2082 estimate based on its distance. Transit Stats credits 0.2 kg of CO\u2082 per kilometer on the L and 0.15 kg per kilometer on the bus, compared with making the same trip by car. A typical 3.6-mile ride saves about 1 kg. Across more than 48,000 tracked rides, Transit Stats riders have saved over 52,000 kg of CO\u2082.",
     answerJsx: (
       <>
-        Every time you track a CTA ride, Transit Stats calculates how much carbon dioxide you saved compared to driving the same distance alone in a car. We use EPA emissions data for the average passenger vehicle (about 404 grams of CO₂ per mile) and subtract the per-rider emissions of CTA trains and buses. The difference is your savings. Over time these add up fast. The average Chicago CTA rider in our app saves over 900 kg of CO₂ per year just by choosing public transit over driving.{" "}
+        Every ride you track gets a CO₂ estimate based on its distance. Transit Stats credits 0.2 kg of CO₂ per kilometer on the L and 0.15 kg per kilometer on the bus, compared with making the same trip by car. A typical 3.6-mile ride saves about 1 kg. Across more than 48,000 tracked rides, Transit Stats riders have saved over 52,000 kg of CO₂.{" "}
         <Link href="/co2-savings-cta-riders" className="text-brand underline underline-offset-2 transition-all hover:text-brand-dark active:opacity-60">See the full CO₂ data</Link>.
       </>
     ),
@@ -103,15 +104,15 @@ const faqs = [
     iconH: 44,
     question: "Can I see my complete CTA ride history?",
     answer:
-      "Yes. Transit Stats saves every ride you track and organizes it into a complete CTA ride history. You can scroll back through all your past trips and see the date, time, route, direction, stops, distance, and CO\u2082 saved for each one. Filter by type (all, bus, or train) to find exactly what you're looking for. You can also view every stop you've visited on a coverage map, so you can see how much of the Chicago transit system you've explored. It's like having a personal logbook of every CTA trip you've ever taken.",
+      "Yes. Transit Stats saves every ride you track in a complete CTA ride history. Each ride shows the line, date, time, start and end stops, distance, and how long it took, and you can open any ride to see its route on a map. Filter by all, train, or bus to find a trip. The coverage map shows every stop you've visited, how many times you've been there, and how much of the CTA system you've covered. It's a personal logbook of every CTA trip you've taken.",
   },
   {
     icon: "/images/emoji/emoji-tracking.svg",
     iconW: 33,
     iconH: 44,
-    question: "Does Transit Stats work on both iPhone and Android?",
+    question: "Is Transit Stats available on Android?",
     answer:
-      "Yes. Transit Stats is available as a free download on both the Apple App Store for iPhone and Google Play for Android. The app works the same on both platforms with full access to live CTA ride tracking, personal transit stats, achievements, city leaderboards, and CO\u2082 savings. Your account syncs across devices so you can switch phones without losing your Chicago transit data or ride history.",
+      "No. Transit Stats is available for iPhone as a free download on the Apple App Store, with full access to live CTA ride tracking, personal transit stats, achievements, city leaderboards, and CO\u2082 savings. Your account is saved to the cloud, so you can switch iPhones without losing your Chicago transit data or ride history.",
   },
   {
     icon: "/images/emoji/emoji-achievements.svg",
@@ -119,7 +120,7 @@ const faqs = [
     iconH: 44,
     question: "What are achievements and how do I unlock them?",
     answer:
-      "Achievements are milestones you earn by riding CTA. Transit Stats tracks your rides and automatically awards achievements when you hit certain goals, like completing your first 10 rides, riding all eight L lines, or logging 100 miles on CTA buses. There are dozens of achievements to unlock across categories like distance, frequency, and exploration. They give you something fun to work toward and help you discover parts of the Chicago transit system you might not have tried yet.",
+      "Achievements are milestones you earn by riding the CTA. Transit Stats checks your rides and awards them automatically. There are 40 in all, covering total rides, distance, CO₂ saved, riding streaks, and exploration, like your first 10 rides, riding every L line, logging 100 miles, or riding 25 different bus routes. They give you something to work toward and a reason to try parts of the Chicago transit system you haven't ridden yet.",
   },
   {
     icon: "/images/emoji/emoji-stats.svg",
@@ -127,7 +128,7 @@ const faqs = [
     iconH: 44,
     question: "Can I see my all-time CTA stats?",
     answer:
-      "Yes. Transit Stats gives you a complete breakdown of your all-time Chicago transit data. You can see your total CTA rides, total distance traveled, total CO\u2082 saved, and your longest ride streak across all time. Your stats page also breaks down your riding patterns by train vs bus, shows your most-visited CTA stops, and tracks which L lines and bus routes you use the most. Everything updates automatically after each ride so you always have an up-to-date snapshot of your entire CTA history in one place.",
+      "Yes. Your stats page shows your total CTA rides, distance, time on transit, money spent, CO\u2082 saved, longest ride, and longest riding streak. Filter by train or bus and by the last week, month, year, or all time. Tap any stat for the details, like your top lines or the stops you visit most on your top line. Everything updates automatically after each ride.",
   },
 ];
 
@@ -169,7 +170,7 @@ export default function FAQPage() {
       <div className="container flex flex-col gap-16 py-10 md:py-[74px] lg:gap-20">
         {/* Heading */}
         <h1 className="text-4xl font-bold leading-[1.2] text-brand md:text-5xl lg:text-6xl lg:leading-[72px]">
-          FAQ
+          Transit Stats FAQ
         </h1>
 
         {/* FAQ items */}

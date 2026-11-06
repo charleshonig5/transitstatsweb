@@ -3,18 +3,19 @@ import Image from "next/image";
 import Link from "next/link";
 import DownloadCTA from "@/components/DownloadCTA";
 import { posts } from "@/data/posts";
+import { shareMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "CTA Data & Insights",
   description:
     "Chicago transit tips, CTA statistics, and rider insights from Transit Stats. Save money, track rides, and get the most from Chicago's transit system.",
   alternates: { canonical: "https://www.transitstats.co/resources" },
-  openGraph: {
+  ...shareMetadata({
     title: "CTA Data & Insights | Transit Stats",
     description:
       "Chicago transit tips, CTA statistics, and rider insights from Transit Stats.",
-    url: "https://www.transitstats.co/resources",
-  },
+    path: "/resources",
+  }),
 };
 
 export default function ResourcesPage() {

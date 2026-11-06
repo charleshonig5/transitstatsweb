@@ -5,6 +5,17 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
+const APP_STORE_URL =
+  "https://apps.apple.com/us/app/transit-stats-cta-analytics/id6747690858";
+
+function AppleLogo({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 32 38" fill="currentColor" aria-hidden="true" className={className}>
+      <path d="M26.43 19.94c-.05-4.56 3.73-6.75 3.9-6.86-2.12-3.1-5.43-3.53-6.62-3.58-2.82-.29-5.49 1.66-6.92 1.66-1.43 0-3.65-1.62-5.99-1.58-3.08.05-5.93 1.8-7.52 4.56-3.2 5.55-.82 13.78 2.3 18.3 1.53 2.21 3.36 4.69 5.76 4.6 2.31-.09 3.18-1.49 5.97-1.49 2.79 0 3.58 1.49 6.02 1.44 2.49-.04 4.06-2.25 5.58-4.47 1.76-2.57 2.48-5.05 2.53-5.18-.06-.02-4.85-1.86-4.9-7.4zM21.87 6.21c1.28-1.54 2.14-3.66 1.9-5.79-1.84.07-4.05 1.22-5.36 2.75-1.17 1.35-2.19 3.51-1.92 5.58 2.04.16 4.12-1.04 5.38-2.54z" />
+    </svg>
+  );
+}
+
 const navLinks = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
@@ -75,13 +86,21 @@ export default function Header() {
           })}
         </div>
 
-        {/* Desktop nav — button far right */}
-        <Link
-          href="/contact"
-          className="hidden h-10 w-36 items-center justify-center rounded-[66px] bg-brand text-base font-semibold text-white transition-all duration-200 hover:scale-105 hover:shadow-[0_4px_16px_rgba(247,117,44,0.4)] active:scale-[0.97] lg:flex"
+        {/* Desktop nav — App Store button far right (the hero/CTA badge
+            layout, compacted to the header's 40px height) */}
+        <a
+          href={APP_STORE_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Download Transit Stats on the App Store"
+          className="hidden h-10 items-center gap-2 whitespace-nowrap rounded-[66px] bg-brand px-4 text-white transition-all duration-200 hover:scale-105 hover:shadow-[0_4px_16px_rgba(247,117,44,0.4)] active:scale-[0.97] lg:flex"
         >
-          Contact us
-        </Link>
+          <AppleLogo className="h-5 w-auto" />
+          <span className="flex flex-col items-start text-left">
+            <span className="text-[10px] leading-tight">Download on the</span>
+            <span className="text-sm font-semibold leading-tight">App Store</span>
+          </span>
+        </a>
 
         {/* Mobile menu button */}
         <button
@@ -141,8 +160,11 @@ export default function Header() {
           </Link>
         );
       })}
-      <Link
-        href="/contact"
+      <a
+        href={APP_STORE_URL}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Download Transit Stats on the App Store"
         className="group block transition-all duration-300"
         style={{
           opacity: mobileOpen ? 1 : 0,
@@ -151,10 +173,14 @@ export default function Header() {
         }}
         onClick={() => setMobileOpen(false)}
       >
-        <span className="block rounded-[66px] bg-white px-10 py-3 text-center text-lg font-semibold text-brand transition-transform duration-200 group-active:scale-[0.97]">
-          Contact us
+        <span className="flex items-center gap-3 whitespace-nowrap rounded-[66px] bg-white px-8 py-3 text-brand transition-transform duration-200 group-active:scale-[0.97]">
+          <AppleLogo className="h-7 w-auto" />
+          <span className="flex flex-col items-start text-left">
+            <span className="text-xs leading-tight">Download on the</span>
+            <span className="text-lg font-semibold leading-tight">App Store</span>
+          </span>
         </span>
-      </Link>
+      </a>
     </div>
     </>
   );

@@ -2,122 +2,128 @@ import Link from "next/link";
 import StatGrid from "@/components/charts/StatGrid";
 import DonutChart from "@/components/charts/DonutChart";
 
+// Transit Stats rides through October 31, 2026 (completed rides only).
 const bigPictureStats = [
-  { value: "23,478", label: "Total rides" },
-  { value: "82,933", label: "Miles traveled" },
-  { value: "5,847", label: "Hours on the CTA" },
-  { value: "32.7", label: "Avg rides per user" },
+  { value: "48,306", label: "Total rides" },
+  { value: "175,143", label: "Miles traveled" },
+  { value: "12,298", label: "Hours on the CTA" },
+  { value: "64.4", label: "Avg rides per user" },
 ];
 
 export default function ArticleContent() {
   return (
     <>
       <p>
-        Real CTA ridership statistics from thousands of Chicago riders and 23,000
-        trips in 2026. How Chicagoans commute, which routes dominate, and what
-        the data reveals about Chicago public transit.
+        Real CTA ridership statistics from thousands of Chicago riders and
+        48,000+ trips through October 2026: how Chicagoans commute, which routes
+        they use most, and what the numbers say about Chicago public transit.
       </p>
       <p>
-        We built <Link href="/">Transit Stats</Link>, a CTA tracker app, to
-        help individual Chicago L train riders track their rides. But when you
-        zoom out and look at the data from thousands of users, patterns start to
-        emerge about how Chicago actually commutes.
+        We built <Link href="/">Transit Stats</Link>, a CTA tracker app, so
+        individual Chicago riders could track their own rides. Put thousands of
+        those riders together and you start to see how the city actually
+        commutes.
       </p>
       <p>
-        Here&rsquo;s what 23,478 tracked CTA rides tell us about public transit
-        in Chicago.
+        This breakdown covers 48,306 tracked CTA rides, more than double the
+        23,478 we analyzed when we first published it in March 2026.
       </p>
 
-      <h2>The Big Picture: CTA Ridership Data in 2026</h2>
+      <h2>The big picture: CTA ridership data in 2026</h2>
       <StatGrid stats={bigPictureStats} />
       <ul>
-        <li>Total rides: 23,478</li>
-        <li>Miles traveled: 82,933</li>
-        <li>Hours on the CTA: 5,847</li>
-        <li>Average rides per user: 32.7</li>
+        <li>Total rides: 48,306</li>
+        <li>Miles traveled: 175,143</li>
+        <li>Hours on the CTA: 12,298</li>
+        <li>Average rides per user: 64.4</li>
       </ul>
       <p>
-        That last number is interesting. The average Transit Stats user has
-        logged nearly 33 rides, which suggests these aren&rsquo;t casual
-        riders. These are daily commuters who tap their Ventra cards and rely on
-        public transit as their primary way of getting around the city. All
-        those miles add up to a real environmental impact. Our riders have
-        saved over{" "}
-        <Link href="/co2-savings-cta-riders">24,656 kg of CO2</Link> by
-        choosing the CTA over driving.
+        The average Transit Stats user has logged about 64 rides, nearly double
+        the average in March. Many of our users track a daily commute, which is
+        why that number keeps climbing. All those miles have saved over{" "}
+        <Link href="/co2-savings-cta-riders">52,000 kg of CO2</Link> compared
+        with driving.
       </p>
 
-      <h2>CTA Train Riders Slightly Outnumber Bus Riders</h2>
+      <h2>CTA train riders slightly outnumber bus riders</h2>
       <p>
-        Out of 23,478 total rides, 12,801 were on CTA trains and 10,677 were on
-        buses. That&rsquo;s a 55/45 split favoring the Chicago L train.
+        Out of 48,306 total rides, 26,342 were on CTA trains and 21,964 were on
+        buses. That&rsquo;s a 55/45 split favoring the Chicago L train, the same
+        split we saw in March.
       </p>
-      <DonutChart trainRides={12801} busRides={10677} />
+      <DonutChart trainRides={26342} busRides={21964} />
       <ul>
-        <li>CTA train rides: 12,801 (55%)</li>
-        <li>CTA bus rides: 10,677 (45%)</li>
+        <li>CTA train rides: 26,342 (55%)</li>
+        <li>CTA bus rides: 21,964 (45%)</li>
       </ul>
       <p>
-        This doesn&rsquo;t mean more Chicagoans ride trains than buses overall.
-        CTA system-wide ridership data actually shows bus ridership is higher.
-        But Transit Stats users skew slightly toward train riders, likely
-        because live GPS tracking works especially well on fixed rail routes.
+        Citywide, it goes the other way.{" "}
+        <Link href="/cta-ridership-growth-2026">
+          CTA system-wide ridership data
+        </Link>{" "}
+        shows buses carry about 59% of all rides. Our users lean toward trains,
+        likely because live GPS tracking works especially well on fixed rail
+        routes.
       </p>
 
-      <h2>The North Side Dominates CTA Ridership</h2>
+      <h2>The North Side dominates our data</h2>
       <p>
         Look at the{" "}
         <Link href="/most-popular-cta-stops-lines">
           busiest CTA stops
         </Link>{" "}
-        and a clear geographic pattern emerges. Belmont, Fullerton, Addison,
-        Bryn Mawr, Sheridan. The top stops are overwhelmingly on the North Side
-        of Chicago.
+        and the geography is obvious: Belmont, Fullerton, Bryn Mawr, Addison.
+        The top neighborhood stops are almost all on the North Side, and the
+        rest of the top 10 are the downtown stations those riders travel to.
       </p>
       <p>
-        The top bus routes tell the same story. The 36 Broadway, 77 Belmont, and
+        The top bus routes say the same thing. The 77 Belmont, 36 Broadway, and
         151 Sheridan all run through North Side neighborhoods like Lakeview,
         Lincoln Park, Edgewater, and Uptown.
       </p>
       <p>
-        This likely reflects the demographics of early Transit Stats adopters
-        rather than CTA ridership overall. But it does highlight just how
-        transit-dependent Chicago&rsquo;s North Side neighborhoods really are.
+        That probably says more about who downloaded Transit Stats first than
+        about CTA ridership overall. Still, these neighborhoods clearly run on
+        transit.
       </p>
 
-      <h2>Nearly 6,000 Hours on the CTA</h2>
+      <h2>More than 12,000 hours on the CTA</h2>
       <p>
-        Chicago riders on our platform have collectively spent 5,847 hours on
-        the CTA. That&rsquo;s over 243 days of nonstop riding. If one person
-        tried to ride for that long straight, it would take them from January
-        through most of August without stopping.
+        Chicago riders on our platform have collectively spent 12,298 hours on
+        the CTA. That&rsquo;s over 512 days of nonstop riding. One person riding
+        that long without a break would have boarded on New Year&rsquo;s Day 2025
+        and still been riding at the end of May 2026.
       </p>
       <p>
-        The average CTA commute time works out to about 15 minutes per trip,
-        which lines up with typical Chicago commute patterns for short to medium
-        distance trips within the city.
+        The average trip takes about 15 minutes and covers about 3.6 miles,
+        which fits the short and medium-length trips most people make within the
+        city.
       </p>
 
-      <h2>What This Data Means for Chicago Transit</h2>
+      <h2>What this data adds</h2>
       <p>
-        Transit Stats is still a small sample compared to the CTA&rsquo;s total
-        daily ridership. But what makes this CTA ridership data unique is that
-        it comes from individual riders tracking their personal habits over
-        time, not from turnstile counts or fare transactions.
+        Transit Stats is a small sample compared to the CTA&rsquo;s total daily
+        ridership. The difference is where the data comes from: individual riders
+        tracking their own habits over time, rather than turnstile counts or fare
+        transactions.
       </p>
       <p>
-        This gives us a rider&rsquo;s-eye view of Chicago public transit. We
-        can see not just which stops are busy, but how individual people move
-        through the system day after day, and measure the{" "}
+        That lets us see things fare data can&rsquo;t, like{" "}
+        <Link href="/cta-rush-hour-data">when people ride</Link>, the{" "}
+        <Link href="/cta-commute-pairs">routes they repeat every day</Link>,
+        and the{" "}
         <Link href="/co2-savings-cta-riders">
-          real CO2 emissions savings
+          CO2 savings
         </Link>{" "}
-        every one of those rides generates.
+        from each trip. The dataset grows with every ride our users log, and
+        we&rsquo;ll keep updating these numbers.
       </p>
+
+      <h2>How we collected this data</h2>
       <p>
-        As <Link href="/">Transit Stats</Link> grows, this dataset will only
-        get richer. We&rsquo;re building the most detailed picture of how real
-        Chicagoans use the CTA, one ride at a time.
+        These figures count every completed ride logged in Transit Stats through
+        October 31, 2026, both live-tracked and manually added. Miles and hours
+        come from each ride&rsquo;s recorded distance and duration.
       </p>
     </>
   );

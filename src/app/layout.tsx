@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     siteName: "Transit Stats",
     title: "Transit Stats | Chicago Transit Data & CTA Statistics Made Personal",
     description:
-      "The best CTA tracker app — view Chicago transit data, in-depth CTA stats, city leaderboards, and measure your CO₂ impact. Free for iOS and Android.",
+      "The best CTA tracker app — view Chicago transit data, in-depth CTA stats, city leaderboards, and measure your CO₂ impact. Free on iPhone.",
     images: [
       {
         url: "/images/og-image.png",
@@ -112,15 +112,12 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "MobileApplication",
               name: "Transit Stats",
-              operatingSystem: "iOS, Android",
+              operatingSystem: "iOS",
               applicationCategory: "TravelApplication",
               description:
                 "Transit Stats is the best CTA tracker app for Chicago transit. View personal CTA stats and transit data, auto-track rides, climb city leaderboards, unlock achievements, and measure your CO₂ savings.",
               url: "https://www.transitstats.co",
-              downloadUrl: [
-                "https://apps.apple.com/us/app/transit-stats-cta-analytics/id6747690858",
-                "https://play.google.com/store/apps/details?id=com.mycompany.transitstatsapp",
-              ],
+              downloadUrl: "https://apps.apple.com/us/app/transit-stats-cta-analytics/id6747690858",
               offers: {
                 "@type": "Offer",
                 price: "0",

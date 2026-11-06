@@ -1,83 +1,86 @@
 import Link from "next/link";
 import HorizontalBarChart from "@/components/charts/HorizontalBarChart";
 
+// Transit Stats rides through October 31, 2026 (48,306 completed rides).
 const topCommutesData = [
-  { name: "Addison to Lake", value: 117 },
-  { name: "Bryn Mawr to Belmont", value: 111 },
-  { name: "Grand to Belmont", value: 107 },
-  { name: "Belmont to Grand", value: 106 },
-  { name: "Merch Mart to Belmont", value: 97 },
-  { name: "Sox-35th to Bryn Mawr", value: 92 },
-  { name: "Sheridan to LaSalle", value: 92 },
-  { name: "Bryn Mawr to Peterson", value: 91 },
-  { name: "Sheridan to Kenmore", value: 90 },
-  { name: "Lake to Addison", value: 85 },
+  { name: "Belmont to Chicago", value: 220 },
+  { name: "Belmont to Grand", value: 203 },
+  { name: "Bryn Mawr to Belmont", value: 196 },
+  { name: "Sheridan to Kenmore", value: 180 },
+  { name: "Belmont to Lake", value: 172 },
+  { name: "Kedzie & 54th to Kedzie", value: 168 },
+  { name: "Sox-35th to Bryn Mawr", value: 168 },
+  { name: "Bryn Mawr to Peterson", value: 162 },
+  { name: "Irving Park to Belden", value: 161 },
+  { name: "Merch Mart to Belmont", value: 155 },
 ];
 
 const avgMilesTrainData = [
-  { name: "Orange Line", value: 6.4 },
+  { name: "Orange Line", value: 6.8 },
   { name: "Blue Line", value: 5.9 },
-  { name: "Purple Line", value: 5.3 },
-  { name: "Red Line", value: 4.5 },
-  { name: "Brown Line", value: 3.5 },
+  { name: "Purple Line", value: 5.0 },
+  { name: "Red Line", value: 4.6 },
+  { name: "Green Line", value: 3.9 },
 ];
 
 export default function ArticleContent() {
   return (
     <>
       <p>
-        The most popular CTA commute routes in Chicago in 2026 based on real
-        rider data. See the top origin-destination pairs for trains and buses
-        across the city.
+        The most popular CTA commute routes in Chicago, based on real rider data
+        from 48,000+ tracked rides through October 2026. See the top
+        origin-destination pairs for trains and buses across the city.
       </p>
       <p>
-        Where are Chicago CTA riders actually going? Not just which lines they
-        ride, but which specific stop-to-stop routes they take the most.
+        Where are Chicago CTA riders actually going? We wanted the specific
+        stop-to-stop trips people take most, not just the lines they ride.
       </p>
       <p>
-        We pulled data from 23,000+ tracked rides on{" "}
+        We pulled 48,306 tracked rides from{" "}
         <Link href="/">Transit Stats</Link> and ranked the most common
-        origin-destination pairs. The results paint a clear picture of how
-        Chicagoans move through the city on public transit.
+        origin-destination pairs.
       </p>
 
-      <h2>The Top 15 CTA Commutes in 2026</h2>
+      <h2>The top 15 CTA commutes (2026 data)</h2>
       <HorizontalBarChart data={topCommutesData} />
       <ol>
-        <li>Addison to Lake (Red Line): 117 rides</li>
-        <li>Bryn Mawr to Belmont (Red Line): 111 rides</li>
-        <li>Grand to Belmont (Blue Line): 107 rides</li>
-        <li>Belmont to Grand (Red Line): 106 rides</li>
-        <li>Merchandise Mart to Belmont (Purple Line): 97 rides</li>
-        <li>Sox-35th to Bryn Mawr (Red Line): 92 rides</li>
-        <li>Sheridan &amp; Wellington to LaSalle &amp; Adams (134 Stockton-LaSalle Express bus): 92 rides</li>
-        <li>Bryn Mawr Red Line to Peterson &amp; California (84 Peterson bus): 91 rides</li>
-        <li>Sheridan &amp; Broadway to Sheridan &amp; Kenmore (151 Sheridan bus): 90 rides</li>
-        <li>Lake to Addison (Red Line): 85 rides</li>
-        <li>Peterson &amp; California to Bryn Mawr Red Line (84 Peterson bus): 85 rides</li>
-        <li>Roosevelt to Roosevelt &amp; Jefferson (12 Roosevelt bus): 83 rides</li>
-        <li>Belmont &amp; Washtenaw to Belmont Red/Brown/Purple Line (77 Belmont bus): 82 rides</li>
-        <li>Roosevelt &amp; Jefferson to Roosevelt (12 Roosevelt bus): 79 rides</li>
-        <li>Bryn Mawr to Sox-35th (Red Line): 79 rides</li>
+        <li>Belmont to Chicago (Red Line): 220 rides</li>
+        <li>Belmont to Grand (Red Line): 203 rides</li>
+        <li>Bryn Mawr to Belmont (Red Line): 196 rides</li>
+        <li>Sheridan &amp; Broadway to Sheridan &amp; Kenmore (151 Sheridan bus): 180 rides</li>
+        <li>Belmont to Lake (Red Line): 172 rides</li>
+        <li>Kedzie &amp; 54th Street to Kedzie Orange Line station (52 Kedzie bus): 168 rides</li>
+        <li>Sox-35th to Bryn Mawr (Red Line): 168 rides</li>
+        <li>Bryn Mawr Red Line to Peterson &amp; California (84 Peterson bus): 162 rides</li>
+        <li>Broadway &amp; Irving Park to Clark &amp; Belden (36 Broadway bus): 161 rides</li>
+        <li>Merchandise Mart to Belmont (Brown Line): 155 rides</li>
+        <li>Belmont to Bryn Mawr (Red Line): 145 rides</li>
+        <li>Belmont &amp; Washtenaw to Belmont Red/Brown/Purple Line (77 Belmont bus): 142 rides</li>
+        <li>Addison to Lake (Red Line): 141 rides</li>
+        <li>Lake to Belmont (Red Line): 141 rides</li>
+        <li>Peterson &amp; California to Bryn Mawr Red Line (84 Peterson bus): 141 rides</li>
       </ol>
 
-      <h2>The Red Line Dominates CTA Commute Patterns</h2>
+      <h2>The Red Line dominates CTA commutes</h2>
       <p>
         8 of the top 15 commute pairs are on the{" "}
-        <Link href="/most-popular-cta-stops-lines">Red Line</Link>. That
-        tracks with what we already know about overall CTA ridership
-        statistics. The Red Line carries more riders than any other Chicago L
-        train line, and its north-south route through the city connects
-        residential neighborhoods to the Loop and major employment centers.
+        <Link href="/most-popular-cta-stops-lines">Red Line</Link>. No other L
+        line comes close in our data, and its north-south route connects the
+        big North Side neighborhoods to downtown jobs.
       </p>
       <p>
-        What&rsquo;s interesting is that many of these top pairs are mirror
-        routes. Addison to Lake is #1, and Lake to Addison is #10. Bryn Mawr
-        to Sox-35th is #6, and Sox-35th to Bryn Mawr is #15. These are daily
-        commuters taking the same route to work and back.
+        The top two commutes are both new since our first ranking in March
+        2026. Belmont to Chicago and Belmont to Grand weren&rsquo;t in the top
+        15 then, and now they lead the list: two Red Line runs from
+        Lakeview into River North and the Magnificent Mile area.
+      </p>
+      <p>
+        Many of the top pairs are mirror routes. Bryn Mawr to Belmont is #3,
+        and Belmont to Bryn Mawr is #11. Belmont to Lake is #5, and Lake to
+        Belmont is #14. That&rsquo;s the same people riding to work and back.
       </p>
 
-      <h2>CTA Bus Commutes Tell a Different Story</h2>
+      <h2>CTA bus commutes look different</h2>
       <p>
         The bus routes in the top 15 are more neighborhood-focused. The 84
         Peterson shows up twice (both directions between Bryn Mawr Red Line and
@@ -86,22 +89,24 @@ export default function ArticleContent() {
         hopping on the 84 bus to get home.
       </p>
       <p>
-        The 77 Belmont pair from Belmont &amp; Washtenaw to the
-        Red/Brown/Purple Line station tells the same story from the west side
-        of the neighborhood. People are using east-west bus routes to connect
-        to north-south train lines.
+        The same thing happens elsewhere in the city. The 77 Belmont pair from
+        Belmont &amp; Washtenaw feeds the Red/Brown/Purple Line station. A new
+        entry since March, the 52 Kedzie from Kedzie &amp; 54th Street, feeds
+        the Kedzie Orange Line station on the Southwest Side. Riders take the
+        bus to the train, then the train downtown.
       </p>
       <p>
-        The 134 Stockton-LaSalle Express pairing (Sheridan &amp; Wellington to
-        LaSalle &amp; Adams) is a direct commuter route. It takes North Side
-        residents straight to the financial district without transferring.
+        The other two bus pairs are short neighborhood trips: the 151 Sheridan
+        from Sheridan &amp; Broadway to Sheridan &amp; Kenmore, and the 36
+        Broadway from Irving Park down to Clark &amp; Belden in Lincoln Park.
       </p>
 
-      <h2>Belmont Is the Center of Everything</h2>
+      <h2>Belmont is the center of everything</h2>
       <p>
-        Belmont shows up in 5 of the top 15 commute pairs. It&rsquo;s a
-        destination from Grand, Bryn Mawr, Merchandise Mart, and Washtenaw.
-        It&rsquo;s an origin for trips to Grand. This confirms what our{" "}
+        Belmont shows up in 8 of the top 15 commute pairs. It&rsquo;s the
+        origin for trips to Chicago, Grand, Lake, and Bryn Mawr, and the
+        destination from Bryn Mawr, Merchandise Mart, Lake, and the 77 Belmont
+        bus. This confirms what our{" "}
         <Link href="/most-popular-cta-stops-lines">
           CTA stop data
         </Link>{" "}
@@ -109,44 +114,44 @@ export default function ArticleContent() {
         for Transit Stats users.
       </p>
       <p>
-        The convergence of three L lines (Red, Brown, Purple) plus major bus
-        routes like the 77 Belmont makes it a natural transfer point for riders
-        coming from all directions.
+        Three L lines (Red, Brown, and Purple) and the 77 Belmont bus all meet
+        there, so riders transfer at Belmont from every direction.
       </p>
 
-      <h2>What the Longest CTA Commutes Look Like</h2>
+      <h2>The longest CTA commutes</h2>
       <p>
         The data also shows which CTA lines carry riders the farthest per
         trip:
       </p>
       <HorizontalBarChart data={avgMilesTrainData} />
       <ol>
-        <li>Orange Line averages 6.4 miles per ride (Midway Airport corridor)</li>
+        <li>Orange Line averages 6.8 miles per ride (Midway Airport corridor)</li>
         <li>Blue Line averages 5.9 miles per ride (O&rsquo;Hare corridor)</li>
-        <li>Purple Line averages 5.3 miles per ride (Evanston express)</li>
-        <li>Red Line averages 4.5 miles per ride</li>
-        <li>Brown Line averages 3.5 miles per ride</li>
+        <li>Purple Line averages 5.0 miles per ride (Evanston express)</li>
+        <li>Red Line averages 4.6 miles per ride</li>
+        <li>Green Line averages 3.9 miles per ride</li>
       </ol>
       <p>
-        The Orange and Blue Lines lead because they serve the two airports and
-        stretch deep into the suburbs. Brown Line rides tend to be shorter
-        because the line winds through dense North Side neighborhoods where
-        stops are closer together.
+        The Orange and Blue Lines lead because they connect the Loop to the
+        city&rsquo;s two airports, and the Blue Line runs on to Forest Park.
+        Brown Line rides are among the shortest, averaging 3.7 miles, because
+        the line winds through dense North Side neighborhoods where stops are
+        closer together. Pink Line rides are the shortest of all, at 2.9 miles.
       </p>
       <p>
-        For buses, the 192 University of Chicago Hospitals Express tops the
-        list at 9.4 miles per ride, followed by the J14 Jeffery Jump at 7.6
-        miles. Express bus routes naturally cover more ground since they skip
-        stops along the way.
+        For buses, the J14 Jeffery Jump tops the list at 7.6 miles per ride,
+        followed by the 192 University of Chicago Hospitals Express at 6.7 miles
+        and the 147 Outer DuSable Lake Shore Express at 6.2 miles. Express bus
+        routes naturally cover more ground since they skip stops along the way.
       </p>
 
-      <h2>How We Got This Data</h2>
+      <h2>How we got this data</h2>
       <p>
         This data comes from <Link href="/">Transit Stats</Link>, a free CTA
-        tracker app that lets Chicago riders track every Ventra card ride and
-        see personal analytics. Thousands of riders have logged more than 23,000
-        trips, creating one of the most detailed rider-level datasets of CTA
-        usage available. Check out our{" "}
+        tracker app that lets Chicago riders track every ride and see their own
+        stats. Thousands of riders have logged more than 48,000 trips through
+        October 31, 2026, and each one records where it started and ended,
+        which is what makes a ranking like this possible. Check out our{" "}
         <Link href="/cta-ridership-data">
           full CTA ridership data breakdown
         </Link>{" "}
