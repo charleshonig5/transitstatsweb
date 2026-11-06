@@ -29,6 +29,14 @@ const faqs = [
       "Tap Start live ride and Transit Stats works as your personal CTA tracker. The app looks for CTA stops within about 150 meters and suggests your line and starting stop, or you can pick them yourself. While you ride, GPS measures your distance, and when you end the ride, the app suggests the stop you got off at. It works on all eight L lines (Red, Blue, Brown, Green, Orange, Pink, Purple, and Yellow) and every CTA bus route. Forgot to track a ride? Add it afterward, and autofill estimates the time and distance from the stops you pick.",
   },
   {
+    icon: "/images/emoji/emoji-bus-stop.svg",
+    iconW: 32,
+    iconH: 32,
+    question: "Does Transit Stats show real-time CTA arrivals?",
+    answer:
+      "No. Transit Stats tracks the rides you take, not when the next train or bus is coming. For real-time arrival times, use the CTA’s own Train Tracker and Bus Tracker. Transit Stats does show CTA service alerts, so you’ll still hear about delays and reroutes on the lines you ride.",
+  },
+  {
     icon: "/images/emoji/emoji-battery.svg",
     iconW: 21,
     iconH: 28,
@@ -85,6 +93,14 @@ const faqs = [
       "Transit Stats supports every CTA train line and bus route in Chicago. That includes all eight L lines (Red, Blue, Brown, Green, Orange, Pink, Purple, and Yellow) plus the full CTA bus network with over 100 routes. Whether you're commuting on the Red Line from Howard to 95th or catching the #8 Halsted bus, the app tracks your ride and adds it to your personal transit stats. We refresh our route and stop data every month from the CTA’s official schedule data, so new and changed routes show up in the app.",
   },
   {
+    icon: "/images/emoji/emoji-loudspeaker.svg",
+    iconW: 32,
+    iconH: 32,
+    question: "Does Transit Stats show CTA service alerts?",
+    answer:
+      "Yes. Current CTA service alerts, like delays, reroutes, and station issues, show up on the app\u2019s home screen, and the Service alerts page lists every one. Tap My lines to see only alerts for the L lines, bus routes, and stations you\u2019ve ridden in the last 60 days, or switch to all, train, or bus. Alerts come straight from the CTA and refresh every 10 minutes.",
+  },
+  {
     icon: "/images/emoji/emoji-stats.svg",
     iconW: 44,
     iconH: 44,
@@ -105,6 +121,14 @@ const faqs = [
     question: "Can I see my complete CTA ride history?",
     answer:
       "Yes. Transit Stats saves every ride you track in a complete CTA ride history. Each ride shows the line, date, time, start and end stops, distance, and how long it took, and you can open any ride to see its route on a map. Filter by all, train, or bus to find a trip. The coverage map shows every stop you've visited, how many times you've been there, and how much of the CTA system you've covered. It's a personal logbook of every CTA trip you've taken.",
+  },
+  {
+    icon: "/images/emoji/emoji-floppy-disk.svg",
+    iconW: 32,
+    iconH: 32,
+    question: "Can I export my ride data?",
+    answer:
+      "Yes, with Transit Stats PRO. Go to Profile > Data export and the app turns your complete CTA ride history into a CSV file: the date, start and end times, train or bus, line, stops, distance, duration, and CO₂ saved for every ride. Save it to Files, email it to yourself, or open it in Excel or Google Sheets.",
   },
   {
     icon: "/images/emoji/emoji-tracking.svg",
