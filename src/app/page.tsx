@@ -182,9 +182,10 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Primary: App Store download. Secondary: Contact (white with
-                  the stat cards' shadow, stretched to the primary's height by
-                  the flex row). */}
+              {/* Primary: App Store download. Secondary: Contact, the app's
+                  secondary pill (white, 1px brand outline) plus the stat
+                  cards' shadow, stretched to the primary's height by the
+                  flex row. */}
               <div className="flex flex-wrap gap-3 sm:gap-6">
                 <a
                   href="https://apps.apple.com/us/app/transit-stats-cta-analytics/id6747690858"
@@ -203,7 +204,7 @@ export default function Home() {
                 </a>
                 <Link
                   href="/contact"
-                  className="flex items-center whitespace-nowrap rounded-[100px] bg-white px-[18px] text-base font-semibold text-brand shadow-[0_0_30px_rgba(0,0,0,0.08)] transition-all duration-200 hover:scale-105 hover:shadow-[0_8px_40px_rgba(0,0,0,0.12)] active:scale-[0.97] sm:px-6 sm:text-lg"
+                  className="flex items-center whitespace-nowrap rounded-[100px] border border-brand bg-white px-[18px] text-base font-semibold text-brand shadow-[0_0_30px_rgba(0,0,0,0.08)] transition-all duration-200 hover:scale-105 hover:shadow-[0_8px_40px_rgba(0,0,0,0.12)] active:scale-[0.97] sm:px-6 sm:text-lg"
                 >
                   Contact us
                 </Link>
