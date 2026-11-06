@@ -13,8 +13,12 @@ import CtaRidershipData from "@/data/articles/cta-ridership-data";
 import CtaRushHourData from "@/data/articles/cta-rush-hour-data";
 import CtaCommutePairs from "@/data/articles/cta-commute-pairs";
 import CtaRidershipGrowth2026 from "@/data/articles/cta-ridership-growth-2026";
+import BusiestCtaStationsBusRoutes from "@/data/articles/busiest-cta-stations-bus-routes";
+import CtaOhareMidwayAirport from "@/data/articles/cta-ohare-midway-airport";
 
 const articleContent: Record<string, ReactNode> = {
+  "busiest-cta-stations-bus-routes": <BusiestCtaStationsBusRoutes />,
+  "cta-ohare-midway-airport": <CtaOhareMidwayAirport />,
   "cta-ridership-growth-2026": <CtaRidershipGrowth2026 />,
   "most-popular-cta-stops-lines": <MostPopularCtaStopsLines />,
   "co2-savings-cta-riders": <Co2SavingsCtaRiders />,

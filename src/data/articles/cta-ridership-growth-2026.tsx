@@ -105,7 +105,9 @@ export default function ArticleContent() {
       <p>
         CTA buses still carry most riders, but the L is growing faster. Through
         August 2026, buses carried 135.7 million rides (up 1.9%) and trains
-        carried 94.3 million (up 3.7%).
+        carried 94.3 million (up 3.7%). See which{" "}
+        <Link href="/busiest-cta-stations-bus-routes">stations and bus routes
+        are busiest</Link>.
       </p>
       <DonutChart trainRides={94340263} busRides={135655218} />
       <ul>

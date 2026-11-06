@@ -134,7 +134,9 @@ export default function ArticleContent() {
         <Link href="/co2-savings-cta-riders">
           CO2 riders save by choosing the CTA
         </Link>
-        . For the system-wide picture, see the latest{" "}
+        . For the citywide ranking from official CTA counts, see the{" "}
+        <Link href="/busiest-cta-stations-bus-routes">busiest CTA stations and
+        bus routes</Link>, or the latest{" "}
         <Link href="/cta-ridership-growth-2026">CTA ridership growth data</Link>.
       </p>
     </>

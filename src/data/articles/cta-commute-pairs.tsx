@@ -133,7 +133,9 @@ export default function ArticleContent() {
       </ol>
       <p>
         The Orange and Blue Lines lead because they connect the Loop to the
-        city&rsquo;s two airports, and the Blue Line runs on to Forest Park.
+        city&rsquo;s two airports (here&rsquo;s{" "}
+        <Link href="/cta-ohare-midway-airport">how to ride the CTA to O&rsquo;Hare
+        and Midway</Link>), and the Blue Line runs on to Forest Park.
         Brown Line rides are among the shortest, averaging 3.7 miles, because
         the line winds through dense North Side neighborhoods where stops are
         closer together. Pink Line rides are the shortest of all, at 2.9 miles.

@@ -19,6 +19,80 @@ export interface Post {
 
 export const posts: Post[] = [
   {
+    slug: "busiest-cta-stations-bus-routes",
+    title: "The busiest CTA stations and bus routes in 2026",
+    subtitle:
+      "Clark/Lake is the busiest CTA station and the 9 Ashland the busiest bus route in 2026. See the top 10 busiest CTA stations and bus routes.",
+    description:
+      "Clark/Lake is the busiest CTA station and the 9 Ashland the busiest bus route in 2026. See the top 10 busiest CTA stations and bus routes.",
+    imageAlt:
+      "Riders waiting at night on the State/Lake L platform in Chicago's Loop, with the Chicago Theatre's marquee sign above",
+    date: "2026-11-06",
+    displayDate: "November 6, 2026",
+    updated: "2026-11-06",
+    displayUpdated: "November 6, 2026",
+    author: "Transit Stats Team",
+    faqs: [
+      {
+        question: "What is the busiest CTA station?",
+        answer:
+          "Clark/Lake, with 2.66 million entries from January through August 2026. The Red Line's Lake station is second with 2.35 million, and O'Hare on the Blue Line is third with 2.22 million.",
+      },
+      {
+        question: "What is the busiest CTA bus route?",
+        answer:
+          "The 9 Ashland, with 4.27 million rides from January through August 2026, followed by the 53 Pulaski at 3.91 million and the 79 79th at 3.84 million.",
+      },
+      {
+        question: "Why is Clark/Lake so busy in 2026?",
+        answer:
+          "The nearby State/Lake elevated station closed on January 5, 2026, for a three-year rebuild, and the CTA sent its riders to Clark/Lake and Washington/Wabash. The two stations gained about 1.25 million entries between them compared with the same months of 2025.",
+      },
+      {
+        question: "Is O'Hare one of the busiest CTA stations?",
+        answer:
+          "Yes. The Blue Line's O'Hare station is the third busiest on the CTA by total entries, with 2.22 million from January through August 2026, about 9,500 on an average weekday.",
+      },
+    ],
+  },
+  {
+    slug: "cta-ohare-midway-airport",
+    title: "How to get to O'Hare and Midway on the CTA",
+    subtitle:
+      "Take the Blue Line to O'Hare or the Orange Line to Midway. Travel times, the $2.50 and $5 fares, hours, and how to find the train at each airport.",
+    description:
+      "Take the Blue Line to O'Hare or the Orange Line to Midway. Travel times, the $2.50 and $5 fares, hours, and how to find the train at each airport.",
+    imageAlt:
+      "Travelers walking through a gate concourse at Chicago O'Hare International Airport",
+    date: "2026-11-06",
+    displayDate: "November 6, 2026",
+    updated: "2026-11-06",
+    displayUpdated: "November 6, 2026",
+    author: "Transit Stats Team",
+    faqs: [
+      {
+        question: "How much does the CTA cost from O'Hare?",
+        answer:
+          "$5 (full fare) when you board the Blue Line at O'Hare. The trip to O'Hare costs the regular $2.50 L fare. A 1-, 3-, 7-, or 30-day pass covers the O'Hare fare at no extra charge.",
+      },
+      {
+        question: "How long does the Blue Line take from O'Hare to downtown?",
+        answer:
+          "About 40 to 45 minutes, according to the CTA. The Blue Line runs 24 hours a day, seven days a week.",
+      },
+      {
+        question: "How do I get from Midway to downtown on the CTA?",
+        answer:
+          "Take the Orange Line. It takes about 20 to 25 minutes and costs $2.50 with a contactless card, phone, or Ventra card. The station is just east of the terminal, connected by an enclosed walkway. Trains run from about 3:30 a.m. on weekdays until about 1 a.m.; overnight, the N62 Archer bus runs between Midway and downtown.",
+      },
+      {
+        question: "Where is the CTA station at O'Hare?",
+        answer:
+          "On the lower level, connected directly to Terminals 1, 2, and 3. Follow the signs for CTA Trains or Trains to City. For Terminal 5, ride the free Airport Transit System train between Terminal 5 and Terminal 2.",
+      },
+    ],
+  },
+  {
     slug: "cta-ridership-growth-2026",
     title: "Chicago CTA ridership continues to grow in 2026",
     subtitle:
@@ -68,7 +142,7 @@ export const posts: Post[] = [
     description:
       "The most popular CTA stops and train lines in Chicago, based on 48,000+ real tracked rides across the L and bus network through October 2026.",
     imageAlt:
-      "Chicago L train arriving at a busy CTA station platform during rush hour",
+      "Riders on an underground CTA subway platform as a Chicago L train pulls in",
     date: "2026-03-10",
     displayDate: "March 10, 2026",
     updated: "2026-11-05",
@@ -100,7 +174,7 @@ export const posts: Post[] = [
     description:
       "We analyzed 48,000+ CTA rides to measure the real CO2 impact of riding transit in Chicago. Riders have saved 52,073 kg of CO2, about 1.1 kg per ride.",
     imageAlt:
-      "Chicago skyline with CTA elevated train representing CO2 savings from public transit ridership",
+      "CTA L train at an elevated station platform with the Chicago skyline in the distance",
     date: "2026-03-10",
     displayDate: "March 10, 2026",
     updated: "2026-11-05",
@@ -132,7 +206,7 @@ export const posts: Post[] = [
     description:
       "Real CTA ridership data from 48,000+ tracked trips through October 2026. How Chicagoans commute, which routes dominate, and what the data reveals.",
     imageAlt:
-      "Riders boarding a CTA bus in Chicago with the downtown skyline in the background",
+      "CTA L train rounding a curve on the elevated tracks between brick buildings in Chicago's Loop",
     date: "2026-03-10",
     displayDate: "March 10, 2026",
     updated: "2026-11-05",
@@ -164,7 +238,7 @@ export const posts: Post[] = [
     description:
       "Hour-by-hour CTA ridership data from 48,000+ tracked rides. See when Chicagoans ride the bus and L train, from morning rush to late night.",
     imageAlt:
-      "Crowded CTA train platform during evening rush hour in Chicago with commuters waiting",
+      "CTA L train on the elevated tracks above a downtown Chicago street, with pedestrians on the sidewalk below",
     date: "2026-03-11",
     displayDate: "March 11, 2026",
     updated: "2026-11-05",
@@ -196,7 +270,7 @@ export const posts: Post[] = [
     description:
       "The most common CTA commute routes in Chicago, from 48,000+ tracked rides through October 2026. See the top stop-to-stop pairs for trains and buses.",
     imageAlt:
-      "Chicago CTA Red Line train crossing elevated tracks above a busy city street",
+      "CTA L trains at an elevated Loop station framed by downtown Chicago high-rises",
     date: "2026-03-11",
     displayDate: "March 11, 2026",
     updated: "2026-11-05",
