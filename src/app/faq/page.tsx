@@ -37,7 +37,7 @@ const faqs = [
     category: "info",
     question: "Does Transit Stats show real-time CTA arrivals?",
     answer:
-      "No. Transit Stats tracks the rides you take, not when the next train or bus is coming. For real-time arrival times, use the CTA’s own Train Tracker and Bus Tracker. Transit Stats does show CTA service alerts, so you’ll still hear about delays and reroutes on the lines you ride.",
+      "Yes. The Arrivals tab shows live arrival times for CTA train stations and bus stops, using the CTA’s own Train Tracker and Bus Tracker data. It keeps the stops you use most in one place, lets you search for any stop or route, and with location on, shows the stops nearest you. Transit Stats also shows CTA service alerts, so you’ll hear about delays and reroutes on the lines you ride.",
   },
   {
     icon: "/images/emoji/emoji-battery.svg",
