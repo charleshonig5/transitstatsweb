@@ -45,7 +45,7 @@ export default function PrivacyPage() {
           {/* ── Intro ── */}
           <section className="flex flex-col gap-4">
             <p>
-              <strong>Last updated:</strong> November 5, 2026
+              <strong>Last updated:</strong> November 22, 2026
             </p>
             <p>
               This Privacy Notice for Transit Stats (&ldquo;we,&rdquo;
@@ -391,14 +391,16 @@ export default function PrivacyPage() {
               payment details.
             </p>
             <p>
-              <strong>Advertising.</strong> The free version of our app shows
-              ads served by Google AdMob. To serve and measure ads, AdMob may
-              collect your device&rsquo;s advertising identifier (only if you
-              allow tracking when your device asks), your IP address and
-              approximate location derived from it, and information about the
-              ads you see and tap. See &ldquo;DO WE USE COOKIES AND OTHER
-              TRACKING TECHNOLOGIES?&rdquo; below for how to opt out. Users who
-              purchase PRO do not see ads.
+              <strong>Advertising in older versions.</strong> Starting with
+              version 2.0.4, our app does not show ads. Earlier versions show
+              ads served by Google AdMob to users who have not purchased PRO.
+              In those versions, AdMob may collect your device&rsquo;s
+              advertising identifier (only if you allow tracking when your
+              device asks), your IP address and approximate location derived
+              from it, and information about the ads you see and tap. Updating
+              to version 2.0.4 or later removes the ads. You can also turn
+              tracking off at any time on iPhone under Settings &gt; Privacy
+              &amp; Security &gt; Tracking.
             </p>
             <p>
               <strong>When we use Google Maps Platform APIs.</strong> We may
@@ -422,14 +424,12 @@ export default function PrivacyPage() {
             <p>
               <strong>In Short:</strong> We are not responsible for the safety of
               any information that you share with third parties that we may link
-              to or who advertise on our Services, but are not affiliated with,
-              our Services.
+              to, but are not affiliated with, our Services.
             </p>
             <p>
               The Services may link to third-party websites, online services, or
-              mobile applications and/or contain advertisements from third
-              parties that are not affiliated with us and which may link to other
-              websites, services, or applications. Accordingly, we do not make
+              mobile applications that are not affiliated with us and which may
+              link to other websites, services, or applications. Accordingly, we do not make
               any guarantee regarding any such third parties, and we will not be
               liable for any loss or damage caused by the use of such
               third-party websites, services, or applications. The inclusion of a
@@ -462,15 +462,8 @@ export default function PrivacyPage() {
               bugs, save your preferences, and assist with basic site functions.
             </p>
             <p>
-              We also permit third parties and service providers to use online
-              tracking technologies on our Services for analytics and
-              advertising, including to help manage and display advertisements,
-              to tailor advertisements to your interests, or to send abandoned
-              shopping cart reminders (depending on your communication
-              preferences). The third parties and service providers use their
-              technology to provide advertising about products and services
-              tailored to your interests which may appear either on our Services
-              or on other websites.
+              We also permit service providers to use online tracking
+              technologies on our Services for analytics.
             </p>
             <p>
               To the extent these online tracking technologies are deemed to be a
@@ -484,36 +477,6 @@ export default function PrivacyPage() {
             <p>
               Specific information about how we use such technologies and how you
               can refuse certain cookies is set out in our Cookie Notice.
-            </p>
-
-            <h3 className="mt-4 font-semibold">Google AdMob</h3>
-            <p>
-              Our app uses Google AdMob to show ads to users who have not
-              purchased PRO. AdMob may use your device&rsquo;s advertising
-              identifier to show more relevant ads, but only if you allow
-              tracking when your device asks. You can change this at any time on
-              iPhone under Settings &gt; Privacy &amp; Security &gt; Tracking.
-              Where required by law, we ask for your consent before ads are
-              personalized. Other opt out means include{" "}
-              <a
-                href="http://optout.networkadvertising.org/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline underline-offset-2 transition-opacity duration-200 active:opacity-60"
-              >
-                http://optout.networkadvertising.org/
-              </a>{" "}
-              and{" "}
-              <a
-                href="http://www.networkadvertising.org/mobile-choice"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline underline-offset-2 transition-opacity duration-200 active:opacity-60"
-              >
-                http://www.networkadvertising.org/mobile-choice
-              </a>
-              . For more information on the privacy practices of Google, please
-              visit the Google Privacy &amp; Terms page.
             </p>
           </section>
 
