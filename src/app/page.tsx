@@ -130,13 +130,13 @@ export default function Home() {
                       for CTA transit rides
                     </span>
                   </h1>
-                  <p className="text-pretty text-sm text-dark md:max-w-[80%] md:text-base">
+                  <p className="text-sm text-dark md:max-w-[80%] md:text-base">
                     <strong>
                       Transit Stats turns your Chicago CTA rides into
                       meaningful, personal data.{" "}
                     </strong>
                     Get detailed statistics, leaderboards, achievements, ride
-                    history, and more from your public transit usage.
+                    history, and more from your public transit&nbsp;usage.
                   </p>
                 </div>
 
