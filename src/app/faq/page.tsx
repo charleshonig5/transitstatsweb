@@ -55,7 +55,7 @@ const faqs = [
     category: "privacy",
     question: "Is my data private?",
     answer:
-      "Yes. We store your rides, not your GPS trail: each ride keeps its line, stops, distance, and time, and the app only uses your location during a live ride. We don\u2019t sell your data. The free version shows ads from Google AdMob, and if your iPhone asks and you allow tracking, Google can use your device\u2019s advertising ID to show more relevant ads. Upgrading to PRO removes the ads. You can delete your account, including your rides, stats, and profile, anytime from Profile > Account.",
+      "Yes. We store your rides, not your GPS trail: each ride keeps its line, stops, distance, and time, and the app only uses your location during a live ride. We don\u2019t sell your data, and the app has no ads. You can delete your account, including your rides, stats, and profile, anytime from Profile > Account.",
   },
   {
     icon: "/images/emoji/emoji-bus.svg",
@@ -73,7 +73,7 @@ const faqs = [
     category: "info",
     question: "Is Transit Stats free?",
     answer:
-      "Yes! CTA ride tracking, in-depth stats, achievements, and city leaderboards are all free, and you get full access to your transit data without paying a cent. Transit Stats PRO is a $2.99 one-time purchase that removes ads, lets you export your ride data as a CSV file, and supports continued development. We believe every Chicago rider deserves access to their own stats.",
+      "Yes! CTA ride tracking, in-depth stats, achievements, and city leaderboards are all free, and you get full access to your transit data without paying a cent. Transit Stats PRO is a $2.99 one-time purchase that lets you export your ride data as a CSV file and supports continued development. We believe every Chicago rider deserves access to their own stats.",
   },
   {
     icon: "/images/emoji/emoji-leaderboards.svg",
