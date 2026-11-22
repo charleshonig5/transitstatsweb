@@ -3,6 +3,11 @@ export interface Faq {
   answer: string; // Plain text: rendered on the page AND in FAQPage JSON-LD, so they always match
 }
 
+export interface Section {
+  id: string;    // The id on the article's <h2>, so the rail link lands on it
+  label: string; // Rail name: the heading cut to two words at most
+}
+
 export interface Post {
   slug: string;
   title: string;
@@ -14,6 +19,7 @@ export interface Post {
   updated: string;         // ISO 8601 last substantive update (dateModified, og:modified_time, sitemap lastmod)
   displayUpdated: string;  // Human-readable
   author: string;
+  sections: Section[];     // One per <h2> in the article file, same order
   faqs: Faq[];
 }
 
@@ -32,6 +38,15 @@ export const posts: Post[] = [
     updated: "2026-11-06",
     displayUpdated: "November 6, 2026",
     author: "Transit Stats Team",
+    sections: [
+      { id: "2026-ridership", label: "2026 ridership" },
+      { id: "busiest-stations", label: "Busiest stations" },
+      { id: "clark-lake-jump", label: "Clark/Lake jump" },
+      { id: "busiest-routes", label: "Busiest routes" },
+      { id: "biggest-gains", label: "Biggest gains" },
+      { id: "our-riders", label: "Our riders" },
+      { id: "sources", label: "Sources" },
+    ],
     faqs: [
       {
         question: "What is the busiest CTA station?",
@@ -69,6 +84,16 @@ export const posts: Post[] = [
     updated: "2026-11-06",
     displayUpdated: "November 6, 2026",
     author: "Transit Stats Team",
+    sections: [
+      { id: "overview", label: "Overview" },
+      { id: "to-ohare", label: "To O'Hare" },
+      { id: "to-midway", label: "To Midway" },
+      { id: "taxi-rideshare", label: "Taxi, rideshare" },
+      { id: "paying", label: "Paying" },
+      { id: "how-busy", label: "How busy" },
+      { id: "before-going", label: "Before going" },
+      { id: "sources", label: "Sources" },
+    ],
     faqs: [
       {
         question: "How much does the CTA cost from O'Hare?",
@@ -106,6 +131,18 @@ export const posts: Post[] = [
     updated: "2026-11-05",
     displayUpdated: "November 5, 2026",
     author: "Transit Stats Team",
+    sections: [
+      { id: "2026-ridership", label: "2026 ridership" },
+      { id: "monthly-growth", label: "Monthly growth" },
+      { id: "rail-growth", label: "Rail growth" },
+      { id: "weekend-ridership", label: "Weekend ridership" },
+      { id: "busiest-days", label: "Busiest days" },
+      { id: "2025-recap", label: "2025 recap" },
+      { id: "chicago-region", label: "Chicago region" },
+      { id: "nita", label: "NITA" },
+      { id: "for-riders", label: "For riders" },
+      { id: "sources", label: "Sources" },
+    ],
     faqs: [
       {
         question: "Is CTA ridership going up in 2026?",
@@ -148,6 +185,12 @@ export const posts: Post[] = [
     updated: "2026-11-05",
     displayUpdated: "November 5, 2026",
     author: "Transit Stats Team",
+    sections: [
+      { id: "train-lines", label: "Train lines" },
+      { id: "bus-routes", label: "Bus routes" },
+      { id: "top-stops", label: "Top stops" },
+      { id: "our-data", label: "Our data" },
+    ],
     faqs: [
       {
         question: "What is the busiest CTA L line?",
@@ -180,6 +223,13 @@ export const posts: Post[] = [
     updated: "2026-11-05",
     displayUpdated: "November 5, 2026",
     author: "Transit Stats Team",
+    sections: [
+      { id: "the-numbers", label: "The numbers" },
+      { id: "train-bus", label: "Train, bus" },
+      { id: "the-calculation", label: "The calculation" },
+      { id: "your-number", label: "Your number" },
+      { id: "for-chicago", label: "For Chicago" },
+    ],
     faqs: [
       {
         question: "How much CO2 does riding the CTA save?",
@@ -212,6 +262,14 @@ export const posts: Post[] = [
     updated: "2026-11-05",
     displayUpdated: "November 5, 2026",
     author: "Transit Stats Team",
+    sections: [
+      { id: "big-picture", label: "Big picture" },
+      { id: "train-riders", label: "Train riders" },
+      { id: "north-side", label: "North Side" },
+      { id: "12-000-hours", label: "12,000 hours" },
+      { id: "whats-added", label: "What's added" },
+      { id: "our-data", label: "Our data" },
+    ],
     faqs: [
       {
         question: "How long is the average CTA trip?",
@@ -244,6 +302,12 @@ export const posts: Post[] = [
     updated: "2026-11-05",
     displayUpdated: "November 5, 2026",
     author: "Transit Stats Team",
+    sections: [
+      { id: "evening-rush", label: "Evening rush" },
+      { id: "why-evening", label: "Why evening" },
+      { id: "busiest-day", label: "Busiest day" },
+      { id: "takeaways", label: "Takeaways" },
+    ],
     faqs: [
       {
         question: "What time is rush hour on the CTA?",
@@ -276,6 +340,14 @@ export const posts: Post[] = [
     updated: "2026-11-05",
     displayUpdated: "November 5, 2026",
     author: "Transit Stats Team",
+    sections: [
+      { id: "top-commutes", label: "Top commutes" },
+      { id: "red-line", label: "Red Line" },
+      { id: "bus-commutes", label: "Bus commutes" },
+      { id: "belmont", label: "Belmont" },
+      { id: "longest-commutes", label: "Longest commutes" },
+      { id: "our-data", label: "Our data" },
+    ],
     faqs: [
       {
         question: "What is the most common CTA commute?",

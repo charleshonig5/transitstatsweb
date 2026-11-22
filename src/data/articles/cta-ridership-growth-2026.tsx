@@ -66,7 +66,7 @@ export default function ArticleContent() {
         riders log.
       </p>
 
-      <h2>CTA ridership in 2026 so far</h2>
+      <h2 id="2026-ridership">CTA ridership in 2026 so far</h2>
       <StatGrid stats={ytdStats} />
       <p>
         Through the end of August 2026, the CTA recorded 230.0 million rides,
@@ -82,7 +82,7 @@ export default function ArticleContent() {
         <li>Days with more than 1 million rides: 134 (vs. 118)</li>
       </ul>
 
-      <h2>Every month of 2026 has beaten 2025</h2>
+      <h2 id="monthly-growth">Every month of 2026 has beaten 2025</h2>
       <p>
         The growth is spread out. All eight months of 2026 so far carried more
         riders than the same month in 2025. February posted the
@@ -101,7 +101,7 @@ export default function ArticleContent() {
         <li>August: +0.2%</li>
       </ol>
 
-      <h2>Rail is growing faster than bus</h2>
+      <h2 id="rail-growth">Rail is growing faster than bus</h2>
       <p>
         CTA buses still carry most riders, but the L is growing faster. Through
         August 2026, buses carried 135.7 million rides (up 1.9%) and trains
@@ -125,7 +125,7 @@ export default function ArticleContent() {
         most-used line among our riders by a wide margin.
       </p>
 
-      <h2>Weekend ridership has passed pre-pandemic levels</h2>
+      <h2 id="weekend-ridership">Weekend ridership has passed pre-pandemic levels</h2>
       <p>
         In June 2026, the CTA reported that{" "}
         <a
@@ -145,7 +145,7 @@ export default function ArticleContent() {
         to make up.
       </p>
 
-      <h2>The busiest days of the week on the CTA</h2>
+      <h2 id="busiest-days">The busiest days of the week on the CTA</h2>
       <p>
         Midweek is peak CTA. In 2026, Wednesday averaged 1.10 million rides,
         just ahead of Tuesday and Thursday. Sunday is the quietest day at about
@@ -158,7 +158,7 @@ export default function ArticleContent() {
         riders, with Wednesday and Thursday close behind.
       </p>
 
-      <h2>2025 recap: 338 million CTA rides after a recount</h2>
+      <h2 id="2025-recap">2025 recap: 338 million CTA rides after a recount</h2>
       <p>
         In March 2026, the CTA{" "}
         <a
@@ -183,7 +183,7 @@ export default function ArticleContent() {
         years, so the growth figures aren&rsquo;t inflated by the recount.
       </p>
 
-      <h2>The Chicago region hit 373.5 million rides in 2025</h2>
+      <h2 id="chicago-region">The Chicago region hit 373.5 million rides in 2025</h2>
       <p>
         Before the CTA&rsquo;s recount, the{" "}
         <a
@@ -225,7 +225,7 @@ export default function ArticleContent() {
         368,000 more rides than a year earlier, a 22% increase.
       </p>
 
-      <h2>NITA replaced the RTA in September 2026</h2>
+      <h2 id="nita">NITA replaced the RTA in September 2026</h2>
       <p>
         The biggest Chicago transit story of 2026 is about funding and who runs
         the system. Governor Pritzker signed the Northern Illinois Transit Authority
@@ -253,7 +253,7 @@ export default function ArticleContent() {
         table before the law passed.
       </p>
 
-      <h2>What this means for Chicago CTA riders</h2>
+      <h2 id="for-riders">What this means for Chicago CTA riders</h2>
       <p>
         Counting 2026 so far, Chicago transit ridership has grown five years in a
         row. Chicagoans are riding the CTA more than at any point since the pandemic.
@@ -269,7 +269,7 @@ export default function ArticleContent() {
         <Link href="/co2-savings-cta-riders">CO2 savings every ride generates</Link>.
       </p>
 
-      <h2>Sources</h2>
+      <h2 id="sources">Sources</h2>
       <ul>
         <li>
           <a

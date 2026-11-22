@@ -5,8 +5,8 @@ import type { Faq } from "@/data/posts";
  * (10px radius, soft shadow, 16px apart, dark/70 body, lift on hover, 0.98
  * on press). Questions are dark while closed and brand once open. The heading matches the article's prose
  * h2. The plus sits in a tinted circle, a pattern taken from the app. Native <details> keeps every answer in the HTML when collapsed, so
- * crawlers read them and they match the FAQPage JSON-LD exactly. The first
- * answer starts open so the block reads as content, not a menu.
+ * crawlers read them and they match the FAQPage JSON-LD exactly. Every
+ * answer starts closed.
  */
 export default function ArticleFaq({ faqs }: { faqs: Faq[] }) {
   if (faqs.length === 0) return null;
@@ -23,10 +23,9 @@ export default function ArticleFaq({ faqs }: { faqs: Faq[] }) {
         Frequently asked questions
       </h2>
       <div className="flex flex-col gap-4">
-        {faqs.map((faq, i) => (
+        {faqs.map((faq) => (
           <details
             key={faq.question}
-            open={i === 0}
             className="group rounded-[10px] bg-white shadow-[0_0_30px_rgba(0,0,0,0.08)] transition-all duration-200 [@media(hover:hover)]:has-[summary:hover]:-translate-y-1 [@media(hover:hover)]:has-[summary:hover]:shadow-[0_8px_40px_rgba(0,0,0,0.12)] has-[summary:active]:translate-y-0 has-[summary:active]:scale-[0.98]"
           >
             <summary className="flex cursor-pointer list-none items-center justify-between gap-4 p-6 text-base font-semibold leading-snug text-dark transition-colors duration-200 group-open:text-brand [@media(hover:hover)]:hover:text-brand md:p-8 md:text-lg md:leading-snug [&::-webkit-details-marker]:hidden">

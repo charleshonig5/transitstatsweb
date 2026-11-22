@@ -27,7 +27,7 @@ export default function ArticleContent() {
         open data.
       </p>
 
-      <h2>CTA to O&rsquo;Hare and Midway at a glance</h2>
+      <h2 id="overview">CTA to O&rsquo;Hare and Midway at a glance</h2>
       <StatGrid stats={quickStats} />
       <ul>
         <li>O&rsquo;Hare: Blue Line, 40 to 45 minutes to downtown, runs 24 hours a day</li>
@@ -35,7 +35,7 @@ export default function ArticleContent() {
         <li>Fare: $2.50, except $5 when you board at O&rsquo;Hare</li>
       </ul>
 
-      <h2>Taking the Blue Line to O&rsquo;Hare</h2>
+      <h2 id="to-ohare">Taking the Blue Line to O&rsquo;Hare</h2>
       <p>
         The Blue Line runs between downtown and O&rsquo;Hare 24 hours a day,
         seven days a week, so it works for red-eye flights too. Every train
@@ -56,7 +56,7 @@ export default function ArticleContent() {
         1-day pass costs the same $5.
       </p>
 
-      <h2>Taking the Orange Line to Midway</h2>
+      <h2 id="to-midway">Taking the Orange Line to Midway</h2>
       <p>
         The Orange Line connects Midway with downtown in about 20 to 25
         minutes, at the regular $2.50 fare both ways. The station is just east
@@ -71,7 +71,7 @@ export default function ArticleContent() {
         Archer bus runs between Midway and State/Washington downtown.
       </p>
 
-      <h2>CTA vs. taxi vs. rideshare</h2>
+      <h2 id="taxi-rideshare">CTA vs. taxi vs. rideshare</h2>
       <p>
         The train is the cheapest way to either airport by a wide margin. The
         CTA&rsquo;s own comparison:
@@ -86,7 +86,7 @@ export default function ArticleContent() {
         a car slower than the train, which runs on its own tracks.
       </p>
 
-      <h2>How to pay</h2>
+      <h2 id="paying">How to pay</h2>
       <p>
         The cheapest way is to tap a contactless bank card or phone at the fare
         gate, or use a Ventra card or the Ventra app. A single-ride ticket from
@@ -96,7 +96,7 @@ export default function ArticleContent() {
         cost extra.
       </p>
 
-      <h2>How busy the airport stations are</h2>
+      <h2 id="how-busy">How busy the airport stations are</h2>
       <p>
         O&rsquo;Hare is the third-busiest L station by total entries, with 2.22
         million from January through August 2026, about 9,500 on an average
@@ -115,7 +115,7 @@ export default function ArticleContent() {
         <Link href="/cta-commute-pairs">CTA commute routes</Link> breakdown.
       </p>
 
-      <h2>Before you go</h2>
+      <h2 id="before-going">Before you go</h2>
       <p>
         Weekend construction sometimes replaces part of a line with shuttle
         buses, and stations and elevators occasionally close. Check{" "}
@@ -130,7 +130,7 @@ export default function ArticleContent() {
         connection.
       </p>
 
-      <h2>Sources</h2>
+      <h2 id="sources">Sources</h2>
       <ul>
         <li>
           <a

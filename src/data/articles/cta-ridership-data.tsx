@@ -29,7 +29,7 @@ export default function ArticleContent() {
         23,478 we analyzed when we first published it in March 2026.
       </p>
 
-      <h2>The big picture: CTA ridership data in 2026</h2>
+      <h2 id="big-picture">The big picture: CTA ridership data in 2026</h2>
       <StatGrid stats={bigPictureStats} />
       <ul>
         <li>Total rides: 48,306</li>
@@ -45,7 +45,7 @@ export default function ArticleContent() {
         with driving.
       </p>
 
-      <h2>CTA train riders slightly outnumber bus riders</h2>
+      <h2 id="train-riders">CTA train riders slightly outnumber bus riders</h2>
       <p>
         Out of 48,306 total rides, 26,342 were on CTA trains and 21,964 were on
         buses. That&rsquo;s a 55/45 split favoring the Chicago L train, the same
@@ -66,7 +66,7 @@ export default function ArticleContent() {
         routes.
       </p>
 
-      <h2>The North Side dominates our data</h2>
+      <h2 id="north-side">The North Side dominates our data</h2>
       <p>
         Look at the{" "}
         <Link href="/most-popular-cta-stops-lines">
@@ -87,7 +87,7 @@ export default function ArticleContent() {
         transit.
       </p>
 
-      <h2>More than 12,000 hours on the CTA</h2>
+      <h2 id="12-000-hours">More than 12,000 hours on the CTA</h2>
       <p>
         Chicago riders on our platform have collectively spent 12,298 hours on
         the CTA. That&rsquo;s over 512 days of nonstop riding. One person riding
@@ -100,7 +100,7 @@ export default function ArticleContent() {
         city.
       </p>
 
-      <h2>What this data adds</h2>
+      <h2 id="whats-added">What this data adds</h2>
       <p>
         Transit Stats is a small sample compared to the CTA&rsquo;s total daily
         ridership. The difference is where the data comes from: individual riders
@@ -119,7 +119,7 @@ export default function ArticleContent() {
         we&rsquo;ll keep updating these numbers.
       </p>
 
-      <h2>How we collected this data</h2>
+      <h2 id="our-data">How we collected this data</h2>
       <p>
         These figures count every completed ride logged in Transit Stats through
         October 31, 2026, both live-tracked and manually added. Miles and hours

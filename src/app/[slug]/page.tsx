@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import { posts } from "@/data/posts";
 import ArticleFaq from "@/components/ArticleFaq";
+import ArticleRail from "@/components/ArticleRail";
+import BackToResources from "@/components/BackToResources";
 import DownloadCTA from "@/components/DownloadCTA";
 
 import MostPopularCtaStopsLines from "@/data/articles/most-popular-cta-stops-lines";
@@ -93,6 +94,14 @@ export default async function ArticlePage({ params }: PageProps) {
 
   const content = articleContent[slug];
 
+  // Rail entries: the intro (title, cover and opening paragraphs, the top of
+  // the page), the article's own sections, then the FAQ block if it has one.
+  const railSections = [
+    { id: "intro", label: "Intro" },
+    ...post.sections,
+    ...(post.faqs.length > 0 ? [{ id: "article-faq", label: "FAQ" }] : []),
+  ];
+
   return (
     <div className="rounded-b-[36px] bg-white">
       {/* Breadcrumb structured data */}
@@ -178,33 +187,16 @@ export default async function ArticlePage({ params }: PageProps) {
         />
       )}
 
-      <div className="container flex flex-col gap-10 py-10 md:gap-14 md:py-[74px]">
+      <div id="intro" className="container flex flex-col gap-10 py-10 md:gap-14 md:py-[74px]">
+        {/* Everything the rail travels beside: header, cover, body and FAQ */}
+        <div className="relative flex flex-col gap-10 md:gap-14">
+        <ArticleRail sections={railSections} />
+
         {/* ── Article header ── */}
         <div className="mx-auto flex w-full max-w-[720px] flex-col">
-          {/* Back to Resources */}
-          <Link
-            href="/resources"
-            className="group mb-6 flex items-center gap-2.5 text-sm font-semibold text-brand transition-all duration-200 hover:-translate-x-1 active:scale-95 md:text-base"
-          >
-            <svg
-              width="20"
-              height="20"
-              viewBox="0 0 20 20"
-              fill="none"
-              aria-hidden="true"
-              className="transition-transform duration-200 group-hover:-translate-x-1"
-            >
-              <path
-                d="M16 10H4M4 10L9 5M4 10L9 15"
-                stroke="currentColor"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-            Back to resources
-          </Link>
-          <h1 className="text-4xl font-bold leading-[1.2] text-brand md:text-5xl lg:text-6xl lg:leading-[72px]">
+          {/* Back to resources - on desktop it lives in the rail instead */}
+          <BackToResources className="mb-6 xl:hidden" />
+          <h1 className="text-4xl font-bold leading-[1.2] text-brand md:text-5xl">
             {post.title}
           </h1>
           <p className="mt-4 text-xs font-medium uppercase tracking-widest text-dark/40 md:mt-6">
@@ -236,6 +228,7 @@ export default async function ArticlePage({ params }: PageProps) {
         </article>
 
         <ArticleFaq faqs={post.faqs} />
+        </div>
 
         {/* ── Download CTA ── */}
         <DownloadCTA />

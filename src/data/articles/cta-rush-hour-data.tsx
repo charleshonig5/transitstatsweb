@@ -48,7 +48,7 @@ export default function ArticleContent() {
         week.
       </p>
 
-      <h2>The evening rush is bigger than the morning rush</h2>
+      <h2 id="evening-rush">The evening rush is bigger than the morning rush</h2>
       <p>
         Most people assume the morning commute is the worst. Our data says
         otherwise. The peak riding hour is{" "}
@@ -104,7 +104,7 @@ export default function ArticleContent() {
         Chicago public transit never fully stops, even at 3am (120 rides).
       </p>
 
-      <h2>Why the evening rush wins</h2>
+      <h2 id="why-evening">Why the evening rush wins</h2>
       <p>
         Morning commuters tend to leave in a tight window between 7am and
         8:30am. The trip home spreads out more. Some people leave at 3pm, others
@@ -117,7 +117,7 @@ export default function ArticleContent() {
         for more than getting to work.
       </p>
 
-      <h2>Which day of the week is the busiest on the CTA?</h2>
+      <h2 id="busiest-day">Which day of the week is the busiest on the CTA?</h2>
       <p>
         Tuesday takes the top spot, with Wednesday and Thursday close behind.
         Weekend ridership holds up better than you might expect.
@@ -151,7 +151,7 @@ export default function ArticleContent() {
         , see our full breakdown.
       </p>
 
-      <h2>What this tells us about Chicago transit</h2>
+      <h2 id="takeaways">What this tells us about Chicago transit</h2>
       <p>
         Rush hour is the peak, but ridership stays strong all day, and
         Saturdays come close to weekdays. If you&rsquo;re trying to avoid

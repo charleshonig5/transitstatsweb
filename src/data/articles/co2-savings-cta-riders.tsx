@@ -20,7 +20,7 @@ export default function ArticleContent() {
         2026.
       </p>
 
-      <h2>The numbers</h2>
+      <h2 id="the-numbers">The numbers</h2>
       <p>
         Across all tracked rides, CTA riders on Transit Stats have saved a
         combined <strong>52,073 kg of CO2</strong>. That&rsquo;s nearly 115,000
@@ -45,7 +45,7 @@ export default function ArticleContent() {
         <li>Powering an average American home for about 7 years</li>
       </ul>
 
-      <h2>CTA train vs. bus: which saves more CO2?</h2>
+      <h2 id="train-bus">CTA train vs. bus: which saves more CO2?</h2>
       <p>
         Chicago L trains save more CO2 per kilometer than buses because they run
         on electricity and carry more passengers per trip. Here&rsquo;s how our
@@ -65,7 +65,7 @@ export default function ArticleContent() {
         among our riders, with more than 10,000 of those tracked trips.
       </p>
 
-      <h2>How we calculate CO2 savings</h2>
+      <h2 id="the-calculation">How we calculate CO2 savings</h2>
       <p>
         Every ride&rsquo;s savings comes from its distance. Transit Stats credits
         0.2 kg of CO2 per kilometer for train rides and 0.15 kg per kilometer
@@ -73,7 +73,7 @@ export default function ArticleContent() {
         A typical 3.6-mile ride saves about 1 kg of CO2.
       </p>
 
-      <h2>Why it helps to see your own number</h2>
+      <h2 id="your-number">Why it helps to see your own number</h2>
       <p>
         Most people don&rsquo;t think about the environmental impact of their
         commute because they can&rsquo;t see it. You tap your Ventra card, ride
@@ -86,7 +86,7 @@ export default function ArticleContent() {
         monthly, and all-time total right in the app.
       </p>
 
-      <h2>What it adds up to for Chicago</h2>
+      <h2 id="for-chicago">What it adds up to for Chicago</h2>
       <p>
         The CTA carried about 1.06 million rides on an average weekday in 2026,
         and{" "}

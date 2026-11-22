@@ -56,7 +56,7 @@ export default function ArticleContent() {
         rider, not just our users.
       </p>
 
-      <h2>CTA station and bus ridership in 2026</h2>
+      <h2 id="2026-ridership">CTA station and bus ridership in 2026</h2>
       <StatGrid stats={bigPictureStats} />
       <p>
         From January through August 2026, riders entered CTA L stations 80.6
@@ -73,7 +73,7 @@ export default function ArticleContent() {
         months</Link>.
       </p>
 
-      <h2>The 10 busiest CTA L stations in 2026</h2>
+      <h2 id="busiest-stations">The 10 busiest CTA L stations in 2026</h2>
       <p>Station entries from January through August 2026:</p>
       <HorizontalBarChart data={stationData} />
       <ol>
@@ -96,7 +96,7 @@ export default function ArticleContent() {
         Purple Lines.
       </p>
 
-      <h2>Why Clark/Lake and Washington/Wabash jumped</h2>
+      <h2 id="clark-lake-jump">Why Clark/Lake and Washington/Wabash jumped</h2>
       <p>
         The State/Lake elevated station{" "}
         <a
@@ -120,7 +120,7 @@ export default function ArticleContent() {
         closed.
       </p>
 
-      <h2>The 10 busiest CTA bus routes in 2026</h2>
+      <h2 id="busiest-routes">The 10 busiest CTA bus routes in 2026</h2>
       <p>Rides from January through August 2026:</p>
       <HorizontalBarChart data={busRouteData} />
       <ol>
@@ -144,7 +144,7 @@ export default function ArticleContent() {
         (down 0.4%).
       </p>
 
-      <h2>Biggest gains: the rebuilt Red Line stations</h2>
+      <h2 id="biggest-gains">Biggest gains: the rebuilt Red Line stations</h2>
       <p>
         Outside the Loop, the biggest gains came at the four Red Line stations
         that{" "}
@@ -161,7 +161,7 @@ export default function ArticleContent() {
         construction, is up 69%.
       </p>
 
-      <h2>How this compares with Transit Stats riders</h2>
+      <h2 id="our-riders">How this compares with Transit Stats riders</h2>
       <p>
         Transit Stats riders&rsquo; busiest stops are Belmont, Fullerton, and
         Chicago, and their top bus routes are the 77 Belmont and 36 Broadway,
@@ -174,7 +174,7 @@ export default function ArticleContent() {
         Midway on the CTA</Link>.
       </p>
 
-      <h2>Sources</h2>
+      <h2 id="sources">Sources</h2>
       <ul>
         <li>
           <a

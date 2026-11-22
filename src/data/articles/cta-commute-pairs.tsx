@@ -41,7 +41,7 @@ export default function ArticleContent() {
         origin-destination pairs.
       </p>
 
-      <h2>The top 15 CTA commutes (2026 data)</h2>
+      <h2 id="top-commutes">The top 15 CTA commutes (2026 data)</h2>
       <HorizontalBarChart data={topCommutesData} />
       <ol>
         <li>Belmont to Chicago (Red Line): 220 rides</li>
@@ -61,7 +61,7 @@ export default function ArticleContent() {
         <li>Peterson &amp; California to Bryn Mawr Red Line (84 Peterson bus): 141 rides</li>
       </ol>
 
-      <h2>The Red Line dominates CTA commutes</h2>
+      <h2 id="red-line">The Red Line dominates CTA commutes</h2>
       <p>
         8 of the top 15 commute pairs are on the{" "}
         <Link href="/most-popular-cta-stops-lines">Red Line</Link>. No other L
@@ -80,7 +80,7 @@ export default function ArticleContent() {
         Belmont is #14. That&rsquo;s the same people riding to work and back.
       </p>
 
-      <h2>CTA bus commutes look different</h2>
+      <h2 id="bus-commutes">CTA bus commutes look different</h2>
       <p>
         The bus routes in the top 15 are more neighborhood-focused. The 84
         Peterson shows up twice (both directions between Bryn Mawr Red Line and
@@ -101,7 +101,7 @@ export default function ArticleContent() {
         Broadway from Irving Park down to Clark &amp; Belden in Lincoln Park.
       </p>
 
-      <h2>Belmont is the center of everything</h2>
+      <h2 id="belmont">Belmont is the center of everything</h2>
       <p>
         Belmont shows up in 8 of the top 15 commute pairs. It&rsquo;s the
         origin for trips to Chicago, Grand, Lake, and Bryn Mawr, and the
@@ -118,7 +118,7 @@ export default function ArticleContent() {
         there, so riders transfer at Belmont from every direction.
       </p>
 
-      <h2>The longest CTA commutes</h2>
+      <h2 id="longest-commutes">The longest CTA commutes</h2>
       <p>
         The data also shows which CTA lines carry riders the farthest per
         trip:
@@ -147,7 +147,7 @@ export default function ArticleContent() {
         routes naturally cover more ground since they skip stops along the way.
       </p>
 
-      <h2>How we got this data</h2>
+      <h2 id="our-data">How we got this data</h2>
       <p>
         This data comes from <Link href="/">Transit Stats</Link>, a free CTA
         tracker app that lets Chicago riders track every ride and see their own

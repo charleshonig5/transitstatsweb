@@ -68,7 +68,7 @@ export default function AboutPage() {
       {/* ── Hero: About heading + intro ── */}
       <section className="container flex flex-col gap-10 py-10 md:py-[74px] lg:flex-row lg:items-start lg:gap-24">
         {/* Heading */}
-        <h1 className="shrink-0 text-4xl leading-[1.2] text-brand md:text-5xl lg:text-6xl lg:leading-[72px]">
+        <h1 className="shrink-0 text-4xl leading-[1.2] text-brand md:text-5xl">
           <span className="font-bold">About</span>
           <br />
           <span className="font-normal">Transit Stats</span>

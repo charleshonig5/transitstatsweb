@@ -47,7 +47,7 @@ export default function ArticleContent() {
         few of the rankings have changed since then.
       </p>
 
-      <h2>The busiest CTA train lines in 2026</h2>
+      <h2 id="train-lines">The busiest CTA train lines in 2026</h2>
       <p>
         Chicago&rsquo;s L train system has eight lines, but CTA train ridership
         is far from even. The Red Line dominates with 10,407 tracked rides, about
@@ -71,7 +71,7 @@ export default function ArticleContent() {
         its tracked rides.
       </p>
 
-      <h2>The most popular CTA bus routes</h2>
+      <h2 id="bus-routes">The most popular CTA bus routes</h2>
       <p>
         Chicago has over 100 bus routes, but our riders lean hard on a handful
         of them.
@@ -92,7 +92,7 @@ export default function ArticleContent() {
         Union Station.
       </p>
 
-      <h2>The most visited CTA stops</h2>
+      <h2 id="top-stops">The most visited CTA stops</h2>
       <p>
         When it comes to individual stops, Belmont wins by a landslide with
         5,307 total visits (rides starting or ending there). That&rsquo;s more
@@ -124,7 +124,7 @@ export default function ArticleContent() {
         these stations.
       </p>
 
-      <h2>How we collected this data</h2>
+      <h2 id="our-data">How we collected this data</h2>
       <p>
         This data comes from <Link href="/">Transit Stats</Link>, a free CTA
         tracker app that lets Chicago riders track their rides and see their own

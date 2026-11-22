@@ -109,6 +109,26 @@ body {
   margin-bottom: 1.5rem;
 }
 
+/* Where a section link lands: clear of the sticky header. From xl up, where
+   the article rail (components/ArticleRail) shows, a section heading lands
+   level with the top of the rail: the tops of its letters line up with the
+   tops of "Back", the same way the title does before any scrolling (36px on
+   a 46.8px line, so the heading's box sits at 172). #intro starts right
+   under the header, so it lands at the top of the page. */
+.prose h2,
+#article-faq,
+#intro {
+  scroll-margin-top: 136px;
+}
+
+@media (min-width: 1280px) {
+  .prose h2,
+  #article-faq,
+  #intro {
+    scroll-margin-top: 172px;
+  }
+}
+
 .prose h2 {
   font-size: 1.5rem;
   font-weight: 600;

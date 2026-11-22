@@ -124,18 +124,19 @@ export default function Home() {
             <div className="relative z-10 w-full flex flex-col gap-12 lg:shrink-0 lg:basis-[44%]">
               <div className="flex flex-col gap-6">
                 <div className="flex flex-col gap-6">
-                  <h1 className="text-4xl font-bold leading-[1.2] text-brand md:text-5xl lg:text-6xl lg:leading-[72px]">
-                    CTA transit data{" "}
-                    <span className="font-normal">made personal</span>
+                  <h1 className="text-4xl font-bold leading-[1.2] text-brand md:text-5xl">
+                    Personal stats{" "}
+                    <span className="block text-balance font-normal">
+                      for CTA transit rides
+                    </span>
                   </h1>
-                  <p className="max-w-[90%] text-sm text-dark md:text-base">
+                  <p className="text-pretty text-sm text-dark md:max-w-[80%] md:text-base">
                     <strong>
-                      Transit Stats turns your CTA rides into meaningful,
-                      personal data.{" "}
+                      Transit Stats turns your Chicago CTA rides into
+                      meaningful, personal data.{" "}
                     </strong>
-                    Get detailed CTA statistics, city leaderboards, achievements,
-                    ride history, and in-depth transit data you&apos;ve never
-                    seen before!
+                    Get detailed statistics, leaderboards, achievements, ride
+                    history, and more from your public transit usage.
                   </p>
                 </div>
 
@@ -153,7 +154,7 @@ export default function Home() {
                       <span className="mt-0.5 text-xs font-medium uppercase tracking-widest text-dark/40">Rating</span>
                     </div>
                     <div className="flex shrink-0 flex-col whitespace-nowrap rounded-[10px] bg-white px-4 py-3 shadow-[0_0_30px_rgba(0,0,0,0.08)] sm:transition-all sm:duration-200 sm:hover:-translate-y-1 sm:hover:shadow-[0_8px_40px_rgba(0,0,0,0.12)]">
-                      <span className="text-xl font-bold text-brand md:text-2xl">1,500+</span>
+                      <span className="text-xl font-bold text-brand md:text-2xl">1,600+</span>
                       <span className="mt-0.5 text-xs font-medium uppercase tracking-widest text-dark/40">Active users</span>
                     </div>
                     <div className="flex shrink-0 flex-col whitespace-nowrap rounded-[10px] bg-white px-4 py-3 shadow-[0_0_30px_rgba(0,0,0,0.08)] sm:transition-all sm:duration-200 sm:hover:-translate-y-1 sm:hover:shadow-[0_8px_40px_rgba(0,0,0,0.12)]">
@@ -171,7 +172,7 @@ export default function Home() {
                       <span className="mt-0.5 text-xs font-medium uppercase tracking-widest text-dark/40">Rating</span>
                     </div>
                     <div className="flex shrink-0 flex-col whitespace-nowrap rounded-[10px] bg-white px-4 py-3 shadow-[0_0_30px_rgba(0,0,0,0.08)] sm:hidden" aria-hidden="true">
-                      <span className="text-xl font-bold text-brand">1,500+</span>
+                      <span className="text-xl font-bold text-brand">1,600+</span>
                       <span className="mt-0.5 text-xs font-medium uppercase tracking-widest text-dark/40">Active users</span>
                     </div>
                     <div className="flex shrink-0 flex-col whitespace-nowrap rounded-[10px] bg-white px-4 py-3 shadow-[0_0_30px_rgba(0,0,0,0.08)] sm:hidden" aria-hidden="true">

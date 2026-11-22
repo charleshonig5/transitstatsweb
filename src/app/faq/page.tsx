@@ -213,7 +213,7 @@ export default function FAQPage() {
             always rendered; the pills only hide the others (SEO). */}
         <FaqFilter
           title={
-            <h1 className="text-4xl font-bold leading-[1.2] text-brand md:text-5xl lg:text-6xl lg:leading-[72px]">
+            <h1 className="text-4xl font-bold leading-[1.2] text-brand md:text-5xl">
               Transit Stats FAQ
             </h1>
           }
