@@ -6,7 +6,7 @@ const DEFAULT_SHARE_IMAGE = {
   url: `${SITE_URL}/images/og-image.png`,
   width: 1200,
   height: 630,
-  alt: "Transit Stats | Chicago Transit Data & CTA Statistics Made Personal",
+  alt: "Transit Stats | Personal stats for Chicago CTA transit rides",
 };
 
 /**

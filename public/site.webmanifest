@@ -1,7 +1,7 @@
 {
   "name": "Transit Stats",
   "short_name": "Transit Stats",
-  "description": "Chicago CTA data made personal — auto-track rides, view transit stats, climb leaderboards, and measure your CO₂ savings.",
+  "description": "Transit Stats turns your Chicago CTA rides into meaningful, personal data. Get detailed statistics, leaderboards, achievements, ride history, and more.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",

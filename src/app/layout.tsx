@@ -14,11 +14,11 @@ const notoSans = Noto_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.transitstats.co"),
   title: {
-    default: "Transit Stats | Chicago Transit Data & CTA Statistics Made Personal",
+    default: "Transit Stats | Personal stats for Chicago CTA transit rides",
     template: "%s | Transit Stats",
   },
   description:
-    "Transit Stats turns your Chicago CTA rides into personal data and stats. Track rides, view transit insights, climb leaderboards, and see CO₂ savings — free.",
+    "Transit Stats turns your Chicago CTA rides into meaningful, personal data. Get detailed statistics, leaderboards, achievements, ride history, and more.",
   keywords: [
     "transit stats",
     "transit data",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://www.transitstats.co",
     siteName: "Transit Stats",
-    title: "Transit Stats | Chicago Transit Data & CTA Statistics Made Personal",
+    title: "Transit Stats | Personal stats for Chicago CTA transit rides",
     description:
       "The best CTA tracker app — view Chicago transit data, in-depth CTA stats, city leaderboards, and measure your CO₂ impact. Free on iPhone.",
     images: [
@@ -54,13 +54,13 @@ export const metadata: Metadata = {
         url: "/images/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Transit Stats | Chicago Transit Data & CTA Statistics Made Personal",
+        alt: "Transit Stats | Personal stats for Chicago CTA transit rides",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Transit Stats | Chicago Transit Data & CTA Statistics Made Personal",
+    title: "Transit Stats | Personal stats for Chicago CTA transit rides",
     description:
       "The best CTA tracker app — view Chicago transit data, in-depth CTA stats, city leaderboards, and measure your CO₂ impact.",
     images: ["/images/og-image.png"],

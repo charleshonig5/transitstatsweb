@@ -6,14 +6,14 @@ import ScrollReveal from "@/components/ScrollReveal";
 import { shareMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Transit Stats | Chicago CTA Data Made Personal",
+  title: "Transit Stats | Personal stats for Chicago CTA transit rides",
   description:
-    "Transit Stats turns your Chicago CTA rides into personal data. Auto-track rides, view transit insights, and measure CO₂ savings. Free on iPhone.",
+    "Transit Stats turns your Chicago CTA rides into meaningful, personal data. Get detailed statistics, leaderboards, achievements, ride history, and more.",
   alternates: { canonical: "https://www.transitstats.co" },
   ...shareMetadata({
-    title: "Transit Stats | Chicago CTA Data Made Personal",
+    title: "Transit Stats | Personal stats for Chicago CTA transit rides",
     description:
-      "Transit Stats turns your Chicago CTA rides into personal data. Auto-track rides, view transit insights, and measure CO₂ savings. Free on iPhone.",
+      "Transit Stats turns your Chicago CTA rides into meaningful, personal data. Get detailed statistics, leaderboards, achievements, ride history, and more.",
     path: "",
   }),
 };
