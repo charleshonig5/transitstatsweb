@@ -79,14 +79,34 @@ export default function Footer() {
               <h3 className="text-xs font-medium uppercase tracking-widest text-white/40">
                 Articles
               </h3>
-              <Link href="/busiest-cta-stations-bus-routes" className={linkClass}>Busiest Stations</Link>
-              <Link href="/cta-ohare-midway-airport" className={linkClass}>Airport Guide</Link>
-              <Link href="/cta-ridership-growth-2026" className={linkClass}>Ridership Growth</Link>
-              <Link href="/most-popular-cta-stops-lines" className={linkClass}>Popular CTA Stops</Link>
-              <Link href="/co2-savings-cta-riders" className={linkClass}>CO2 Savings</Link>
-              <Link href="/cta-ridership-data" className={linkClass}>Ridership Data</Link>
-              <Link href="/cta-rush-hour-data" className={linkClass}>Rush Hour Data</Link>
-              <Link href="/cta-commute-pairs" className={linkClass}>Commute Routes</Link>
+              <Link href="/ride-every-cta-l-station" className={linkClass}>Ride Every L Station</Link>
+              <Link href="/which-cta-lines-run-24-hours" className={linkClass}>CTA 24 Hour Lines</Link>
+              <Link href="/longest-cta-bus-routes-train-lines" className={linkClass}>Longest CTA Routes</Link>
+              <Link href="/best-cta-apps" className={linkClass}>Best CTA Apps</Link>
+              <Link href="/cta-ventra-ride-history" className={linkClass}>Ride History</Link>
+              {/* The article "Back" link, mirrored: arrow after the label, motion forward */}
+              <Link
+                href="/resources"
+                className="group flex items-center gap-2.5 text-sm font-semibold leading-6 text-white transition-all duration-200 hover:translate-x-1 active:scale-95 md:text-base md:leading-7"
+              >
+                View more
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  aria-hidden="true"
+                  className="transition-transform duration-200 group-hover:translate-x-1"
+                >
+                  <path
+                    d="M4 10H16M16 10L11 5M16 10L11 15"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </Link>
             </nav>
 
             {/* Legal + Download */}

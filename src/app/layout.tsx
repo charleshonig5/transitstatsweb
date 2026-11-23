@@ -127,7 +127,7 @@ export default function RootLayout({
               aggregateRating: {
                 "@type": "AggregateRating",
                 ratingValue: "4.7",
-                ratingCount: "1500",
+                ratingCount: "23",
               },
               featureList: [
                 "Auto live tracking",

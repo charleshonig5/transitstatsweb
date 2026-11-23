@@ -25,6 +25,319 @@ export interface Post {
 
 export const posts: Post[] = [
   {
+    slug: "ride-every-cta-l-station",
+    title: "How to ride every CTA L station in one day",
+    subtitle:
+      "The CTA counts 146 L stations on eight lines. The Guinness record for all of them is 8:58:55, and a $5 day pass covers it. Routes, costs and tracking.",
+    description:
+      "The CTA counts 146 L stations on eight lines. The Guinness record for all of them is 8:58:55, and a $5 day pass covers it. Routes, costs and tracking.",
+    imageAlt:
+      "A Quincy station sign on a dark wooden station house with an orange door, above the L platform",
+    date: "2026-11-22",
+    displayDate: "November 22, 2026",
+    updated: "2026-11-22",
+    displayUpdated: "November 22, 2026",
+    author: "Charles from Transit Stats",
+    sections: [
+      { id: "how-many", label: "Station count" },
+      { id: "l-challenge", label: "Record times" },
+      { id: "route", label: "The route" },
+      { id: "cost", label: "Cost" },
+      { id: "tracking", label: "Tracking" },
+      { id: "method", label: "Our method" },
+      { id: "sources", label: "Sources" },
+    ],
+    faqs: [
+      {
+        question: "How many L stations does the CTA have?",
+        answer:
+          "The CTA counts 146 L stations on eight lines. The station list it publishes on the City of Chicago's data portal comes to 144 when each station is counted once. One station, State/Lake on the Loop elevated, has been closed since January 5, 2026 for a rebuild the CTA says will run into 2029.",
+      },
+      {
+        question: "What is the record for riding every CTA L station?",
+        answer:
+          "The Guinness World Record is 8 hours, 58 minutes and 55 seconds for all 146 stations, set by Joabe Bayer Barbosa, James Barbosa and Matthew Plese on November 10, 2025. Earlier L Challenge standings published by Streetsblog Chicago in 2019 list 8:40:03 by Bill Cash and Alex Pisarski for 145 stations, on a run where passing through a station counted.",
+      },
+      {
+        question: "Can you ride every CTA L station in one day?",
+        answer:
+          "Yes. Record times reported since 2011 run from 8 hours 40 minutes to 9 hours 37 minutes. The 2019 record route used buses to get between lines, because the eight lines end at 11 places where no other line continues. State/Lake is closed into 2029, so for now nobody can get on or off there.",
+      },
+      {
+        question: "How much does it cost to ride every CTA L station?",
+        answer:
+          "$5 with a 1-Day CTA/Pace Pass, which gives unlimited rides on CTA trains and buses for 24 hours from the first time you use it. Paying by the ride costs more: the regular fare is $2.50 on the L and $2.25 on a bus, with up to two more rides free within two hours.",
+      },
+      {
+        question: "Is the State/Lake L station open?",
+        answer:
+          "No. State/Lake on the Loop elevated closed on January 5, 2026 for reconstruction that the CTA says will run into 2029. The CTA sends riders to Clark/Lake or Washington/Wabash instead.",
+      },
+    ],
+  },
+  {
+    slug: "which-cta-lines-run-24-hours",
+    title: "Which CTA lines run 24 hours?",
+    subtitle:
+      "Two CTA train lines run 24 hours a day: the Red and Blue Lines. The other six stop overnight, and 17 bus routes run all night. Last trains for each line.",
+    description:
+      "Two CTA train lines run 24 hours a day: the Red and Blue Lines. The other six stop overnight, and 17 bus routes run all night. Last trains for each line.",
+    imageAlt:
+      "An L train pulling into an empty subway platform lined with blue and white tile",
+    date: "2026-11-22",
+    displayDate: "November 22, 2026",
+    updated: "2026-11-22",
+    displayUpdated: "November 22, 2026",
+    author: "Charles from Transit Stats",
+    sections: [
+      { id: "all-night-trains", label: "24-hour trains" },
+      { id: "last-trains", label: "Last trains" },
+      { id: "owl-buses", label: "Owl buses" },
+      { id: "airports", label: "Airports" },
+      { id: "holidays", label: "Holidays" },
+      { id: "method", label: "Our method" },
+      { id: "sources", label: "Sources" },
+    ],
+    faqs: [
+      {
+        question: "Which CTA lines run 24 hours?",
+        answer:
+          "The Red Line and the Blue Line. Both run at all times, every day: the Red Line between Howard and 95th/Dan Ryan, and the Blue Line between O'Hare and Forest Park. The other six train lines stop overnight.",
+      },
+      {
+        question: "What time do CTA trains stop running?",
+        answer:
+          "It depends on the line. The Red and Blue Lines don't stop. The last Yellow Line trains leave Howard at 11:00 p.m. and Dempster-Skokie at 11:15 p.m. On the Green, Pink and Orange Lines the last trains leave between 12:45 and 1:30 a.m., and the last Brown Line train leaves the Loop at 2:05 a.m. (1:35 a.m. on Sunday and holiday nights). The last Purple Line train leaves Linden at 1:35 a.m., or 2:05 a.m. on Friday and Saturday nights. The last one from Howard to Linden leaves between 1:10 and 1:50 a.m., depending on the night.",
+      },
+      {
+        question: "Which CTA buses run 24 hours?",
+        answer:
+          "Seventeen CTA bus routes have overnight Owl service: 4, N5, 9, 20, 22, 34, 49, 53, 55, 60, 62, 63, 66, 77, 79, 81 and 87. Six of them (20, 22, 34, 49, 63 and 81) run their regular route at all times. Most of the others cover a shorter stretch overnight, and the N5 runs only at night.",
+      },
+      {
+        question: "Does the Blue Line run to O'Hare all night?",
+        answer:
+          "Yes. The Blue Line runs between O'Hare and Forest Park at all times, every day.",
+      },
+      {
+        question: "Does the Orange Line run to Midway all night?",
+        answer:
+          "No. The last Orange Line train leaves the Loop for Midway at 1:30 a.m. On weekdays the first train leaves Midway at 3:30 a.m. and the first one leaves the Loop for Midway at 3:55 a.m. Both are half an hour later on Saturdays and an hour later on Sundays and holidays. Overnight, the 62 Archer's Owl buses run between State/Washington downtown and Midway Airport.",
+      },
+    ],
+  },
+  {
+    slug: "longest-cta-bus-routes-train-lines",
+    title: "The longest CTA bus routes and train lines",
+    subtitle:
+      "The longest CTA bus route is the 26 South Shore Express at about 18.9 miles. The longest train line is the Blue Line at 27.6 miles. See the top ten.",
+    description:
+      "The longest CTA bus route is the 26 South Shore Express at about 18.9 miles. The longest train line is the Blue Line at 27.6 miles. See the top ten.",
+    imageAlt:
+      "An L train stopped at a rain-soaked elevated platform under a gray sky",
+    date: "2026-11-22",
+    displayDate: "November 22, 2026",
+    updated: "2026-11-22",
+    displayUpdated: "November 22, 2026",
+    author: "Charles from Transit Stats",
+    sections: [
+      { id: "longest-bus-routes", label: "Bus routes" },
+      { id: "all-day-routes", label: "All day" },
+      { id: "train-lines", label: "Train lines" },
+      { id: "blue-line", label: "Blue Line" },
+      { id: "red-line", label: "Red Line" },
+      { id: "shortest-line", label: "Shortest line" },
+      { id: "method", label: "Our method" },
+      { id: "sources", label: "Sources" },
+    ],
+    faqs: [
+      {
+        question: "What is the longest CTA bus route?",
+        answer:
+          "The 26 South Shore Express, at about 18.9 miles each way between 103rd/Stony Island and Chicago Avenue in Streeterville. It runs on weekdays only. The longest routes that run all day, every day are the 9 Ashland at about 17.4 miles and the 53 Pulaski at about 17. These are our own measurements on the City of Chicago's route map.",
+      },
+      {
+        question: "What is the longest CTA train line?",
+        answer:
+          "The Blue Line, at about 27.6 miles from O'Hare to Forest Park. The Red Line is second at about 21.9 miles from Howard to 95th/Dan Ryan.",
+      },
+      {
+        question: "How long is the CTA Red Line?",
+        answer:
+          "About 21.9 miles from Howard to 95th/Dan Ryan, with 33 stations. The CTA's Red Line Extension will add 5.5 miles and four stations, south to 130th Street.",
+      },
+      {
+        question: "What is the shortest CTA train line?",
+        answer:
+          "The Yellow Line, at about 4.9 miles between Dempster-Skokie and Howard, with three stations. Outside weekday rush periods the Purple Line covers less ground, about 3.9 miles between Linden and Howard.",
+      },
+      {
+        question: "How many bus routes and train lines does the CTA have?",
+        answer:
+          "The CTA says it runs 127 bus routes covering 1,526 route miles, and eight train lines on 224.1 miles of track.",
+      },
+    ],
+  },
+  {
+    slug: "best-cta-apps",
+    title: "Best CTA apps in 2026, and what each is for",
+    subtitle:
+      "The best CTA apps in 2026 and what each is for: Ventra for fares, Transit and Transit Stop for arrival times, Citymapper and Google Maps for directions.",
+    description:
+      "The best CTA apps in 2026 and what each is for: Ventra for fares, Transit and Transit Stop for arrival times, Citymapper and Google Maps for directions.",
+    imageAlt:
+      "A CTA train at the snow-covered Adams/Wabash station while riders wait on the platform",
+    date: "2026-11-22",
+    displayDate: "November 22, 2026",
+    updated: "2026-11-22",
+    displayUpdated: "November 22, 2026",
+    author: "Charles from Transit Stats",
+    sections: [
+      { id: "at-a-glance", label: "The apps" },
+      { id: "ventra", label: "Ventra" },
+      { id: "transit", label: "Transit" },
+      { id: "transit-stop", label: "Transit Stop" },
+      { id: "directions", label: "Directions" },
+      { id: "transit-stats", label: "Transit Stats" },
+      { id: "cta-app", label: "CTA app" },
+      { id: "method", label: "Our method" },
+      { id: "sources", label: "Sources" },
+    ],
+    faqs: [
+      {
+        question: "What is the best app for the CTA?",
+        answer:
+          "It depends on what you need. Ventra is the CTA's official app and handles your fare. Transit and Transit Stop are built around arrival times, Citymapper and Google Maps give directions, and Transit Stats keeps a record of the rides you take. All six are free to download.",
+      },
+      {
+        question: "Does the CTA have an official app?",
+        answer:
+          "Yes. The Ventra app is published by the Chicago Transit Authority. It handles fares and passes, sells Metra mobile tickets, and shows arrival times for the CTA, Metra and Pace. The CTA's Bus Tracker and Train Tracker are web pages, and both also work by text message.",
+      },
+      {
+        question: "Which apps show CTA bus and train arrival times?",
+        answer:
+          "Ventra, Transit, Transit Stop and Transit Stats all show CTA arrival times. Citymapper gives live wait times as part of its directions. In Google Maps, some stations show real-time departures and others show a schedule.",
+      },
+      {
+        question: "Is the Transit app free?",
+        answer:
+          "Transit is free to download. The trip planner, GO and departure times for at least three lines, plus every line with a stop near you, stay free. Royale, the paid subscription, adds future departure times and vehicle tracking for any line. It costs around $5 a month or $25 a year.",
+      },
+      {
+        question: "Is there an app that tracks my CTA rides?",
+        answer:
+          "Transit Stats is a free iPhone app that logs your CTA rides. It suggests your line and stops, measures the distance with GPS, and totals your rides, distance and time. It doesn't connect to Ventra, and there is no Android version.",
+      },
+    ],
+  },
+  {
+    slug: "cta-ventra-ride-history",
+    title: "How to see your CTA and Ventra ride history",
+    subtitle:
+      "How to see your Ventra ride history in the Ventra app or at ventrachicago.com, why a ride can be missing, and how to keep a full CTA ride history.",
+    description:
+      "How to see your Ventra ride history in the Ventra app or at ventrachicago.com, why a ride can be missing, and how to keep a full CTA ride history.",
+    imageAlt:
+      "A rider walking toward the glass entrance of the Logan Square Blue Line station on a snowy night",
+    date: "2026-11-22",
+    displayDate: "November 22, 2026",
+    updated: "2026-11-22",
+    displayUpdated: "November 22, 2026",
+    author: "Charles from Transit Stats",
+    sections: [
+      { id: "ventra-history", label: "Ventra history" },
+      { id: "register", label: "Register card" },
+      { id: "missing-rides", label: "Missing rides" },
+      { id: "how-far-back", label: "History limit" },
+      { id: "bank-cards", label: "Bank cards" },
+      { id: "fare-record", label: "Fare records" },
+      { id: "full-history", label: "Full history" },
+      { id: "sources", label: "Sources" },
+    ],
+    faqs: [
+      {
+        question: "How do I see my Ventra ride history?",
+        answer:
+          "Sign in to your Ventra account in the Ventra app or at ventrachicago.com. In the app, open My Ventra Cards, which shows the ride and transaction history for the cards registered to your account. A card bought at a vending machine or a store has to be registered first.",
+      },
+      {
+        question: "How far back does Ventra ride history go?",
+        answer:
+          "Ventra doesn't publish a limit. Its terms say only that a registered account gets access to a longer transaction history than an unregistered one. For older rides, call Ventra customer service at 1-877-669-8368.",
+      },
+      {
+        question: "Why isn't my ride showing in my Ventra history?",
+        answer:
+          "Ventra says a ride can take up to 20 minutes to appear, because the reader has to send the tap to Ventra's servers first. A ride also won't appear if you paid with a contactless bank card, or a bank card in Apple Pay or Google Pay, instead of your Ventra Card, or if the card isn't registered to the account you're signed in to.",
+      },
+      {
+        question: "Can I see my CTA ride history if I pay with a credit card or Apple Pay?",
+        answer:
+          "Not in a Ventra account, for now. Ventra lists registering a transit account to a bank card as coming soon. That leaves your bank statement, which shows the fares charged, sometimes grouped into one charge. A Ventra Card on your iPhone or Apple Watch, or in Google Pay, is different: it has to be registered, so its rides are in your Ventra account.",
+      },
+      {
+        question: "Does Ventra history show where I got off or how far I rode?",
+        answer:
+          "No. The CTA has you pay only when you board a bus or enter a station. With no tap on the way out, the fare system has no exit stop, distance or ride time to record. A ride tracker such as Transit Stats logs those as you ride.",
+      },
+    ],
+  },
+  {
+    slug: "cta-ridership-by-year",
+    title: "Chicago CTA ridership by year, 1988 to 2026",
+    subtitle:
+      "CTA ridership by year, 1988 to 2026. The CTA carried 338.0 million rides in 2025, down from 545.6 million in 2012 and up from 196.0 million in 2021.",
+    description:
+      "CTA ridership by year, 1988 to 2026. The CTA carried 338.0 million rides in 2025, down from 545.6 million in 2012 and up from 196.0 million in 2021.",
+    imageAlt:
+      "A CTA 29 State bus on a wet, nearly empty street in downtown Chicago under an overcast sky",
+    date: "2026-11-22",
+    displayDate: "November 22, 2026",
+    updated: "2026-11-22",
+    displayUpdated: "November 22, 2026",
+    author: "Charles from Transit Stats",
+    sections: [
+      { id: "by-year", label: "By year" },
+      { id: "earlier-years", label: "Earlier years" },
+      { id: "peak-years", label: "Peak years" },
+      { id: "bus-vs-rail", label: "Bus, rail" },
+      { id: "pandemic", label: "Pandemic recovery" },
+      { id: "2025-recount", label: "2025 recount" },
+      { id: "2026-ridership", label: "2026 ridership" },
+      { id: "daily-ridership", label: "Daily ridership" },
+      { id: "counting-rides", label: "Counting rides" },
+      { id: "sources", label: "Sources" },
+    ],
+    faqs: [
+      {
+        question: "What is the CTA's annual ridership?",
+        answer:
+          "The CTA carried 338.0 million rides in 2025: 199.6 million on buses and 138.4 million on the L. From January through September 2026 it carried 262.0 million, up 2.7% from the same months of 2025.",
+      },
+      {
+        question: "When did CTA ridership peak?",
+        answer:
+          "In the City of Chicago's data, which starts in 1988, the highest year is 1988 with 604.5 million rides. The highest year after 1990 is 2012, with 545.6 million. Rail ridership peaked in 2015 at 241.7 million.",
+      },
+      {
+        question: "How many people ride the CTA each day?",
+        answer:
+          "From January through September 2026 the CTA averaged about 1.07 million rides on a weekday, 790,000 on a Saturday and 613,000 on a Sunday or holiday. These are boardings, so a trip with a transfer counts more than once.",
+      },
+      {
+        question: "Has CTA ridership recovered from the pandemic?",
+        answer:
+          "Not fully. In 2025 the CTA carried 74% of its 2019 ridership, with buses at 84% and trains at 63%. Part of that comes from a new counting method the CTA adopted for 2025. On its original count, 2025 was about 70% of 2019.",
+      },
+      {
+        question: "Why did CTA ridership jump in 2025?",
+        answer:
+          "Mostly because the CTA changed how it counts. In March 2026 it restated 2025 from 319.2 million rides to 338.0 million, adding 18.9 million. That alone is about two thirds of the increase of 28.8 million rides over 2024.",
+      },
+    ],
+  },
+  {
     slug: "busiest-cta-stations-bus-routes",
     title: "The busiest CTA stations and bus routes in 2026",
     subtitle:
@@ -37,7 +350,7 @@ export const posts: Post[] = [
     displayDate: "November 6, 2026",
     updated: "2026-11-06",
     displayUpdated: "November 6, 2026",
-    author: "Transit Stats Team",
+    author: "Charles from Transit Stats",
     sections: [
       { id: "2026-ridership", label: "2026 ridership" },
       { id: "busiest-stations", label: "Busiest stations" },
@@ -83,7 +396,7 @@ export const posts: Post[] = [
     displayDate: "November 6, 2026",
     updated: "2026-11-06",
     displayUpdated: "November 6, 2026",
-    author: "Transit Stats Team",
+    author: "Charles from Transit Stats",
     sections: [
       { id: "overview", label: "Overview" },
       { id: "to-ohare", label: "To O'Hare" },
@@ -130,7 +443,7 @@ export const posts: Post[] = [
     displayDate: "June 9, 2026",
     updated: "2026-11-05",
     displayUpdated: "November 5, 2026",
-    author: "Transit Stats Team",
+    author: "Charles from Transit Stats",
     sections: [
       { id: "2026-ridership", label: "2026 ridership" },
       { id: "monthly-growth", label: "Monthly growth" },
@@ -184,7 +497,7 @@ export const posts: Post[] = [
     displayDate: "March 10, 2026",
     updated: "2026-11-05",
     displayUpdated: "November 5, 2026",
-    author: "Transit Stats Team",
+    author: "Charles from Transit Stats",
     sections: [
       { id: "train-lines", label: "Train lines" },
       { id: "bus-routes", label: "Bus routes" },
@@ -222,7 +535,7 @@ export const posts: Post[] = [
     displayDate: "March 10, 2026",
     updated: "2026-11-05",
     displayUpdated: "November 5, 2026",
-    author: "Transit Stats Team",
+    author: "Charles from Transit Stats",
     sections: [
       { id: "the-numbers", label: "The numbers" },
       { id: "train-bus", label: "Train, bus" },
@@ -261,7 +574,7 @@ export const posts: Post[] = [
     displayDate: "March 10, 2026",
     updated: "2026-11-05",
     displayUpdated: "November 5, 2026",
-    author: "Transit Stats Team",
+    author: "Charles from Transit Stats",
     sections: [
       { id: "big-picture", label: "Big picture" },
       { id: "train-riders", label: "Train riders" },
@@ -301,7 +614,7 @@ export const posts: Post[] = [
     displayDate: "March 11, 2026",
     updated: "2026-11-05",
     displayUpdated: "November 5, 2026",
-    author: "Transit Stats Team",
+    author: "Charles from Transit Stats",
     sections: [
       { id: "evening-rush", label: "Evening rush" },
       { id: "why-evening", label: "Why evening" },
@@ -339,7 +652,7 @@ export const posts: Post[] = [
     displayDate: "March 11, 2026",
     updated: "2026-11-05",
     displayUpdated: "November 5, 2026",
-    author: "Transit Stats Team",
+    author: "Charles from Transit Stats",
     sections: [
       { id: "top-commutes", label: "Top commutes" },
       { id: "red-line", label: "Red Line" },

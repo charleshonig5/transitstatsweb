@@ -68,7 +68,12 @@ export default function ArticleContent() {
         Unlike the Blue Line, the Orange Line doesn&rsquo;t run overnight.
         Trains leave Midway from about 3:30 a.m. on weekdays (4 a.m. Saturdays,
         4:30 a.m. Sundays and holidays) until about 1 a.m. Overnight, the N62
-        Archer bus runs between Midway and State/Washington downtown.
+        Archer bus runs between Midway and State/Washington downtown. We list
+        every overnight train and bus in{" "}
+        <Link href="/which-cta-lines-run-24-hours">
+          which CTA lines run 24 hours
+        </Link>
+        .
       </p>
 
       <h2 id="taxi-rideshare">CTA vs. taxi vs. rideshare</h2>
@@ -93,7 +98,10 @@ export default function ArticleContent() {
         the station machine costs $3 ($5 at O&rsquo;Hare). Tap the same card or
         phone again and you get up to two free transfers within two hours, so
         switching from the train to a bus to reach your hotel doesn&rsquo;t
-        cost extra.
+        cost extra. Rides paid with a registered Ventra card show up in your
+        Ventra account afterward. Here&rsquo;s{" "}
+        <Link href="/cta-ventra-ride-history">how to see your Ventra ride
+        history</Link>.
       </p>
 
       <h2 id="how-busy">How busy the airport stations are</h2>

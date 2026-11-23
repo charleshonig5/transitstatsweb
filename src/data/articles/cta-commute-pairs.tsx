@@ -146,6 +146,14 @@ export default function ArticleContent() {
         and the 147 Outer DuSable Lake Shore Express at 6.2 miles. Express bus
         routes naturally cover more ground since they skip stops along the way.
       </p>
+      <p>
+        Those are averages per ride. For how far each route runs from end to
+        end, we ranked{" "}
+        <Link href="/longest-cta-bus-routes-train-lines">
+          the longest CTA bus routes and train lines
+        </Link>
+        .
+      </p>
 
       <h2 id="our-data">How we got this data</h2>
       <p>

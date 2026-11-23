@@ -180,7 +180,9 @@ export default function ArticleContent() {
       </ul>
       <p>
         Every 2026 comparison in this article uses the new method for both
-        years, so the growth figures aren&rsquo;t inflated by the recount.
+        years, so the growth figures aren&rsquo;t inflated by the recount. For
+        every year back to 1988, see{" "}
+        <Link href="/cta-ridership-by-year">CTA ridership by year</Link>.
       </p>
 
       <h2 id="chicago-region">The Chicago region hit 373.5 million rides in 2025</h2>

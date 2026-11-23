@@ -16,8 +16,20 @@ import CtaCommutePairs from "@/data/articles/cta-commute-pairs";
 import CtaRidershipGrowth2026 from "@/data/articles/cta-ridership-growth-2026";
 import BusiestCtaStationsBusRoutes from "@/data/articles/busiest-cta-stations-bus-routes";
 import CtaOhareMidwayAirport from "@/data/articles/cta-ohare-midway-airport";
+import CtaRidershipByYear from "@/data/articles/cta-ridership-by-year";
+import CtaVentraRideHistory from "@/data/articles/cta-ventra-ride-history";
+import BestCtaApps from "@/data/articles/best-cta-apps";
+import LongestCtaBusRoutesTrainLines from "@/data/articles/longest-cta-bus-routes-train-lines";
+import WhichCtaLinesRun24Hours from "@/data/articles/which-cta-lines-run-24-hours";
+import RideEveryCtaLStation from "@/data/articles/ride-every-cta-l-station";
 
 const articleContent: Record<string, ReactNode> = {
+  "ride-every-cta-l-station": <RideEveryCtaLStation />,
+  "which-cta-lines-run-24-hours": <WhichCtaLinesRun24Hours />,
+  "longest-cta-bus-routes-train-lines": <LongestCtaBusRoutesTrainLines />,
+  "best-cta-apps": <BestCtaApps />,
+  "cta-ventra-ride-history": <CtaVentraRideHistory />,
+  "cta-ridership-by-year": <CtaRidershipByYear />,
   "busiest-cta-stations-bus-routes": <BusiestCtaStationsBusRoutes />,
   "cta-ohare-midway-airport": <CtaOhareMidwayAirport />,
   "cta-ridership-growth-2026": <CtaRidershipGrowth2026 />,
@@ -149,7 +161,7 @@ export default async function ArticlePage({ params }: PageProps) {
               url: "https://www.transitstats.co",
             },
             author: {
-              "@type": "Organization",
+              "@type": "Person",
               name: post.author,
               url: "https://www.transitstats.co/about",
             },
