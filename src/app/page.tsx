@@ -30,10 +30,8 @@ const features = [
     body: (
       <>
         One tap starts the magic. Transit Stats is a{" "}
-        <strong>CTA tracker that automatically logs your ride in real-time</strong>,
-        capturing distance, time, and route details as you go. Smart GPS detects
-        your line and stops across Chicago transit, and we handle everything
-        else with battery-optimized tracking that never gets in your way.
+        <strong>CTA tracker that automatically logs your ride in real-time</strong>.
+        Smart GPS detects your line and stops, and we handle everything&nbsp;else.
       </>
     ),
     image: "/images/feature-tracking.png",
@@ -48,9 +46,7 @@ const features = [
       <>
         See how your daily commutes add up with detailed CTA statistics. Track your{" "}
         <strong>total distance, ride time, number of trips, CO₂ emissions saved,</strong>{" "}
-        and even your <strong>most used line.</strong> Compare your Chicago transit data
-        over time with weekly, monthly, and yearly views, all personalized to
-        your transit habits.
+        and even your <strong>most used&nbsp;line.</strong>
       </>
     ),
     image: "/images/feature-stats.png",
@@ -63,11 +59,9 @@ const features = [
     title: "City leaderboards",
     body: (
       <>
-        Compete with other riders across the city and climb the ranks. Whether
-        you&apos;re taking the most trips, traveling the greatest distance, or
-        saving the most emissions,{" "}
-        <strong>Transit Stats shows you where you stand.</strong> Filter by time
-        period to see your progress and motivation build over time.
+        Compete with other users across the city and climb the ranks.{" "}
+        <strong>Transit Stats shows you where you stand</strong> compared to
+        your city&apos;s most active transit&nbsp;enthusiasts.
       </>
     ),
     image: "/images/feature-leaderboards.png",
@@ -80,14 +74,9 @@ const features = [
     title: "Ride history",
     body: (
       <>
-        View a complete history of your past rides in one place. See when,
-        where, and how you traveled — sorted by recency, and filterable by
-        transit type.{" "}
-        <strong>
-          Explore your personal coverage map to discover which stops you&apos;ve
-          visited and track your progress
-        </strong>{" "}
-        across Chicago&apos;s entire transit network.
+        View a complete history of all your past rides in one place.{" "}
+        <strong>Explore your personal map to see your coverage</strong> of the
+        entire transit network build over&nbsp;time.
       </>
     ),
     image: "/images/feature-history.png",
@@ -100,12 +89,11 @@ const features = [
     title: "Unlock achievements",
     body: (
       <>
-        Every mile, every ride, and every streak counts. Our{" "}
+        Every mile, every trip, and every streak counts. Our{" "}
         <strong>
-          Achievements System is designed to celebrate your transit milestones
+          achievements system is designed to celebrate your transit milestones
         </strong>{" "}
-        and keep you motivated. From your first ride to mastering every CTA
-        line, there&apos;s always a new goal to reach.
+        and there&apos;s always a new goal to reach.
       </>
     ),
     image: "/images/feature-achievements.png",
