@@ -224,11 +224,10 @@ const infoItems: InfoItem[] = [
         We{" "}
         <strong>
           don&rsquo;t collect or sell personal information to
-          third&nbsp;parties, and we never track sensitive data
+          third&nbsp;parties, and never track sensitive or financial data.
         </strong>{" "}
-        or financial information. Your account data is protected with
-        industry-standard security measures and is automatically deleted when
-        you close your&nbsp;account.
+        Your account is protected with industry-standard security and deleted
+        when you close&nbsp;it.
       </>
     ),
     image: "/images/home/info-security.jpg",
