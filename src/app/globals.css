@@ -1,7 +1,13 @@
 @import "tailwindcss";
 
 @theme inline {
-  --font-sans: var(--font-noto-sans), ui-sans-serif, system-ui, sans-serif;
+  /* Noto Sans, one family per alphabet (src/fonts/noto-sans.ts). Latin stays
+     last: it brings the Arial stand-in, which would block the ones after it. */
+  --font-sans: var(--font-noto-sans-cyrillic-ext), var(--font-noto-sans-cyrillic),
+    var(--font-noto-sans-devanagari), var(--font-noto-sans-greek-ext),
+    var(--font-noto-sans-greek), var(--font-noto-sans-vietnamese),
+    var(--font-noto-sans-latin-ext), var(--font-noto-sans), ui-sans-serif,
+    system-ui, sans-serif;
   --color-brand: #F7752C;
   --color-brand-dark: #FF5C00;
   --color-dark: #000100;

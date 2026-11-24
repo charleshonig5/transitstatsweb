@@ -1,16 +1,10 @@
 import type { Metadata } from "next";
-import { Noto_Sans } from "next/font/google";
+import { notoSansVariables } from "@/fonts/noto-sans";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ContactDialog from "@/components/ContactDialog";
 import { Analytics } from "@vercel/analytics/next";
-
-const notoSans = Noto_Sans({
-  variable: "--font-noto-sans",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.transitstats.co"),
@@ -185,7 +179,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`${notoSans.variable} font-sans antialiased`}>
+      <body className={`${notoSansVariables} font-sans antialiased`}>
         <Header />
         <main>{children}</main>
         <Footer />
