@@ -17,7 +17,7 @@ export default function ArticleFaq({ faqs }: { faqs: Faq[] }) {
         id="article-faq"
         className="text-2xl font-semibold leading-[1.3] text-brand md:text-3xl xl:text-4xl"
       >
-        Frequently asked questions
+        FAQ
       </h2>
       <div className="flex flex-col gap-4">
         {faqs.map((faq) => (
