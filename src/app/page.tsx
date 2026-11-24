@@ -12,9 +12,9 @@ import ReviewsMarquee, { type Review } from "@/components/home/ReviewsMarquee";
 import { getBoards } from "@/lib/leaderboard-data";
 import { shareMetadata } from "@/lib/seo";
 
-/* The page is rebuilt at most once an hour, which is how often the live
+/* The page is rebuilt at most twice a day, which is how often the live
    leaderboard is read again. */
-export const revalidate = 3600;
+export const revalidate = 43200;
 
 export const metadata: Metadata = {
   title: "Transit Stats | Chicago CTA transit app for personal stats",

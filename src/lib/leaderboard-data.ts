@@ -4,11 +4,11 @@ import { METRICS, TIMES, type BoardKey, type BoardRow, type Boards, type Metric,
 /* Loads the home page's live leaderboard. It reads the same boards the app's
    Ranking screen reads: one public document per metric and time range, which
    the backend rewrites every few hours. Read only, no sign-in, nothing
-   written, and no copy kept beyond the page's own hourly cache. Runs on the
-   server only. */
+   written, and no copy kept beyond the page's own twice-a-day cache. Runs on
+   the server only. */
 
 const ROWS = 5;
-const REFRESH_SECONDS = 3600;
+const REFRESH_SECONDS = 43200;
 const BOARDS_URL =
   "https://firestore.googleapis.com/v1/projects/transit-stats/databases/(default)/documents/leaderboards";
 

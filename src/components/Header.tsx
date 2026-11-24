@@ -13,7 +13,11 @@ const navLinks = [
 ];
 
 export default function Header() {
-  const pathname = usePathname();
+  /* When the host rebuilds the home page in the background (twice a day, for
+     the leaderboard) it renders it under the path "/index", not "/". Read as
+     is, that turned the home header white and took the bold off "Home". */
+  const rawPathname = usePathname();
+  const pathname = rawPathname === "/index" ? "/" : rawPathname;
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
