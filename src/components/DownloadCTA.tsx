@@ -25,7 +25,8 @@ export default function DownloadCTA({ size = "default" }: DownloadCTAProps) {
           Available on iPhone. No Ventra account&nbsp;needed.
         </p>
       </div>
-      <AppStoreButton size="lg" tone="white" />
+      {/* The hero button's sizes: the header's size on phones */}
+      <AppStoreButton size="responsive" tone="white" />
     </div>
   );
 }

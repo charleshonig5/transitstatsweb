@@ -5,7 +5,8 @@ export const APP_STORE_URL =
 
 /* The design's own App Store button art (public/images/appstore): the Apple
    mark and the two lines of drawn lettering, each at the size it was drawn.
-   "sm" is the header's button, "lg" the hero's and the closing card's. */
+   "sm" is the header's button, "lg" the hero's and the closing card's
+   (both of those are "sm" on phones). */
 const ART = {
   sm: {
     apple: { w: 23.4566, h: 28.1475 },
@@ -26,7 +27,6 @@ const ART = {
 } as const;
 
 type Size = keyof typeof ART;
-/* The white button's orange art exists at "lg" only. */
 type Tone = "brand" | "white";
 
 function Art({ size, tone, className }: { size: Size; tone: Tone; className: string }) {
