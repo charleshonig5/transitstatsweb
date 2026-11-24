@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 
 export default function ResourcesPage() {
   return (
-    <div className="rounded-b-[36px] bg-canvas pb-10 md:pb-[74px] xl:pb-[149px]">
+    <div className="rounded-b-[44px] bg-canvas pb-10 md:pb-[74px] xl:pb-[149px]">
       {/* Breadcrumb structured data */}
       <script
         type="application/ld+json"

@@ -133,7 +133,7 @@ const faqs: PageFaq[] = [
 
 export default function FAQPage() {
   return (
-    <div className="rounded-b-[36px] bg-canvas">
+    <div className="rounded-b-[44px] bg-canvas">
       {/* FAQPage structured data for Google rich snippets + AI search */}
       <script
         type="application/ld+json"

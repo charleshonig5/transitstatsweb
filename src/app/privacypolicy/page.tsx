@@ -19,7 +19,7 @@ export default function PrivacyPage() {
     "text-sm leading-6 text-dark md:text-base md:leading-7";
 
   return (
-    <div className="rounded-b-[36px] bg-white">
+    <div className="rounded-b-[44px] bg-white">
       {/* Breadcrumb structured data */}
       <script
         type="application/ld+json"

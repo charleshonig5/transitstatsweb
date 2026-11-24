@@ -9,7 +9,7 @@ import { Analytics } from "@vercel/analytics/next";
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.transitstats.co"),
   title: {
-    default: "Transit Stats | Personal stats for Chicago CTA transit rides",
+    default: "Transit Stats | Chicago CTA transit app for personal stats",
     template: "%s | Transit Stats",
   },
   description:
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://www.transitstats.co",
     siteName: "Transit Stats",
-    title: "Transit Stats | Personal stats for Chicago CTA transit rides",
+    title: "Transit Stats | Chicago CTA transit app for personal stats",
     description:
       "The best CTA tracker app — view Chicago transit data, in-depth CTA stats, city leaderboards, and measure your CO₂ impact. Free on iPhone.",
     images: [
@@ -49,13 +49,13 @@ export const metadata: Metadata = {
         url: "/images/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Transit Stats | Personal stats for Chicago CTA transit rides",
+        alt: "Transit Stats | Chicago CTA transit app for personal stats",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Transit Stats | Personal stats for Chicago CTA transit rides",
+    title: "Transit Stats | Chicago CTA transit app for personal stats",
     description:
       "The best CTA tracker app — view Chicago transit data, in-depth CTA stats, city leaderboards, and measure your CO₂ impact.",
     images: ["/images/og-image.png"],

@@ -17,12 +17,12 @@ import { shareMetadata } from "@/lib/seo";
 export const revalidate = 3600;
 
 export const metadata: Metadata = {
-  title: "Transit Stats | Personal stats for Chicago CTA transit rides",
+  title: "Transit Stats | Chicago CTA transit app for personal stats",
   description:
     "Transit Stats turns your Chicago CTA rides into meaningful, personal data. Get detailed statistics, leaderboards, achievements, ride history, and more.",
   alternates: { canonical: "https://www.transitstats.co" },
   ...shareMetadata({
-    title: "Transit Stats | Personal stats for Chicago CTA transit rides",
+    title: "Transit Stats | Chicago CTA transit app for personal stats",
     description:
       "Transit Stats turns your Chicago CTA rides into meaningful, personal data. Get detailed statistics, leaderboards, achievements, ride history, and more.",
     path: "",
@@ -266,7 +266,7 @@ export default async function Home() {
   return (
     /* The whole page sits on the off-white canvas, rounded at the bottom so
        the footer shows on the orange like every other page. */
-    <div className="overflow-x-clip rounded-b-[36px] bg-canvas pb-10 md:pb-[74px] xl:pb-[149px]">
+    <div className="overflow-x-clip rounded-b-[44px] bg-canvas pb-10 md:pb-[74px] xl:pb-[149px]">
       {/* ===== HERO ===== From xl the art starts 27px up under the 96
           header, which puts it 69 from the top of the page as the design
           has it (the header's lower edge covers only empty map). */}

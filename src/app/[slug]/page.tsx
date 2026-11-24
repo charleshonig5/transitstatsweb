@@ -115,7 +115,7 @@ export default async function ArticlePage({ params }: PageProps) {
   ];
 
   return (
-    <div className="rounded-b-[36px] bg-white">
+    <div className="rounded-b-[44px] bg-white">
       {/* Breadcrumb structured data */}
       <script
         type="application/ld+json"
