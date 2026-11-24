@@ -3,6 +3,7 @@ import { Noto_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import ContactDialog from "@/components/ContactDialog";
 import { Analytics } from "@vercel/analytics/next";
 
 const notoSans = Noto_Sans({
@@ -131,6 +132,7 @@ export default function RootLayout({
               },
               featureList: [
                 "Auto live tracking",
+                "Live CTA arrival times",
                 "In-depth transit stats",
                 "City leaderboards",
                 "Ride history",
@@ -172,7 +174,7 @@ export default function RootLayout({
               contactPoint: {
                 "@type": "ContactPoint",
                 contactType: "customer support",
-                url: "https://www.transitstats.co/contact",
+                url: "https://www.transitstats.co/?contact",
               },
               areaServed: {
                 "@type": "City",
@@ -187,6 +189,7 @@ export default function RootLayout({
         <Header />
         <main>{children}</main>
         <Footer />
+        <ContactDialog />
         <Analytics />
       </body>
     </html>

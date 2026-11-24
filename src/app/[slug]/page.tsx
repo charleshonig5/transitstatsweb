@@ -163,7 +163,7 @@ export default async function ArticlePage({ params }: PageProps) {
             author: {
               "@type": "Person",
               name: post.author,
-              url: "https://www.transitstats.co/about",
+              url: "https://www.transitstats.co",
             },
             publisher: {
               "@type": "Organization",
@@ -202,7 +202,7 @@ export default async function ArticlePage({ params }: PageProps) {
       <div id="intro" className="container flex flex-col gap-10 py-10 md:gap-14 md:py-[74px]">
         {/* Everything the rail travels beside: header, cover, body and FAQ */}
         <div className="relative flex flex-col gap-10 md:gap-14">
-        <ArticleRail sections={railSections} />
+        <ArticleRail sections={railSections} url={`https://www.transitstats.co/${post.slug}`} />
 
         {/* ── Article header ── */}
         <div className="mx-auto flex w-full max-w-[720px] flex-col">

@@ -12,7 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // The home page's own last change (headline, copy). Its lastmod is this or
   // the newest article, whichever is later.
-  const homeUpdated = new Date("2026-11-22");
+  const homeUpdated = new Date("2026-11-23");
   const homeDate = homeUpdated > latestPostDate ? homeUpdated : latestPostDate;
 
   const articleEntries: MetadataRoute.Sitemap = posts.map((post) => ({
@@ -25,10 +25,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     { url: baseUrl, lastModified: homeDate, changeFrequency: "weekly", priority: 1, images: [`${baseUrl}/images/og-image.png`] },
-    { url: `${baseUrl}/about`, lastModified: new Date("2026-03-01"), changeFrequency: "monthly", priority: 0.8 },
     { url: `${baseUrl}/resources`, lastModified: latestPostDate, changeFrequency: "weekly", priority: 0.8 },
     { url: `${baseUrl}/faq`, lastModified: new Date("2026-11-22"), changeFrequency: "monthly", priority: 0.8 },
-    { url: `${baseUrl}/contact`, lastModified: new Date("2026-03-01"), changeFrequency: "monthly", priority: 0.7 },
     { url: `${baseUrl}/privacypolicy`, lastModified: new Date("2026-11-22"), changeFrequency: "yearly", priority: 0.5 },
     ...articleEntries,
   ];

@@ -4,21 +4,10 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-
-const APP_STORE_URL =
-  "https://apps.apple.com/us/app/transit-stats-cta-analytics/id6747690858";
-
-function AppleLogo({ className }: { className?: string }) {
-  return (
-    <svg viewBox="0 0 32 38" fill="currentColor" aria-hidden="true" className={className}>
-      <path d="M26.43 19.94c-.05-4.56 3.73-6.75 3.9-6.86-2.12-3.1-5.43-3.53-6.62-3.58-2.82-.29-5.49 1.66-6.92 1.66-1.43 0-3.65-1.62-5.99-1.58-3.08.05-5.93 1.8-7.52 4.56-3.2 5.55-.82 13.78 2.3 18.3 1.53 2.21 3.36 4.69 5.76 4.6 2.31-.09 3.18-1.49 5.97-1.49 2.79 0 3.58 1.49 6.02 1.44 2.49-.04 4.06-2.25 5.58-4.47 1.76-2.57 2.48-5.05 2.53-5.18-.06-.02-4.85-1.86-4.9-7.4zM21.87 6.21c1.28-1.54 2.14-3.66 1.9-5.79-1.84.07-4.05 1.22-5.36 2.75-1.17 1.35-2.19 3.51-1.92 5.58 2.04.16 4.12-1.04 5.38-2.54z" />
-    </svg>
-  );
-}
+import AppStoreButton from "@/components/AppStoreButton";
 
 const navLinks = [
   { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
   { href: "/resources", label: "Resources" },
   { href: "/faq", label: "FAQ" },
 ];
@@ -43,19 +32,27 @@ export default function Header() {
     return () => { document.documentElement.style.overflow = ""; };
   }, [mobileOpen]);
 
+  /* Home, Resources and FAQ sit on the off-white canvas, every other page
+     on white: the header takes the colour of the page under it. */
+  const isHome = ["/", "/resources", "/faq"].includes(pathname);
+
   return (
     <>
     <header
       className={`sticky top-0 z-50 transition-all duration-300 ${
         mobileOpen
-          ? "bg-transparent lg:bg-white"
+          ? isHome
+            ? "bg-transparent lg:bg-canvas"
+            : "bg-transparent lg:bg-white"
           : scrolled
-            ? "bg-white/90 backdrop-blur-md shadow-[0_4px_30px_rgba(0,0,0,0.06)]"
-            : "bg-white"
+            ? `${isHome ? "bg-canvas/90" : "bg-white/90"} backdrop-blur-md shadow-[0_4px_30px_rgba(0,0,0,0.06)]`
+            : isHome
+              ? "bg-canvas"
+              : "bg-white"
       }`}
     >
       <nav
-        className="container relative flex items-center justify-between py-4 md:py-7"
+        className="container relative flex items-center justify-between py-4 md:py-7 lg:py-6"
         aria-label="Main navigation"
       >
         {/* Logo */}
@@ -65,20 +62,25 @@ export default function Header() {
             alt="Transit Stats"
             width={205}
             height={32}
-            className={`h-auto w-[149px] lg:w-[205px] transition-all duration-300 ${mobileOpen ? "brightness-0 invert lg:brightness-100 lg:invert-0" : ""}`}
+            className={`h-auto w-[149px] lg:w-[184px] transition-all duration-300 ${mobileOpen ? "brightness-0 invert lg:brightness-100 lg:invert-0" : ""}`}
             priority
           />
         </Link>
 
-        {/* Desktop nav — centered links */}
-        <div className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-8 lg:flex lg:gap-16">
+        {/* Desktop nav — centered links. Each is a pill that fills with the
+            site's light orange on hover; the 16 of padding either side comes
+            out of the gap. Every link is as wide as its bold form (an unseen
+            bold copy under the word holds the width), so the row doesn't
+            shift when the bold moves from one page's link to another's. */}
+        <div className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-6 lg:flex">
           {navLinks.map((link) => {
             const isActive = pathname === link.href;
             return (
               <Link
                 key={link.href}
                 href={link.href}
-                className={`text-base ${isActive ? "font-bold" : "font-normal"} text-brand transition-all duration-200 hover:scale-105 hover:text-brand-dark active:scale-95`}
+                data-label={link.label}
+                className={`flex flex-col items-center rounded-[100px] px-4 py-2 text-base ${isActive ? "font-bold" : "font-normal"} text-brand transition-all duration-200 after:invisible after:block after:h-0 after:overflow-hidden after:font-bold after:content-[attr(data-label)] hover:bg-[#FEF0EB] active:scale-95`}
               >
                 {link.label}
               </Link>
@@ -86,21 +88,9 @@ export default function Header() {
           })}
         </div>
 
-        {/* Desktop nav — App Store button far right (the hero/CTA badge
-            layout, compacted to the header's 40px height) */}
-        <a
-          href={APP_STORE_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Download Transit Stats on the App Store"
-          className="hidden h-10 items-center gap-2 whitespace-nowrap rounded-[66px] bg-brand px-4 text-white transition-all duration-200 hover:scale-105 hover:shadow-[0_4px_16px_rgba(247,117,44,0.4)] active:scale-[0.97] lg:flex"
-        >
-          <AppleLogo className="h-5 w-auto" />
-          <span className="flex flex-col items-start text-left">
-            <span className="text-[10px] leading-tight">Download on the</span>
-            <span className="text-sm font-semibold leading-tight">App Store</span>
-          </span>
-        </a>
+        {/* Desktop nav — App Store button far right: the design's 144 x 48
+            button */}
+        <AppStoreButton size="sm" tone="brand" show="hidden lg:flex" className="w-[144px]" />
 
         {/* Mobile menu button */}
         <button
@@ -160,27 +150,16 @@ export default function Header() {
           </Link>
         );
       })}
-      <a
-        href={APP_STORE_URL}
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Download Transit Stats on the App Store"
-        className="group block transition-all duration-300"
+      <div
+        className="transition-all duration-300"
         style={{
           opacity: mobileOpen ? 1 : 0,
           transform: mobileOpen ? "translateY(0)" : "translateY(12px)",
           transitionDelay: mobileOpen ? `${75 * navLinks.length}ms` : "0ms",
         }}
-        onClick={() => setMobileOpen(false)}
       >
-        <span className="flex items-center gap-3 whitespace-nowrap rounded-[66px] bg-white px-8 py-3 text-brand transition-transform duration-200 group-active:scale-[0.97]">
-          <AppleLogo className="h-7 w-auto" />
-          <span className="flex flex-col items-start text-left">
-            <span className="text-xs leading-tight">Download on the</span>
-            <span className="text-lg font-semibold leading-tight">App Store</span>
-          </span>
-        </span>
-      </a>
+        <AppStoreButton size="lg" tone="white" onClick={() => setMobileOpen(false)} />
+      </div>
     </div>
     </>
   );

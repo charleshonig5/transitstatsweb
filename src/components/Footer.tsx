@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import ContactButton from "@/components/ContactButton";
 
 const linkClass =
   "text-sm leading-6 text-white transition-opacity duration-200 hover:opacity-80 active:opacity-60 md:text-base md:leading-7";
@@ -68,10 +69,10 @@ export default function Footer() {
                 Pages
               </h3>
               <Link href="/" className={linkClass}>Home</Link>
-              <Link href="/about" className={linkClass}>About</Link>
               <Link href="/resources" className={linkClass}>Resources</Link>
               <Link href="/faq" className={linkClass}>FAQ</Link>
-              <Link href="/contact" className={linkClass}>Contact</Link>
+              {/* Opens the contact pop-up */}
+              <ContactButton className={`cursor-pointer text-left ${linkClass}`}>Contact</ContactButton>
             </nav>
 
             {/* Articles */}

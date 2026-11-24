@@ -8,8 +8,14 @@ export interface Section {
   label: string; // Rail name: the heading cut to two words at most
 }
 
+/* The Resources page's filter pills. "guides" are how-tos, "cta-data" is
+   built on the CTA's published numbers, "app-data" on rides tracked in
+   Transit Stats. */
+export type PostCategory = "guides" | "cta-data" | "app-data";
+
 export interface Post {
   slug: string;
+  category: PostCategory;
   title: string;
   subtitle: string;
   description: string;
@@ -26,6 +32,7 @@ export interface Post {
 export const posts: Post[] = [
   {
     slug: "ride-every-cta-l-station",
+    category: "guides",
     title: "How to ride every CTA L station in one day",
     subtitle:
       "The CTA counts 146 L stations on eight lines. The Guinness record for all of them is 8:58:55, and a $5 day pass covers it. Routes, costs and tracking.",
@@ -77,13 +84,14 @@ export const posts: Post[] = [
   },
   {
     slug: "which-cta-lines-run-24-hours",
+    category: "guides",
     title: "Which CTA lines run 24 hours?",
     subtitle:
       "Two CTA train lines run 24 hours a day: the Red and Blue Lines. The other six stop overnight, and 17 bus routes run all night. Last trains for each line.",
     description:
       "Two CTA train lines run 24 hours a day: the Red and Blue Lines. The other six stop overnight, and 17 bus routes run all night. Last trains for each line.",
     imageAlt:
-      "An L train pulling into an empty subway platform lined with blue and white tile",
+      "An empty Red Line subway platform at Harrison, with signs pointing to 95th/Dan Ryan and Howard",
     date: "2026-11-22",
     displayDate: "November 22, 2026",
     updated: "2026-11-22",
@@ -128,6 +136,7 @@ export const posts: Post[] = [
   },
   {
     slug: "longest-cta-bus-routes-train-lines",
+    category: "cta-data",
     title: "The longest CTA bus routes and train lines",
     subtitle:
       "The longest CTA bus route is the 26 South Shore Express at about 18.9 miles. The longest train line is the Blue Line at 27.6 miles. See the top ten.",
@@ -180,6 +189,7 @@ export const posts: Post[] = [
   },
   {
     slug: "best-cta-apps",
+    category: "guides",
     title: "Best CTA apps in 2026, and what each is for",
     subtitle:
       "The best CTA apps in 2026 and what each is for: Ventra for fares, Transit and Transit Stop for arrival times, Citymapper and Google Maps for directions.",
@@ -233,6 +243,7 @@ export const posts: Post[] = [
   },
   {
     slug: "cta-ventra-ride-history",
+    category: "guides",
     title: "How to see your CTA and Ventra ride history",
     subtitle:
       "How to see your Ventra ride history in the Ventra app or at ventrachicago.com, why a ride can be missing, and how to keep a full CTA ride history.",
@@ -285,6 +296,7 @@ export const posts: Post[] = [
   },
   {
     slug: "cta-ridership-by-year",
+    category: "cta-data",
     title: "Chicago CTA ridership by year, 1988 to 2026",
     subtitle:
       "CTA ridership by year, 1988 to 2026. The CTA carried 338.0 million rides in 2025, down from 545.6 million in 2012 and up from 196.0 million in 2021.",
@@ -339,6 +351,7 @@ export const posts: Post[] = [
   },
   {
     slug: "busiest-cta-stations-bus-routes",
+    category: "cta-data",
     title: "The busiest CTA stations and bus routes in 2026",
     subtitle:
       "Clark/Lake is the busiest CTA station and the 9 Ashland the busiest bus route in 2026. See the top 10 busiest CTA stations and bus routes.",
@@ -385,6 +398,7 @@ export const posts: Post[] = [
   },
   {
     slug: "cta-ohare-midway-airport",
+    category: "guides",
     title: "How to get to O'Hare and Midway on the CTA",
     subtitle:
       "Take the Blue Line to O'Hare or the Orange Line to Midway. Travel times, the $2.50 and $5 fares, hours, and how to find the train at each airport.",
@@ -432,6 +446,7 @@ export const posts: Post[] = [
   },
   {
     slug: "cta-ridership-growth-2026",
+    category: "cta-data",
     title: "Chicago CTA ridership continues to grow in 2026",
     subtitle:
       "CTA ridership is up 2.6% in 2026 through August, with every month beating 2025. The latest Chicago transit ridership data, the CTA's 2025 recount, and what's next.",
@@ -486,6 +501,7 @@ export const posts: Post[] = [
   },
   {
     slug: "most-popular-cta-stops-lines",
+    category: "app-data",
     title: "Chicago's most popular CTA stops and lines",
     subtitle:
       "The most popular CTA stops and train lines in Chicago, based on 48,000+ real tracked rides across the L and bus network through October 2026.",
@@ -524,6 +540,7 @@ export const posts: Post[] = [
   },
   {
     slug: "co2-savings-cta-riders",
+    category: "app-data",
     title: "How much CO2 do CTA riders actually save?",
     subtitle:
       "We analyzed 48,000+ CTA rides to measure the real CO2 impact of riding public transit in Chicago. Here's how much carbon CTA riders actually save.",
@@ -563,6 +580,7 @@ export const posts: Post[] = [
   },
   {
     slug: "cta-ridership-data",
+    category: "app-data",
     title: "Chicago CTA ridership by the numbers",
     subtitle:
       "Real CTA ridership data from thousands of Chicago riders and 48,000+ trips. How Chicagoans commute, which routes dominate, and what the data reveals.",
@@ -603,6 +621,7 @@ export const posts: Post[] = [
   },
   {
     slug: "cta-rush-hour-data",
+    category: "app-data",
     title: "When does Chicago ride the CTA? Rush hour data",
     subtitle:
       "Real hour-by-hour CTA ridership data from 48,000+ tracked rides through October 2026. See when Chicagoans actually ride the bus and Chicago L train, from morning rush to late night.",
@@ -641,6 +660,7 @@ export const posts: Post[] = [
   },
   {
     slug: "cta-commute-pairs",
+    category: "app-data",
     title: "Chicago's most common CTA commute routes",
     subtitle:
       "The most popular CTA commute routes in Chicago, from 48,000+ tracked rides through October 2026. See the top origin-destination pairs for trains and buses across the city.",

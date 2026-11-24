@@ -5,7 +5,20 @@
   --color-brand: #F7752C;
   --color-brand-dark: #FF5C00;
   --color-dark: #000100;
+  /* The home page background: the app's off-white. */
+  --color-canvas: #FCFCFD;
 }
+
+/* Line heights on the home page are the design's "Auto" for Noto Sans,
+   which comes to whole pixels: 14 type on 19, 16 on 22, 20 on 27, 26 on 35,
+   42 on 57. They are written out because browsers round "normal" their own
+   way. 26 type is the one exception: it is set on a 36 line with 1px taken
+   back underneath, which keeps the design's 35 and its letter height.
+   The three pictures beside the info topics are cropped in page.tsx with
+   the design's own numbers (each photo's size and offset in the 580 square).
+   Each picture is a card of its own: picking another topic brings its card
+   up from below on the reveal curve further down, in half a second, while
+   the old card lifts and fades (components/home/InfoSwitcher). */
 
 html {
   background: linear-gradient(to bottom, #F7752C, #FF5C00) fixed;
@@ -58,10 +71,56 @@ body {
   100% { transform: translateX(-50%); }
 }
 
-/* Hero entrance animation — clean slide down */
-@keyframes hero-card-enter {
-  from { opacity: 0; transform: translateY(-100px); }
-  to   { opacity: 1; transform: translateY(0); }
+/* Hero entrance — the words rise in first and the picture builds: the
+   map fades in, the two phones pop up leaning and settle straight, then the
+   four notes pop in one by one, each from a little off its spot. Every piece
+   ends exactly where the layout puts it (the keyframes have no "to").
+   Each piece sets where it starts from and when:
+   --pop-x / --pop-y (offset), --pop-tilt, --pop-scale, --pop-ms, --pop-delay.
+   The pop curve runs a touch past the mark and settles back; the fades use
+   the app's curve. Reduce Motion: none of it. */
+@keyframes hero-fade {
+  from { opacity: 0; }
+}
+
+/* The words beside the picture: each block rises 30px and fades in over
+   0.6s on the reveal curve, the same numbers the scroll reveals further down
+   use. --rise-delay sets when each one starts; the last one starts at 400 ms,
+   so the whole block takes one second. */
+@keyframes hero-rise {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+}
+
+.hero-rise {
+  animation: hero-rise 600ms cubic-bezier(0.22, 1, 0.36, 1) var(--rise-delay, 0ms) backwards;
+}
+
+@keyframes hero-pop {
+  from {
+    transform: translate(var(--pop-x, 0px), var(--pop-y, 0px))
+      rotate(var(--pop-tilt, 0deg)) scale(var(--pop-scale, 0.9));
+  }
+}
+
+.hero-fade {
+  animation: hero-fade 280ms cubic-bezier(0.2, 0, 0, 1) backwards;
+}
+
+.hero-pop {
+  animation:
+    hero-pop var(--pop-ms, 450ms) cubic-bezier(0.34, 1.45, 0.64, 1) var(--pop-delay, 0ms) backwards,
+    hero-fade 150ms cubic-bezier(0.2, 0, 0, 1) var(--pop-delay, 0ms) backwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-fade,
+  .hero-pop,
+  .hero-rise {
+    animation: none;
+  }
 }
 
 /* Scroll-reveal transitions — start hidden, transition to visible */
@@ -81,14 +140,6 @@ body {
 .scroll-reveal-visible {
   opacity: 1 !important;
   transform: translate(0) !important;
-}
-
-/* FAQ category filter (components/FaqFilter): hide, never unmount, so
-   every question stays in the HTML for search engines. */
-[data-faq-filter="info"] [data-faq-category]:not([data-faq-category="info"]),
-[data-faq-filter="features"] [data-faq-category]:not([data-faq-category="features"]),
-[data-faq-filter="privacy"] [data-faq-category]:not([data-faq-category="privacy"]) {
-  display: none;
 }
 
 /* Article prose — matches site body-copy ramp: text-sm/leading-6 → md:text-base/leading-7 */
@@ -114,7 +165,8 @@ body {
    level with the top of the rail: the tops of its letters line up with the
    tops of "Back", the same way the title does before any scrolling (36px on
    a 46.8px line, so the heading's box sits at 172). #intro starts right
-   under the header, so it lands at the top of the page. */
+   under the header, so it lands at the top of the page. The header is 96
+   tall from lg up (24 above and below a 48 button) and shorter below. */
 .prose h2,
 #article-faq,
 #intro {

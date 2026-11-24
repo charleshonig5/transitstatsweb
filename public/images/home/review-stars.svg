@@ -1,0 +1,31 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="147" height="21" viewBox="0 0 147 21" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="Frame 1171275844">
+<g id="Star 1">
+<use xlink:href="#stroke0_0_7" fill="#D9D9D9"/>
+<use xlink:href="#stroke0_0_7" fill="#F7752C"/>
+</g>
+<g id="Star 2">
+<use xlink:href="#stroke1_0_7" fill="#D9D9D9"/>
+<use xlink:href="#stroke1_0_7" fill="#F7752C"/>
+</g>
+<g id="Star 3">
+<use xlink:href="#stroke2_0_7" fill="#D9D9D9"/>
+<use xlink:href="#stroke2_0_7" fill="#F7752C"/>
+</g>
+<g id="Star 4">
+<use xlink:href="#stroke3_0_7" fill="#D9D9D9"/>
+<use xlink:href="#stroke3_0_7" fill="#F7752C"/>
+</g>
+<g id="Star 5">
+<use xlink:href="#stroke4_0_7" fill="#D9D9D9"/>
+<use xlink:href="#stroke4_0_7" fill="#F7752C"/>
+</g>
+</g>
+<defs>
+<path id="stroke0_0_7" d="M11.5 0L14.9115 7.1006L23 8.02129L17.02 13.3304L18.6074 21L11.5 17.1806L4.39261 21L5.98 13.3304L0 8.02129L8.08845 7.1006L11.5 0Z"/>
+<path id="stroke1_0_7" d="M42.5 0L45.9115 7.1006L54 8.02129L48.02 13.3304L49.6074 21L42.5 17.1806L35.3926 21L36.98 13.3304L31 8.02129L39.0885 7.1006L42.5 0Z"/>
+<path id="stroke2_0_7" d="M73.5 0L76.9115 7.1006L85 8.02129L79.02 13.3304L80.6074 21L73.5 17.1806L66.3926 21L67.98 13.3304L62 8.02129L70.0885 7.1006L73.5 0Z"/>
+<path id="stroke3_0_7" d="M104.5 0L107.912 7.1006L116 8.02129L110.02 13.3304L111.607 21L104.5 17.1806L97.3926 21L98.98 13.3304L93 8.02129L101.088 7.1006L104.5 0Z"/>
+<path id="stroke4_0_7" d="M135.5 0L138.912 7.1006L147 8.02129L141.02 13.3304L142.607 21L135.5 17.1806L128.393 21L129.98 13.3304L124 8.02129L132.088 7.1006L135.5 0Z"/>
+</defs>
+</svg>
