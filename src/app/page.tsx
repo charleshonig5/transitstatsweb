@@ -326,13 +326,14 @@ export default async function Home() {
             {/* Primary: App Store download. Secondary: Contact, the design's
                 outlined pill (white, 2px brand outline) at the same height;
                 it opens the contact pop-up.
-                On phones both are the header button's height. */}
+                On phones both are the header button's height, and the
+                outline thins to 1px with the smaller pill. */}
             <div
               className="hero-rise flex flex-wrap gap-3 sm:gap-6"
               style={{ "--rise-delay": "400ms" } as CSSProperties}
             >
               <AppStoreButton size="responsive" tone="brand" />
-              <ContactButton className="flex h-12 cursor-pointer items-center whitespace-nowrap rounded-[100px] border-2 border-brand bg-white px-6 text-base font-semibold text-brand transition-all duration-200 hover:scale-105 active:scale-[0.97] sm:h-[68px] sm:px-[34px] sm:text-xl">
+              <ContactButton className="flex h-12 cursor-pointer items-center whitespace-nowrap rounded-[100px] border border-brand bg-white px-6 text-base font-semibold text-brand transition-all duration-200 hover:scale-105 active:scale-[0.97] sm:h-[68px] sm:border-2 sm:px-[34px] sm:text-xl">
                 Contact us
               </ContactButton>
             </div>

@@ -25,6 +25,7 @@ const CLOSE_MS = 200;
 
 export default function ContactDialog() {
   const dialog = useRef<HTMLDialogElement>(null);
+  const card = useRef<HTMLDivElement>(null);
   const body = useRef<HTMLDivElement>(null);
   const closing = useRef<ReturnType<typeof setTimeout>>(undefined);
   const pressedOutside = useRef(false);
@@ -47,11 +48,9 @@ export default function ContactDialog() {
         void el.offsetWidth;
       }
       setShown(true);
-      // With a mouse the first field is ready to type in. On a touch screen
-      // it is left alone, so the keyboard doesn't cover the card on arrival.
-      if (window.matchMedia("(hover: hover)").matches) {
-        el.querySelector<HTMLElement>('[name="name"]')?.focus();
-      }
+      // The card itself takes the focus, so the pop-up opens with nothing
+      // selected: left alone, the browser picks the close button.
+      card.current?.focus({ preventScroll: true });
     };
 
     const stop = onOpenContact(open);
@@ -126,7 +125,9 @@ export default function ContactDialog() {
           }}
         >
           <div
-            className={`flex w-full max-w-[720px] flex-col gap-6 rounded-[44px] bg-white p-6 shadow-[0_8px_40px_rgba(0,0,0,0.12)] transition-[opacity,scale,translate] sm:p-8 md:gap-8 md:p-10 ${EASE} ${
+            ref={card}
+            tabIndex={-1}
+            className={`flex w-full max-w-[720px] flex-col gap-6 rounded-[44px] bg-white p-6 shadow-[0_8px_40px_rgba(0,0,0,0.12)] outline-none transition-[opacity,scale,translate] sm:p-8 md:gap-8 md:p-10 ${EASE} ${
               shown ? "duration-300" : "translate-y-3 scale-[0.96] opacity-0 duration-200"
             }`}
           >
