@@ -85,7 +85,7 @@ export default function FaqBrowser({ title, items }: { title: ReactNode; items: 
       />
 
       {/* One card across, 16 apart like the article FAQ's */}
-      <div ref={list} className="mt-10 flex flex-col gap-4 xl:mt-[54px]">
+      <div ref={list} className="mt-6 flex flex-col gap-4 xl:mt-[54px]">
         {items.map((item) => (
           <div key={item.question} className={shows(item) ? "" : "hidden"}>
             <FaqCard question={item.question} heading>

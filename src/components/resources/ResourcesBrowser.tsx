@@ -94,7 +94,7 @@ export default function ResourcesBrowser({
 
       <div
         ref={grid}
-        className="mt-10 grid grid-cols-1 gap-y-14 md:grid-cols-2 md:gap-x-10 md:gap-y-16 xl:mt-[54px] xl:grid-cols-3 xl:gap-x-[54px] xl:gap-y-[84px]"
+        className="mt-6 grid grid-cols-1 gap-y-16 md:grid-cols-2 md:gap-x-10 xl:mt-[54px] xl:grid-cols-3 xl:gap-x-[54px] xl:gap-y-[84px]"
       >
         {items.map((item) => (
           <Link
