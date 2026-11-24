@@ -148,6 +148,70 @@ body {
   transform: translate(0) !important;
 }
 
+/* The phones in the home page's feature cards (components/home/PhonePair).
+   Rise: each phone waits below the card's edge, then comes up on the reveal
+   curve, runs 8 design pixels past its place and settles back, 0.6s in all;
+   the front phone starts 90 ms after the back one.
+   Drift: while the card crosses the screen each phone moves --drift design
+   pixels either side of its place, so the front one travels further than the
+   back one. It is tied to the scroll, and it sits exactly on its place when
+   the card is mid-screen. Browsers without scroll-tied motion skip the
+   drift. Reduce Motion: neither of the two. */
+.feature-card {
+  view-timeline-name: --feature-card;
+  view-timeline-axis: block;
+}
+
+.feature-phone {
+  transform: translateY(calc(var(--u) * 440));
+}
+
+.phones-in .feature-phone {
+  transform: none;
+  animation: phone-rise 600ms var(--phone-delay, 0ms) backwards;
+}
+
+@keyframes phone-rise {
+  from {
+    transform: translateY(calc(var(--u) * 440));
+    animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  72% {
+    transform: translateY(calc(var(--u) * -8));
+    animation-timing-function: ease-in-out;
+  }
+  to {
+    transform: none;
+  }
+}
+
+@keyframes phone-drift {
+  from { translate: 0 calc(var(--u) * var(--drift, 0)); }
+  to   { translate: 0 calc(var(--u) * var(--drift, 0) * -1); }
+}
+
+@supports (animation-timeline: view()) {
+  .feature-phone {
+    animation: phone-drift linear both;
+    animation-timeline: --feature-card;
+  }
+
+  .phones-in .feature-phone {
+    animation:
+      phone-drift linear both,
+      phone-rise 600ms var(--phone-delay, 0ms) backwards;
+    animation-timeline: --feature-card, auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .feature-phone,
+  .phones-in .feature-phone {
+    transform: none;
+    animation: none;
+  }
+}
+
 /* Article prose — matches site body-copy ramp: text-sm/leading-6 → md:text-base/leading-7 */
 .prose {
   font-size: 0.875rem;

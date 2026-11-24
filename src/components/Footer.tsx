@@ -57,7 +57,10 @@ export default function Footer() {
               </a>
             </div>
             <p className="mt-4 text-sm leading-6 text-white/40">
-              &copy; {new Date().getFullYear()} Transit Stats. All rights reserved.
+              &copy; {new Date().getFullYear()} Transit Stats.{" "}
+              {/* Its own line from md up, where the column is 240 wide and
+                  the last word would otherwise drop down alone. */}
+              <span className="md:block">All rights reserved.</span>
             </p>
           </div>
 

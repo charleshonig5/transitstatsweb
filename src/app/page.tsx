@@ -441,7 +441,7 @@ export default async function Home() {
               /* Odd cards: text left, phones right. Even cards: mirrored. */
               const phonesLeft = i % 2 !== 0;
               return (
-                <ScrollReveal key={feature.title} direction="up">
+                <ScrollReveal key={feature.title} direction="up" className="feature-card">
                   {/* The gradient is mixed in sRGB, the way the design tool
                       mixes it (Tailwind's default mix comes out a touch
                       yellower mid-card). The inner shadow (0 -5 30, black 6%)
