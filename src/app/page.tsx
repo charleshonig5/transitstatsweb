@@ -431,7 +431,7 @@ export default async function Home() {
         </div>
       </section>
 
-      <div className="mt-10 flex flex-col gap-20 md:mt-[74px] md:gap-[148px] xl:mt-[31px] xl:gap-50">
+      <div className="mt-10 flex flex-col gap-[94px] md:mt-[74px] md:gap-[148px] xl:mt-[31px] xl:gap-50">
         {/* ===== FEATURES ===== */}
         <section aria-labelledby="features-heading">
           <h2 id="features-heading" className="sr-only">

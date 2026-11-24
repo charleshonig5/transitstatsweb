@@ -419,7 +419,7 @@ export default function LeaderboardPreview({
 
   return (
     <div className="flex flex-col gap-10 md:gap-14 lg:grid lg:grid-cols-[522fr_580fr] lg:items-center xl:gap-[98px]">
-      <div className="flex flex-col gap-11">
+      <div className="flex flex-col gap-6 lg:gap-11">
         <div className="flex flex-col gap-3.5">
           <h2 className="text-xl font-bold leading-tight text-dark md:text-2xl lg:-mb-px lg:text-[26px] lg:leading-[36px]">
             {title}

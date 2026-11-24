@@ -119,12 +119,13 @@ export default function Header() {
 
     </header>
 
-    {/* Mobile nav — full-screen frosted overlay, fixed to the viewport so it
-        works at any scroll position. Sibling of <header> (not a child): the
-        header's backdrop-blur would otherwise become the containing block for
+    {/* Mobile nav — full-screen overlay in the brand gradient (the feature
+        cards' own), fixed to the viewport so it works at any scroll
+        position. Sibling of <header> (not a child): the header's
+        backdrop-blur would otherwise become the containing block for
         position: fixed and pin the overlay to the header instead. */}
     <div
-      className={`fixed inset-0 z-40 flex flex-col items-center justify-center gap-12 bg-brand/90 backdrop-blur-md transition-opacity duration-300 lg:hidden ${
+      className={`fixed inset-0 z-40 flex flex-col items-center justify-center gap-16 bg-linear-to-b/srgb from-brand to-brand-dark transition-opacity duration-300 lg:hidden ${
         mobileOpen ? "opacity-100" : "pointer-events-none opacity-0"
       }`}
       aria-hidden={!mobileOpen}
